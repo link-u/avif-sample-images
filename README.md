@@ -4,6 +4,8 @@ AVIF example images, licensed under CC-BY-SA.
 
 [Makefile](Makefile) describes how they were created.
 
+All images are marked as "still-picture" and use reduced still picture header in OBU sequence header.
+
 ## hato
 
 ![hato.jpg](hato.jpg)
@@ -131,3 +133,25 @@ Cropping condition is:
 - vertOffD: 1
 
 Resulted image should be as the same as above.
+
+## Fox Parade - Odd image dimensions tests
+
+### Original
+
+[<img src="https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.jpg" alt="fox.jpg" height="512">](fox.jpg)
+
+ - size: 1204 x 800
+ - By Kaede Fujisaki ([@ledyba](https://github.com/ledyba))
+ - Downloaded from [her website](https://hexe.net/2017/12/02/16:33:53/).
+
+#### Odd-Width
+
+ - [fox.odd-width.png](fox.odd-width.png)
+ - size: 1203 x 800
+
+#### Odd-Height
+
+  - [fox.odd-width.png](fox.odd-height.png)
+  - size: 1204 x 799
+
+### AVIF version
