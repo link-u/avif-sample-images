@@ -102,8 +102,7 @@ DUMMY_CHECK_TARGETS=$(ALL_AVIF:%.avif=%.check)
 .PHONY: all \
 	clean hato kimono \
 	clean-decode decode-all decode \
-	clean-compare compare-all compare \
-	DUMMY_CHECK_TARGETS
+	compare $(DUMMY_CHECK_TARGETS)
 
 fox: $(FOX);
 
@@ -120,22 +119,12 @@ decode:
 	$(MAKE) clean-decode
 	$(MAKE) decode-all
 
-stats:
-	mkdir -p stats
-
-clean-compare:
-	rm -Rfv stats
-
-compare:
-	$(MAKE) clean-compare
-	$(MAKE) compare-all
-
-compare-all: $(DUMMY_CHECK_TARGETS);
+compare: $(DUMMY_CHECK_TARGETS);
 
 decoded/%.png: %.avif decoded
 	$(DAVIF) -i $< -o $@
 
-%.check: %.avif decoded/%.png stats
+$(DUMMY_CHECK_TARGETS): %.check: %.avif decoded/%.png
 	bash -e scripts/compare.sh $@ $(word 1,$^) $(word 2,$^)
 
 clean:
