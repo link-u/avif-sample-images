@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install required tools
-      run: sudo apt install -y curl jq unzip
+      run: sudo apt install -y curl jq unzip coreutils
     - name: Download latest cavif
       shell: bash
       run: |
@@ -31,5 +31,11 @@ jobs:
       env:
         WORKFLOW_ID: "452394" #id of https://github.com/link-u/davif/actions?query=workflow%3A%22Build+debian+package+on+push+or+release-tags.%22
     - name: Install davif and cavif
-      run: sudo dpkg -i \*.deb
-
+      run: sudo dpkg -i *.deb
+    - name: Encode them all.
+      run: |
+        make clean
+        make CAVIF=cavif DAVIF=davif all -j $(nproc)
+    - name: Decode them all.
+      run: |
+        make CAVIF=cavif DAVIF=davif decode -j $(nproc)
