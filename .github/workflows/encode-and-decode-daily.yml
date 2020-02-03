@@ -32,13 +32,17 @@ jobs:
         WORKFLOW_ID: "452394" #id of https://github.com/link-u/davif/actions?query=workflow%3A%22Build+debian+package+on+push+or+release-tags.%22
     - name: Install davif and cavif
       run: sudo dpkg -i *.deb
+    - name: Use installed cavif and davif
+      run: |
+        sed -i -e 's/^CAVIF=.*$/CAVIF=cavif/' Makefile
+        sed -i -e 's/^DAVIF=.*$/DAVIF=davif/' Makefile
     - name: Encode them all.
       run: |
         make clean
-        make CAVIF=cavif DAVIF=davif all -j $(nproc)
+        make all -j $(nproc)
     - name: Decode them all.
       run: |
-        make CAVIF=cavif DAVIF=davif decode -j $(nproc)
+        make decode -j $(nproc)
     - name: Compare the result
       run: |
-        make CAVIF=cavif DAVIF=davif compare -j $(nproc)
+        make compare -j $(nproc)
