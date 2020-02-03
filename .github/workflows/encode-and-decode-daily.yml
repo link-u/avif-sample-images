@@ -41,4 +41,4 @@ jobs:
         make CAVIF=cavif DAVIF=davif decode -j $(nproc)
     - name: Compare the result
       run: |
-        make compare -j $(nproc)
+        make CAVIF=cavif DAVIF=davif compare -j $(nproc)
