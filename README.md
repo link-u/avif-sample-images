@@ -12,7 +12,7 @@ All images are marked as "still-picture" and use reduced still picture header in
 
  - size: 3082x2048
  - By Kaede Fujisaki ([@ledyba](https://github.com/ledyba))
- - Downloaded from [her website](https://hexe.net/2017/11/27/12:27:02/).
+ - Retrieved from [her website](https://hexe.net/2017/11/27/12:27:02/).
 
 ### AVIF version
 
@@ -42,7 +42,7 @@ All images are marked as "still-picture" and use reduced still picture header in
 
  - size: 722x1024
  - By Momiji Jinzamomi([@momiji-san](https://github.com/momiji-san)) and Kaede Fujisaki ([@ledyba](https://github.com/ledyba))
- - Downloaded from [their website](https://hexe.net/2018/12/24/18:59:01/).
+ - Retrieved from [their website](https://hexe.net/2018/12/24/18:59:01/).
 
 Test images for rotation(`irot`), mirroring(`imir`), cropping(`clap`).
 
@@ -142,7 +142,7 @@ Resulted image should be as the same as above.
 
  - size: 1204 x 800
  - By Kaede Fujisaki ([@ledyba](https://github.com/ledyba))
- - Downloaded from [her website](https://hexe.net/2017/12/02/16:33:53/).
+ - Retrieved from [her website](https://hexe.net/2017/12/02/16:33:53/).
 
 #### Odd-Width
 
