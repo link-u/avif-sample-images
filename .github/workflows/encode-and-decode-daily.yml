@@ -1,6 +1,7 @@
 name: Encode all images and decode them again daily.
 
 on:
+  push:
   schedule:
     - cron:  '0 2 * * *' # https://crontab.guru/#0_2_*_*_*
 
