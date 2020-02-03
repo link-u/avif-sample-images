@@ -1,0 +1,34 @@
+name: Encode all images and decode them again daily.
+
+on:
+  schedule:
+    - cron:  '0 2 * * * # https://crontab.guru/#0_2_*_*_*
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install required tools
+      run: sudo apt install -y curl jq unzip
+    - name: Download latest cavif
+      run: |
+        runId=$(curl https://api.github.com/repos/link-u/cavif/actions/workflows/${WORKFLOW_ID}/runs | jq '.workflow_runs[0].id')
+        artifactId=$(curl https://api.github.com/repos/link-u/cavif/actions/runs/${runId}/artifacts | jq '.artifacts[0].id')
+        curl --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -o cavif.zip -L https://api.github.com/repos/link-u/cavif/actions/artifacts/${artifactId}/zip 
+        unzip cavif.zip
+      with:
+        #id of https://github.com/link-u/cavif/actions?query=workflow%3A%22Build+debian+package+on+push+or+release-tags.%22
+        WORKFLOW_ID: "452267"
+    - name: Download latest davif
+      run: |
+        runId=$(curl https://api.github.com/repos/link-u/davif/actions/workflows/${WORKFLOW_ID}/runs | jq '.workflow_runs[0].id')
+        artifactId=$(curl https://api.github.com/repos/link-u/davif/actions/runs/${runId}/artifacts | jq '.artifacts[0].id')
+        curl --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -o davif.zip -L https://api.github.com/repos/link-u/davif/actions/artifacts/${artifactId}/zip 
+        unzip davif.zip
+      with:
+        #id of https://github.com/link-u/davif/actions?query=workflow%3A%22Build+debian+package+on+push+or+release-tags.%22
+        WORKFLOW_ID: "452394"
+    - name: Install davif and cavif
+      run: sudo dpkg -i \*.deb
+
