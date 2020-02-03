@@ -136,7 +136,7 @@ decoded/%.png: %.avif decoded
 	$(DAVIF) -i $< -o $@
 
 %.check: %.avif decoded/%.png stats
-	bash -e scripts/gen-stat.sh $@ $(word 1,$^) $(word 2,$^)
+	bash -e scripts/compare.sh $@ $(word 1,$^) $(word 2,$^)
 
 clean:
 	rm -Rfv *.avif decoded
