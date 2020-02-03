@@ -134,7 +134,7 @@ Cropping condition is:
 
 Resulted image should be as the same as above.
 
-## Fox Parade - Odd image dimensions tests
+## Fox Parade - Odd dimensions images
 
 ### Original
 
