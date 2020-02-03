@@ -1,10 +1,7 @@
 CAVIF=../cavif/cmake-build-debug/cavif
 DAVIF=../davif/cmake-build-debug/davif
 
-.PHONY: all clean hato kimono clean-decode decode-all decode
-
 all: hato kimono fox;
-
 
 HATO=\
 	hato.profile2.8bpc.yuv422.no-cdef.avif \
@@ -98,10 +95,17 @@ FOX=\
 	fox.profile2.12bpc.yuv444.monochrome.odd-height.avif \
 	fox.profile2.12bpc.yuv444.monochrome.odd-width.odd-height.avif
 
-fox: $(FOX);
-
 ALL_AVIF=$(HATO) $(KIMONO) $(FOX)
 DECODED_PNG=$(ALL_AVIF:%.avif=decoded/%.png)
+DUMMY_CHECK_TARGETS=$(ALL_AVIF:%.avif=%.check)
+
+.PHONY: all \
+	clean hato kimono \
+	clean-decode decode-all decode \
+	clean-compare compare-all compare \
+	DUMMY_CHECK_TARGETS
+
+fox: $(FOX);
 
 clean-decode:
 	rm -Rfv decoded
@@ -109,12 +113,30 @@ clean-decode:
 
 decode-all: $(DECODED_PNG);
 
+decoded:
+	mkdir -p decoded
+
 decode:
 	$(MAKE) clean-decode
 	$(MAKE) decode-all
 
-decoded/%.png: %.avif
+stats:
+	mkdir -p stats
+
+clean-compare:
+	rm -Rfv stats
+
+compare:
+	$(MAKE) clean-compare
+	$(MAKE) compare-all
+
+compare-all: $(DUMMY_CHECK_TARGETS);
+
+decoded/%.png: %.avif decoded
 	$(DAVIF) -i $< -o $@
+
+%.check: %.avif decoded/%.png stats
+	bash -e scripts/gen-stat.sh $@ $(word 1,$^) $(word 2,$^)
 
 clean:
 	rm -Rfv *.avif decoded
