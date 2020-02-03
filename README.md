@@ -155,3 +155,74 @@ Resulted image should be as the same as above.
   - size: 1204 x 799
 
 ### AVIF version
+
+| profile | bit depth | pix fmt | Monochrome | odd width | odd height | file                                                                   |
+|---------|-----------|---------|------------|-----------|------------|------------------------------------------------------------------------|
+| 0       | 8         | YUV420  |            |           |            | [here](fox.profile0.8bpc.yuv420.avif)                                  |
+| 0       | 8         | YUV420  |            | YES       |            | [here](fox.profile0.8bpc.yuv420.odd-width.avif)                        |
+| 0       | 8         | YUV420  |            |           | YES        | [here](fox.profile0.8bpc.yuv420.odd-height.avif)                       |
+| 0       | 8         | YUV420  |            | YES       | YES        | [here](fox.profile0.8bpc.yuv420.odd-width.odd-height.avif)             |
+| 0       | 8         | YUV420  | YES        |           |            | [here](fox.profile0.8bpc.yuv420.monochrome.avif)                       |
+| 0       | 8         | YUV420  | YES        | YES       |            | [here](fox.profile0.8bpc.yuv420.monochrome.odd-width.avif)             |
+| 0       | 8         | YUV420  | YES        |           | YES        | [here](fox.profile0.8bpc.yuv420.monochrome.odd-height.avif)            |
+| 0       | 8         | YUV420  | YES        | YES       | YES        | [here](fox.profile0.8bpc.yuv420.monochrome.odd-width.odd-height.avif)  |
+| 0       | 10        | YUV420  |            |           |            | [here](fox.profile0.10bpc.yuv420.avif)                                 |
+| 0       | 10        | YUV420  |            | YES       |            | [here](fox.profile0.10bpc.yuv420.odd-width.avif)                       |
+| 0       | 10        | YUV420  |            |           | YES        | [here](fox.profile0.10bpc.yuv420.odd-height.avif)                      |
+| 0       | 10        | YUV420  |            | YES       | YES        | [here](fox.profile0.10bpc.yuv420.odd-width.odd-height.avif)            |
+| 0       | 10        | YUV420  | YES        |           |            | [here](fox.profile0.10bpc.yuv420.monochrome.avif)                      |
+| 0       | 10        | YUV420  | YES        | YES       |            | [here](fox.profile0.10bpc.yuv420.monochrome.odd-width.avif)            |
+| 0       | 10        | YUV420  | YES        |           | YES        | [here](fox.profile0.10bpc.yuv420.monochrome.odd-height.avif)           |
+| 0       | 10        | YUV420  | YES        | YES       | YES        | [here](fox.profile0.10bpc.yuv420.monochrome.odd-width.odd-height.avif) |
+| 2       | 12        | YUV420  |            |           |            | [here](fox.profile2.12bpc.yuv420.avif)                                 |
+| 2       | 12        | YUV420  |            | YES       |            | [here](fox.profile2.12bpc.yuv420.odd-width.avif)                       |
+| 2       | 12        | YUV420  |            |           | YES        | [here](fox.profile2.12bpc.yuv420.odd-height.avif)                      |
+| 2       | 12        | YUV420  |            | YES       | YES        | [here](fox.profile2.12bpc.yuv420.odd-width.odd-height.avif)            |
+| 2       | 12        | YUV420  | YES        |           |            | [here](fox.profile2.12bpc.yuv420.monochrome.avif)                      |
+| 2       | 12        | YUV420  | YES        | YES       |            | [here](fox.profile2.12bpc.yuv420.monochrome.odd-width.avif)            |
+| 2       | 12        | YUV420  | YES        |           | YES        | [here](fox.profile2.12bpc.yuv420.monochrome.odd-height.avif)           |
+| 2       | 12        | YUV420  | YES        | YES       | YES        | [here](fox.profile2.12bpc.yuv420.monochrome.odd-width.odd-height.avif) |
+| 2       | 8         | YUV422  |            |           |            | [here](fox.profile2.8bpc.yuv422.avif)                                  |
+| 2       | 8         | YUV422  |            | YES       |            | [here](fox.profile2.8bpc.yuv422.odd-width.avif)                        |
+| 2       | 8         | YUV422  |            |           | YES        | [here](fox.profile2.8bpc.yuv422.odd-height.avif)                       |
+| 2       | 8         | YUV422  |            | YES       | YES        | [here](fox.profile2.8bpc.yuv422.odd-width.odd-height.avif)             |
+| 2       | 8         | YUV422  | YES        |           |            | [here](fox.profile2.8bpc.yuv422.monochrome.avif)                       |
+| 2       | 8         | YUV422  | YES        | YES       |            | [here](fox.profile2.8bpc.yuv422.monochrome.odd-width.avif)             |
+| 2       | 8         | YUV422  | YES        |           | YES        | [here](fox.profile2.8bpc.yuv422.monochrome.odd-height.avif)            |
+| 2       | 8         | YUV422  | YES        | YES       | YES        | [here](fox.profile2.8bpc.yuv422.monochrome.odd-width.odd-height.avif)  |
+| 2       | 10        | YUV422  |            |           |            | [here](fox.profile2.10bpc.yuv422.avif)                                 |
+| 2       | 10        | YUV422  |            | YES       |            | [here](fox.profile2.10bpc.yuv422.odd-width.avif)                       |
+| 2       | 10        | YUV422  |            |           | YES        | [here](fox.profile2.10bpc.yuv422.odd-height.avif)                      |
+| 2       | 10        | YUV422  |            | YES       | YES        | [here](fox.profile2.10bpc.yuv422.odd-width.odd-height.avif)            |
+| 2       | 10        | YUV422  | YES        |           |            | [here](fox.profile2.10bpc.yuv422.monochrome.avif)                      |
+| 2       | 10        | YUV422  | YES        | YES       |            | [here](fox.profile2.10bpc.yuv422.monochrome.odd-width.avif)            |
+| 2       | 10        | YUV422  | YES        |           | YES        | [here](fox.profile2.10bpc.yuv422.monochrome.odd-height.avif)           |
+| 2       | 10        | YUV422  | YES        | YES       | YES        | [here](fox.profile2.10bpc.yuv422.monochrome.odd-width.odd-height.avif) |
+| 2       | 12        | YUV422  |            |           |            | [here](fox.profile2.12bpc.yuv422.avif)                                 |
+| 2       | 12        | YUV422  |            | YES       |            | [here](fox.profile2.12bpc.yuv422.odd-width.avif)                       |
+| 2       | 12        | YUV422  |            |           | YES        | [here](fox.profile2.12bpc.yuv422.odd-height.avif)                      |
+| 2       | 12        | YUV422  |            | YES       | YES        | [here](fox.profile2.12bpc.yuv422.odd-width.odd-height.avif)            |
+| 2       | 12        | YUV422  | YES        |           |            | [here](fox.profile2.12bpc.yuv422.monochrome.avif)                      |
+| 2       | 12        | YUV422  | YES        | YES       |            | [here](fox.profile2.12bpc.yuv422.monochrome.odd-width.avif)            |
+| 2       | 12        | YUV422  | YES        |           | YES        | [here](fox.profile2.12bpc.yuv422.monochrome.odd-height.avif)           |
+| 2       | 12        | YUV422  | YES        | YES       | YES        | [here](fox.profile2.12bpc.yuv422.monochrome.odd-width.odd-height.avif) |
+| 1       | 8         | YUV444  |            |           |            | [here](fox.profile1.8bpc.yuv444.avif)                                  |
+| 1       | 8         | YUV444  |            | YES       |            | [here](fox.profile1.8bpc.yuv444.odd-width.avif)                        |
+| 1       | 8         | YUV444  |            |           | YES        | [here](fox.profile1.8bpc.yuv444.odd-height.avif)                       |
+| 1       | 8         | YUV444  |            | YES       | YES        | [here](fox.profile1.8bpc.yuv444.odd-width.odd-height.avif)             |
+| 1       | 8         | YUV444  |            |           |            | [here](fox.profile1.8bpc.yuv444.avif)                                  |
+| 1       | 8         | YUV444  |            | YES       |            | [here](fox.profile1.8bpc.yuv444.odd-width.avif)                        |
+| 1       | 8         | YUV444  |            |           | YES        | [here](fox.profile1.8bpc.yuv444.odd-height.avif)                       |
+| 1       | 8         | YUV444  |            | YES       | YES        | [here](fox.profile1.8bpc.yuv444.odd-width.odd-height.avif)             |
+| 1       | 10        | YUV444  |            |           |            | [here](fox.profile1.10bpc.yuv444.avif)                                 |
+| 1       | 10        | YUV444  |            | YES       |            | [here](fox.profile1.10bpc.yuv444.odd-width.avif)                       |
+| 1       | 10        | YUV444  |            |           | YES        | [here](fox.profile1.10bpc.yuv444.odd-height.avif)                      |
+| 1       | 10        | YUV444  |            | YES       | YES        | [here](fox.profile1.10bpc.yuv444.odd-width.odd-height.avif)            |
+| 1       | 12        | YUV444  |            |           |            | [here](fox.profile2.12bpc.yuv444.avif)                                 |
+| 1       | 12        | YUV444  |            | YES       |            | [here](fox.profile2.12bpc.yuv444.odd-width.avif)                       |
+| 1       | 12        | YUV444  |            |           | YES        | [here](fox.profile2.12bpc.yuv444.odd-height.avif)                      |
+| 1       | 12        | YUV444  |            | YES       | YES        | [here](fox.profile2.12bpc.yuv444.odd-width.odd-height.avif)            |
+| 2       | 12        | YUV444  | YES        |           |            | [here](fox.profile2.12bpc.yuv444.monochrome.avif)                      |
+| 2       | 12        | YUV444  | YES        | YES       |            | [here](fox.profile2.12bpc.yuv444.monochrome.odd-width.avif)            |
+| 2       | 12        | YUV444  | YES        |           | YES        | [here](fox.profile2.12bpc.yuv444.monochrome.odd-height.avif)           |
+| 2       | 12        | YUV444  | YES        | YES       | YES        | [here](fox.profile2.12bpc.yuv444.monochrome.odd-width.odd-height.avif) |

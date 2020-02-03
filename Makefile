@@ -53,6 +53,7 @@ FOX=\
 	fox.profile2.12bpc.yuv420.odd-width.avif \
 	fox.profile2.12bpc.yuv420.odd-height.avif \
 	fox.profile2.12bpc.yuv420.odd-width.odd-height.avif \
+	fox.profile2.12bpc.yuv420.monochrome.avif \
 	fox.profile2.12bpc.yuv420.monochrome.odd-width.avif \
 	fox.profile2.12bpc.yuv420.monochrome.odd-height.avif \
 	fox.profile2.12bpc.yuv420.monochrome.odd-width.odd-height.avif \
@@ -76,6 +77,7 @@ FOX=\
 	fox.profile2.12bpc.yuv422.odd-width.avif \
 	fox.profile2.12bpc.yuv422.odd-height.avif \
 	fox.profile2.12bpc.yuv422.odd-width.odd-height.avif \
+	fox.profile2.12bpc.yuv422.monochrome.avif \
 	fox.profile2.12bpc.yuv422.monochrome.odd-width.avif \
 	fox.profile2.12bpc.yuv422.monochrome.odd-height.avif \
 	fox.profile2.12bpc.yuv422.monochrome.odd-width.odd-height.avif \
@@ -91,6 +93,7 @@ FOX=\
 	fox.profile2.12bpc.yuv444.odd-width.avif \
 	fox.profile2.12bpc.yuv444.odd-height.avif \
 	fox.profile2.12bpc.yuv444.odd-width.odd-height.avif \
+	fox.profile2.12bpc.yuv444.monochrome.avif \
 	fox.profile2.12bpc.yuv444.monochrome.odd-width.avif \
 	fox.profile2.12bpc.yuv444.monochrome.odd-height.avif \
 	fox.profile2.12bpc.yuv444.monochrome.odd-width.odd-height.avif
@@ -246,6 +249,9 @@ fox.profile2.12bpc.yuv420.odd-height.avif: fox.odd-height.png
 fox.profile2.12bpc.yuv420.odd-width.odd-height.avif: fox.odd-width.odd-height.png
 	$(CAVIF) -i $< -o $@ --tune ssim --profile 2 --bit-depth 12 --pix-fmt yuv420 --disable-cdef --enable-loop-restoration --cpu-used 0 --rate-control q --crf 22
 
+fox.profile2.12bpc.yuv420.monochrome.avif: fox.png
+	$(CAVIF) -i $< -o $@ --monochrome --tune ssim --profile 2 --bit-depth 12 --pix-fmt yuv420 --disable-cdef --enable-loop-restoration --cpu-used 0 --rate-control q --crf 22
+
 fox.profile2.12bpc.yuv420.monochrome.odd-width.avif: fox.odd-width.png
 	$(CAVIF) -i $< -o $@ --monochrome --tune ssim --profile 2 --bit-depth 12 --pix-fmt yuv420 --disable-cdef --enable-loop-restoration --cpu-used 0 --rate-control q --crf 22
 
@@ -323,6 +329,9 @@ fox.profile2.12bpc.yuv422.odd-height.avif: fox.odd-height.png
 fox.profile2.12bpc.yuv422.odd-width.odd-height.avif: fox.odd-width.odd-height.png
 	$(CAVIF) -i $< -o $@ --tune ssim --profile 2 --bit-depth 12 --pix-fmt yuv422 --disable-cdef --enable-loop-restoration --cpu-used 0 --rate-control q --crf 22
 
+fox.profile2.12bpc.yuv422.monochrome.avif: fox.png
+	$(CAVIF) -i $< -o $@ --monochrome --tune ssim --profile 2 --bit-depth 12 --pix-fmt yuv422 --disable-cdef --enable-loop-restoration --cpu-used 0 --rate-control q --crf 22
+
 fox.profile2.12bpc.yuv422.monochrome.odd-width.avif: fox.odd-width.png
 	$(CAVIF) -i $< -o $@ --monochrome --tune ssim --profile 2 --bit-depth 12 --pix-fmt yuv422 --disable-cdef --enable-loop-restoration --cpu-used 0 --rate-control q --crf 22
 
@@ -375,6 +384,9 @@ fox.profile2.12bpc.yuv444.odd-height.avif: fox.odd-height.png
 
 fox.profile2.12bpc.yuv444.odd-width.odd-height.avif: fox.odd-width.odd-height.png
 	$(CAVIF) -i $< -o $@ --tune ssim --profile 2 --bit-depth 12 --pix-fmt yuv444 --disable-cdef --enable-loop-restoration --cpu-used 0 --rate-control q --crf 22
+
+fox.profile2.12bpc.yuv444.monochrome.avif: fox.png
+	$(CAVIF) -i $< -o $@ --monochrome --tune ssim --profile 2 --bit-depth 12 --pix-fmt yuv444 --disable-cdef --enable-loop-restoration --cpu-used 0 --rate-control q --crf 22
 
 fox.profile2.12bpc.yuv444.monochrome.odd-width.avif: fox.odd-width.png
 	$(CAVIF) -i $< -o $@ --monochrome --tune ssim --profile 2 --bit-depth 12 --pix-fmt yuv444 --disable-cdef --enable-loop-restoration --cpu-used 0 --rate-control q --crf 22
