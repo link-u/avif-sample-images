@@ -14,4 +14,4 @@ elif (echo ${avif} | grep "\(rotate\|mirror\|crop\)"); then
 else
   score=$(compare -metric PSNR ${orig} ${decoded} NULL: 2>&1 || true)
 fi
-test $(echo "${score} >= 30.0" | bc -l) -eq 1
+test $(echo "${score} >= 35.0" | bc -l) -eq 1

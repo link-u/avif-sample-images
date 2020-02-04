@@ -22,23 +22,23 @@ All images are marked as "still-picture" and use reduced still picture header in
 
 #### YUV 420
 
-| profile | bit depth | Monochrome | CDEF | Loop Restoration | file                                                                      |
-|---------|-----------|------------|------|------------------|---------------------------------------------------------------------------|
-| 0       | 8         |            | NO   | YES              | [here](hato.profile0.8bpc.yuv420.no-cdef.avif)                            |
-| 0       | 8         | YES        | NO   | YES              | [here](hato.profile0.8bpc.yuv420.monochrome.no-cdef.avif)                 |
-| 0       | 10        |            | NO   | NO               | [here](hato.profile0.10bpc.yuv420.no-cdef.no-restoration.avif)            |
-| 0       | 10        | YES        | NO   | NO               | [here](hato.profile0.10bpc.yuv420.monochrome.no-cdef.no-restoration.avif) |
+| profile | bit depth | Monochrome | file                                             |
+|---------|-----------|------------|--------------------------------------------------|
+| 0       | 8         |            | [here](hato.profile0.8bpc.yuv420.avif)           |
+| 0       | 8         | YES        | [here](hato.profile0.8bpc.yuv420.monochromeavif) |
+| 0       | 10        |            | [here](hato.profile0.10bpc.yuv420.avif)          |
+| 0       | 10        | YES        | [here](hato.profile0.10bpc.yuv420.avif)          |
 
 #### YUV422
 
-| profile | bit depth | Monochrome | CDEF | Loop Restroation | file                                                                      |
-|---------|-----------|------------|------|------------------|---------------------------------------------------------------------------|
-| 0       | 8         |            | NO   | YES              | [here](hato.profile2.8bpc.yuv422.no-cdef.avif)                            |
-| 0       | 8         | YES        | NO   | YES              | [here](hato.profile2.8bpc.yuv422.monochrome.no-cdef.avif)                 |
-| 0       | 10        |            | NO   | NO               | [here](hato.profile2.10bpc.yuv422.no-cdef.no-restoration.avif)            |
-| 0       | 10        | YES        | NO   | NO               | [here](hato.profile2.10bpc.yuv422.monochrome.no-cdef.no-restoration.avif) |
-| 0       | 12        |            | NO   | NO               | [here](hato.profile2.12bpc.yuv422.no-cdef.no-restoration.avif)            |
-| 0       | 12        | YES        | NO   | NO               | [here](hato.profile2.12bpc.yuv422.monochrome.no-cdef.no-restoration.avif) |
+| profile | bit depth | Monochrome | file                                              |
+|---------|-----------|------------|---------------------------------------------------|
+| 0       | 8         |            | [here](hato.profile2.8bpc.yuv422.avif)            |
+| 0       | 8         | YES        | [here](hato.profile2.8bpc.yuv422.monochrome.avif) |
+| 0       | 10        |            | [here](hato.profile2.10bpc.yuv422.avif)           |
+| 0       | 10        | YES        | [here](hato.profile2.10bpc.yuv422.avif)           |
+| 0       | 12        |            | [here](hato.profile2.12bpc.yuv422.avif)           |
+| 0       | 12        | YES        | [here](hato.profile2.12bpc.yuv422.avif)           |
 
 ## Kimono - Transformation tests
 
