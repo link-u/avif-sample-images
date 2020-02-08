@@ -42,10 +42,23 @@ jobs:
       run: make all -j $(nproc)
     - name: Decode them all.
       run: make decode -j $(nproc)
+    - name: Copy images to upload.
+      run: |
+        mkdir limited-range
+        mv decoded limited-range/
+        mkdir limited-range/encoded
+        mv *.avif limited-range/encoded
+    - name: Upload result
+      uses: actions/upload-artifact@v1
+      with:
+        name: limited-range
+        path: limited-range
     - name: Compare the result
       run: make compare -j $(nproc)
     - name: Clean all images to test again.
-      run: make clean
+      run: |
+        make clean
+        rm -Rfv limited-range
     - name: Set full-color-range flag to cavif.
       run: sed -i -e 's/^CAVIF=.*$/CAVIF=cavif --enable-full-color-range/' Makefile
     - name: Encode them all again with full-color-range mode.
@@ -54,3 +67,14 @@ jobs:
       run: make decode -j $(nproc)
     - name: Compare the result again with full-color-range mode.
       run: make compare -j $(nproc)
+    - name: Copy images to upload.
+      run: |
+        mkdir full-range
+        mv decoded full-range/
+        mkdir full-range/encoded
+        mv *.avif full-range/encoded
+    - name: Upload result
+      uses: actions/upload-artifact@v1
+      with:
+        name: full-range
+        path: full-range
