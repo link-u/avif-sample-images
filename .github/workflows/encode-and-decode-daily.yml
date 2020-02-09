@@ -11,8 +11,10 @@ jobs:
     strategy:
       matrix:
         env:
-          - { MATRIX_NAME="full-range", CAVIF_FLAGS: "--enable-full-color-range" }
-          - { MATRIX_NAME="limited-range", CAVIF_FLAGS: "--disable-full-color-range" }
+          - MATRIX_NAME: "full-range"
+            CAVIF_FLAGS: "--enable-full-color-range"
+          - MATRIX_NAME: "limited-range"
+            CAVIF_FLAGS: "--disable-full-color-range"
     steps:
     - uses: actions/checkout@v2
     - name: Install required tools
