@@ -6,15 +6,8 @@ on:
     - cron:  '0 2 * * *' # https://crontab.guru/#0_2_*_*_*
 
 jobs:
-  check:
+  limited:
     runs-on: ubuntu-18.04
-    strategy:
-    matrix:
-      color_range:
-        - name: "limited"
-          flag: "--disable-full-color-range"
-        - name: "full"
-          flag: "--enable-full-color-range"
     steps:
     - uses: actions/checkout@v2
     - name: Install required tools
@@ -41,7 +34,7 @@ jobs:
       run: sudo dpkg -i *.deb
     - name: Use installed cavif and davif
       run: |
-        sed -i -e 's/^CAVIF=.*$/CAVIF=cavif ${{ matrix.color_range.flag }}/' Makefile
+        sed -i -e 's/^CAVIF=.*$/CAVIF=cavif --disable-full-color-range/' Makefile
         sed -i -e 's/^DAVIF=.*$/DAVIF=davif/' Makefile
     - name: Clean all images.
       run: make clean
@@ -51,14 +44,65 @@ jobs:
       run: make decode -j $(nproc)
     - name: Copy images to upload.
       run: |
-        mkdir ${{ matrix.color_range.name }}
-        mv decoded ${{ matrix.color_range.name }}/
-        mkdir ${{ matrix.color_range.name }}/encoded
-        mv *.avif ${{ matrix.color_range.name }}/encoded
+        dir="limited-range"
+        mkdir ${dir}
+        mv decoded ${dir}/
+        mkdir ${dir}/encoded
+        mv *.avif ${dir}/encoded
     - name: Upload result
       uses: actions/upload-artifact@v1
       with:
-        name: ${{ matrix.color_range.name }}
-        path: ${{ matrix.color_range.name }}
+        name: limited-range
+        path: limited-range
     - name: Compare the result
-      run: make compare -j $(nproc)
+      run: make compare
+  full:
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install required tools
+      run: sudo apt install -y curl jq unzip coreutils imagemagick
+    - name: Download latest cavif
+      shell: bash
+      run: |
+        runId=$(curl https://api.github.com/repos/link-u/cavif/actions/workflows/${WORKFLOW_ID}/runs | jq '.workflow_runs[0].id')
+        artifactId=$(curl https://api.github.com/repos/link-u/cavif/actions/runs/${runId}/artifacts | jq '.artifacts[0].id')
+        curl --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -o cavif.zip -L https://api.github.com/repos/link-u/cavif/actions/artifacts/${artifactId}/zip
+        unzip cavif.zip
+      env:
+        WORKFLOW_ID: "452267" #id of https://github.com/link-u/cavif/actions?query=workflow%3A%22Build+debian+package+on+push+or+release-tags.%22
+    - name: Download latest davif
+      shell: bash
+      run: |
+        runId=$(curl https://api.github.com/repos/link-u/davif/actions/workflows/${WORKFLOW_ID}/runs | jq '.workflow_runs[0].id')
+        artifactId=$(curl https://api.github.com/repos/link-u/davif/actions/runs/${runId}/artifacts | jq '.artifacts[0].id')
+        curl --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -o davif.zip -L https://api.github.com/repos/link-u/davif/actions/artifacts/${artifactId}/zip
+        unzip davif.zip
+      env:
+        WORKFLOW_ID: "452394" #id of https://github.com/link-u/davif/actions?query=workflow%3A%22Build+debian+package+on+push+or+release-tags.%22
+    - name: Install davif and cavif
+      run: sudo dpkg -i *.deb
+    - name: Use installed cavif and davif
+      run: |
+        sed -i -e 's/^CAVIF=.*$/CAVIF=cavif --enable-full-color-range/' Makefile
+        sed -i -e 's/^DAVIF=.*$/DAVIF=davif/' Makefile
+    - name: Clean all images.
+      run: make clean
+    - name: Encode them all.
+      run: make all -j $(nproc)
+    - name: Decode them all.
+      run: make decode -j $(nproc)
+    - name: Copy images to upload.
+      run: |
+        dir="full-range"
+        mkdir ${dir}
+        mv decoded ${dir}/
+        mkdir ${dir}/encoded
+        mv *.avif ${dir}/encoded
+    - name: Upload result
+      uses: actions/upload-artifact@v1
+      with:
+        name: full-range
+        path: full-range
+    - name: Compare the result
+      run: make compare

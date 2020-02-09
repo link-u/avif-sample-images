@@ -14,4 +14,10 @@ elif (echo ${avif} | grep "\(rotate\|mirror\|crop\)"); then
 else
   score=$(compare -metric PSNR ${orig} ${decoded} NULL: 2>&1 || true)
 fi
-test $(echo "${score} >= 35.0" | bc -l) -eq 1
+if test $(echo "${score} >= 35.0" | bc -l) -eq 1; then
+  echo "Passing: ${decoded}: ${score}"
+  exit 0
+else
+  echo "Failed: ${decoded}: ${score} (vs ${orig})"
+  exit -1
+fi
