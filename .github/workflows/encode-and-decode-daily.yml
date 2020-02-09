@@ -41,7 +41,7 @@ jobs:
       run: sudo dpkg -i *.deb
     - name: Use installed cavif and davif
       run: |
-        sed -i -e 's/^CAVIF=.*$/CAVIF=cavif ${{ env.CAVIF_FLAGS }}/' Makefile
+        sed -i -e 's/^CAVIF=.*$/CAVIF=cavif ${{ matrix.env.CAVIF_FLAGS }}/' Makefile
         sed -i -e 's/^DAVIF=.*$/DAVIF=davif/' Makefile
     - name: Clean all images.
       run: make clean
@@ -51,14 +51,14 @@ jobs:
       run: make decode -j $(nproc)
     - name: Copy images to upload.
       run: |
-        mkdir ${{ env.MATRIX_NAME }}
-        mv decoded ${{ env.MATRIX_NAME }}/
-        mkdir ${{ env.MATRIX_NAME }}/encoded
-        mv *.avif ${{ env.MATRIX_NAME }}/encoded
+        mkdir ${{ matrix.env.MATRIX_NAME }}
+        mv decoded ${{ matrix.env.MATRIX_NAME }}/
+        mkdir ${{ matrix.env.MATRIX_NAME }}/encoded
+        mv *.avif ${{ matrix.env.MATRIX_NAME }}/encoded
     - name: Upload result
       uses: actions/upload-artifact@v1
       with:
-        name: ${{ env.MATRIX_NAME }}
-        path: ${{ env.MATRIX_NAME }}
+        name: ${{ matrix.env.MATRIX_NAME }}
+        path: ${{ matrix.env.MATRIX_NAME }}
     - name: Compare the result
       run: make compare
