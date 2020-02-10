@@ -51,9 +51,9 @@ jobs:
       run: make decode -j $(nproc)
     - name: Copy images to upload.
       run: |
-        mkdir ${{ matrix.env.MATRIX_NAME }}
-        cp decoded ${{ matrix.env.MATRIX_NAME }}/
-        mkdir ${{ matrix.env.MATRIX_NAME }}/encoded
+        mkdir -p ${{ matrix.env.MATRIX_NAME }}/decoded
+        mkdir -p ${{ matrix.env.MATRIX_NAME }}/encoded
+        cp decoded/* ${{ matrix.env.MATRIX_NAME }}/decoded
         cp *.avif ${{ matrix.env.MATRIX_NAME }}/encoded
     - name: Upload result
       uses: actions/upload-artifact@v1
