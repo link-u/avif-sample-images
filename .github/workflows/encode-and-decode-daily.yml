@@ -52,9 +52,9 @@ jobs:
     - name: Copy images to upload.
       run: |
         mkdir ${{ matrix.env.MATRIX_NAME }}
-        mv decoded ${{ matrix.env.MATRIX_NAME }}/
+        cp decoded ${{ matrix.env.MATRIX_NAME }}/
         mkdir ${{ matrix.env.MATRIX_NAME }}/encoded
-        mv *.avif ${{ matrix.env.MATRIX_NAME }}/encoded
+        cp *.avif ${{ matrix.env.MATRIX_NAME }}/encoded
     - name: Upload result
       uses: actions/upload-artifact@v1
       with:
