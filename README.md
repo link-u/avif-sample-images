@@ -1,5 +1,7 @@
 # AVIF Example files.
 
+![Encode all images and decode them again daily.](https://github.com/link-u/avif-sample-images/workflows/Encode%20all%20images%20and%20decode%20them%20again%20daily./badge.svg)
+
 - All files does not contain Exif metadata.
 - All files are tagged as MIAF compatible.
 - All files are tagged as compatible with the AVIF Baseline or Advanced Profile if possible.
@@ -155,8 +157,13 @@ Resulted image should be as the same as above.
 
 #### Odd-Height
 
-  - [fox.odd-width.png](fox.odd-height.png)
+  - [fox.odd-height.png](fox.odd-height.png)
   - size: 1204 x 799
+
+#### Odd-Width x Odd-Height
+
+  - [fox.odd-width.odd-height.png](fox.odd-width.odd-height.png)
+  - size: 1203 x 799
 
 ### AVIF version
 
