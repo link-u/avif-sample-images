@@ -102,6 +102,7 @@ DUMMY_CHECK_TARGETS=$(ALL_AVIF:%.avif=%.check)
 .PHONY: all \
 	clean hato kimono \
 	clean-decode decode-all decode \
+	url hato-url kimono-url fox-url\
 	compare $(DUMMY_CHECK_TARGETS)
 
 fox: $(FOX);
@@ -126,6 +127,18 @@ decoded/%.png: %.avif decoded
 
 $(DUMMY_CHECK_TARGETS): %.check: %.avif decoded/%.png
 	bash -e scripts/compare.sh $@ $(word 1,$^) $(word 2,$^)
+
+url:
+	cat Makefile | grep '^.*\?\.avif:' | sort -d | sed 's/^\(.*\)\:\s*\(.*\)$\/https\:\/\/raw.githubusercontent.com\/link-u\/avif-sample-images\/master\/\1, https\:\/\/raw.githubusercontent.com\/link-u\/avif-sample-images\/master\/\2/'
+
+hato-url:
+	$(MAKE) url | grep hato
+
+kimono-url:
+	$(MAKE) url | grep kimono
+
+fox-url:
+	$(MAKE) url | grep fox
 
 clean:
 	rm -Rfv *.avif decoded

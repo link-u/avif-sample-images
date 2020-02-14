@@ -42,6 +42,24 @@ All images are marked as "still-picture" and use reduced still picture header in
 | 0       | 12        |            | [here](hato.profile2.12bpc.yuv422.avif)           |
 | 0       | 12        | YES        | [here](hato.profile2.12bpc.yuv422.avif)           |
 
+#### URLS
+
+You can obtain this list with `make hato-url`.
+
+```
+(avif version), (original image)
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile0.10bpc.yuv420.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.16bpc.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile0.10bpc.yuv420.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.16bpc.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile0.8bpc.yuv420.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile0.8bpc.yuv420.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.10bpc.yuv422.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.16bpc.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.10bpc.yuv422.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.16bpc.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.12bpc.yuv422.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.16bpc.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.12bpc.yuv422.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.16bpc.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.8bpc.yuv422.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.8bpc.yuv422.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.png
+```
+
 ## Kimono - Transformation tests
 
 [<img src="https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.jpg" alt="kimono.jpg" height="512">](kimono.jpg)
@@ -140,6 +158,21 @@ Cropping condition is:
 
 Resulted image should be as the same as above.
 
+### URLS
+
+You can obtain this list with `make kimono-url`.
+
+```
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.crop.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-horizontal.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-horizontal.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.rotate270.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.rotate270.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.rotate270.crop.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.rotate270.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate270.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate270.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate90.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate90.png
+```
+
 ## Fox Parade - Odd dimensions images
 
 ### Original
@@ -237,3 +270,74 @@ Resulted image should be as the same as above.
 | 2       | 12        | YUV444  | YES        | YES       |            | [here](fox.profile2.12bpc.yuv444.monochrome.odd-width.avif)            |
 | 2       | 12        | YUV444  | YES        |           | YES        | [here](fox.profile2.12bpc.yuv444.monochrome.odd-height.avif)           |
 | 2       | 12        | YUV444  | YES        | YES       | YES        | [here](fox.profile2.12bpc.yuv444.monochrome.odd-width.odd-height.avif) |
+
+### URLs
+
+You can obtain this list with `make fox-url`.
+
+```
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.monochrome.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.monochrome.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.monochrome.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.monochrome.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.monochrome.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.monochrome.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.10bpc.yuv444.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.10bpc.yuv444.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.10bpc.yuv444.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.10bpc.yuv444.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.8bpc.yuv444.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.8bpc.yuv444.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.8bpc.yuv444.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.8bpc.yuv444.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.monochrome.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.monochrome.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.monochrome.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.monochrome.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.monochrome.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.monochrome.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.monochrome.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.monochrome.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.monochrome.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.monochrome.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.monochrome.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.monochrome.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.monochrome.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.monochrome.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.monochrome.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+```
