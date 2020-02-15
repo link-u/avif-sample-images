@@ -10,8 +10,6 @@
 
 [Makefile](Makefile) describes how they were created. To generate files yourself, you have to install [cavif](https://github.com/link-u/cavif) and [davif](https://github.com/link-u/davif)
 
-All images are marked as "still-picture" and use reduced still picture header in OBU sequence header.
-
 ## hato
 
 ![hato.jpg](hato.jpg)
