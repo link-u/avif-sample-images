@@ -161,7 +161,7 @@ hato.profile2.12bpc.yuv422.avif: hato.16bpc.png
 	$(CAVIF) -i $< -o $@ --tune psnr --profile 2 --bit-depth 12 --pix-fmt yuv422 --cpu-used 0 --rate-control q --crf 18
 
 hato.profile2.12bpc.yuv422.monochrome.avif: hato.16bpc.png
-	$(CAVIF) -i $< -o $@ --tune psnr --profile 2 --bit-depth 12 --pix-fmt yuv422 --cpu-used 0 --rate-control q --crf 18
+	$(CAVIF) -i $< -o $@ --tune psnr --profile 2 --bit-depth 12 --pix-fmt yuv422 --monochrome --cpu-used 0 --rate-control q --crf 18
 
 ## YUV420
 
