@@ -33,12 +33,12 @@
 
 | profile | bit depth | Monochrome | file                                              |
 |---------|-----------|------------|---------------------------------------------------|
-| 0       | 8         |            | [here](hato.profile2.8bpc.yuv422.avif)            |
-| 0       | 8         | YES        | [here](hato.profile2.8bpc.yuv422.monochrome.avif) |
-| 0       | 10        |            | [here](hato.profile2.10bpc.yuv422.avif)           |
-| 0       | 10        | YES        | [here](hato.profile2.10bpc.yuv422.avif)           |
-| 0       | 12        |            | [here](hato.profile2.12bpc.yuv422.avif)           |
-| 0       | 12        | YES        | [here](hato.profile2.12bpc.yuv422.avif)           |
+| 2       | 8         |            | [here](hato.profile2.8bpc.yuv422.avif)            |
+| 2       | 8         | YES        | [here](hato.profile2.8bpc.yuv422.monochrome.avif) |
+| 2       | 10        |            | [here](hato.profile2.10bpc.yuv422.avif)           |
+| 2       | 10        | YES        | [here](hato.profile2.10bpc.yuv422.avif)           |
+| 2       | 12        |            | [here](hato.profile2.12bpc.yuv422.avif)           |
+| 2       | 12        | YES        | [here](hato.profile2.12bpc.yuv422.avif)           |
 
 #### URLS
 
@@ -260,10 +260,10 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate
 | 1       | 10        | YUV444  |            | YES       |            | [here](fox.profile1.10bpc.yuv444.odd-width.avif)                       |
 | 1       | 10        | YUV444  |            |           | YES        | [here](fox.profile1.10bpc.yuv444.odd-height.avif)                      |
 | 1       | 10        | YUV444  |            | YES       | YES        | [here](fox.profile1.10bpc.yuv444.odd-width.odd-height.avif)            |
-| 1       | 12        | YUV444  |            |           |            | [here](fox.profile2.12bpc.yuv444.avif)                                 |
-| 1       | 12        | YUV444  |            | YES       |            | [here](fox.profile2.12bpc.yuv444.odd-width.avif)                       |
-| 1       | 12        | YUV444  |            |           | YES        | [here](fox.profile2.12bpc.yuv444.odd-height.avif)                      |
-| 1       | 12        | YUV444  |            | YES       | YES        | [here](fox.profile2.12bpc.yuv444.odd-width.odd-height.avif)            |
+| 2       | 12        | YUV444  |            |           |            | [here](fox.profile2.12bpc.yuv444.avif)                                 |
+| 2       | 12        | YUV444  |            | YES       |            | [here](fox.profile2.12bpc.yuv444.odd-width.avif)                       |
+| 2       | 12        | YUV444  |            |           | YES        | [here](fox.profile2.12bpc.yuv444.odd-height.avif)                      |
+| 2       | 12        | YUV444  |            | YES       | YES        | [here](fox.profile2.12bpc.yuv444.odd-width.odd-height.avif)            |
 | 2       | 12        | YUV444  | YES        |           |            | [here](fox.profile2.12bpc.yuv444.monochrome.avif)                      |
 | 2       | 12        | YUV444  | YES        | YES       |            | [here](fox.profile2.12bpc.yuv444.monochrome.odd-width.avif)            |
 | 2       | 12        | YUV444  | YES        |           | YES        | [here](fox.profile2.12bpc.yuv444.monochrome.odd-height.avif)           |
