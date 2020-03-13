@@ -45,17 +45,16 @@
 You can obtain this list with `make hato-url`.
 
 ```
-(avif version), (original image)
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile0.10bpc.yuv420.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.16bpc.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile0.10bpc.yuv420.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.16bpc.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile0.8bpc.yuv420.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile0.8bpc.yuv420.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.10bpc.yuv422.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.16bpc.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.10bpc.yuv422.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.16bpc.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.12bpc.yuv422.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.16bpc.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.12bpc.yuv422.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.16bpc.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.8bpc.yuv422.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.8bpc.yuv422.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile0.10bpc.yuv420.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile0.10bpc.yuv420.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile0.8bpc.yuv420.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile0.8bpc.yuv420.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.10bpc.yuv422.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.10bpc.yuv422.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.12bpc.yuv422.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.12bpc.yuv422.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.8bpc.yuv422.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2.8bpc.yuv422.monochrome.avif
 ```
 
 ## Kimono - Transformation tests
@@ -161,14 +160,14 @@ Resulted image should be as the same as above.
 You can obtain this list with `make kimono-url`.
 
 ```
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.crop.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-horizontal.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-horizontal.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.rotate270.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.rotate270.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.rotate270.crop.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.rotate270.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate270.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate270.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate90.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate90.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.crop.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-horizontal.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.rotate270.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.mirror-vertical.rotate270.crop.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate270.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate90.avif
 ```
 
 ## Fox Parade - Odd dimensions images
@@ -252,10 +251,6 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate
 | 1       | 8         | YUV444  |            | YES       |            | [here](fox.profile1.8bpc.yuv444.odd-width.avif)                        |
 | 1       | 8         | YUV444  |            |           | YES        | [here](fox.profile1.8bpc.yuv444.odd-height.avif)                       |
 | 1       | 8         | YUV444  |            | YES       | YES        | [here](fox.profile1.8bpc.yuv444.odd-width.odd-height.avif)             |
-| 1       | 8         | YUV444  |            |           |            | [here](fox.profile1.8bpc.yuv444.avif)                                  |
-| 1       | 8         | YUV444  |            | YES       |            | [here](fox.profile1.8bpc.yuv444.odd-width.avif)                        |
-| 1       | 8         | YUV444  |            |           | YES        | [here](fox.profile1.8bpc.yuv444.odd-height.avif)                       |
-| 1       | 8         | YUV444  |            | YES       | YES        | [here](fox.profile1.8bpc.yuv444.odd-width.odd-height.avif)             |
 | 1       | 10        | YUV444  |            |           |            | [here](fox.profile1.10bpc.yuv444.avif)                                 |
 | 1       | 10        | YUV444  |            | YES       |            | [here](fox.profile1.10bpc.yuv444.odd-width.avif)                       |
 | 1       | 10        | YUV444  |            |           | YES        | [here](fox.profile1.10bpc.yuv444.odd-height.avif)                      |
@@ -274,68 +269,244 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate
 You can obtain this list with `make fox-url`.
 
 ```
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.monochrome.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.monochrome.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.monochrome.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.monochrome.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.monochrome.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.monochrome.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.10bpc.yuv444.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.10bpc.yuv444.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.10bpc.yuv444.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.10bpc.yuv444.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.8bpc.yuv444.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.8bpc.yuv444.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.8bpc.yuv444.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.8bpc.yuv444.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.monochrome.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.monochrome.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.monochrome.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.monochrome.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.monochrome.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.monochrome.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.monochrome.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.monochrome.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.monochrome.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.monochrome.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.monochrome.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.monochrome.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.monochrome.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.monochrome.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.monochrome.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.monochrome.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-height.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.odd-width.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.png
-https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.odd-width.odd-height.avif, https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.odd-width.odd-height.png
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.monochrome.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.monochrome.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.monochrome.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.10bpc.yuv420.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.monochrome.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.monochrome.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.monochrome.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile0.8bpc.yuv420.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.10bpc.yuv444.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.10bpc.yuv444.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.10bpc.yuv444.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.10bpc.yuv444.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.8bpc.yuv444.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.8bpc.yuv444.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.8bpc.yuv444.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile1.8bpc.yuv444.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.monochrome.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.monochrome.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.monochrome.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.10bpc.yuv422.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.monochrome.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.monochrome.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.monochrome.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv420.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.monochrome.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.monochrome.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.monochrome.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv422.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.monochrome.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.monochrome.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.monochrome.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.12bpc.yuv444.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.monochrome.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.monochrome.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.monochrome.odd-width.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.odd-height.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.odd-width.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.8bpc.yuv422.odd-width.odd-height.avif
+```
+## Plum blossom - test images for alpha planes
+
+### Original (SVG)
+
+[<img src="https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom.svg" alt="plum-blossom.svg" height="512" height="512">](plum-blossom.svg)
+
+ - Author: Ryo Hirafuji ([@ledyba-z](https://github.com/ledyba-z))
+
+#### Large Version (PNG)
+
+ - [plum-blossom-large.png](plum-blossom-large.png)
+ - size: 2048x2048
+
+#### Small Version (PNG)
+
+ - [plum-blossom-small.png](plum-blossom-small.png)
+ - size: 128x128
+
+### AVIF version (Large Version)
+
+#### Limited-ranged alpha
+
+| profile | bit depth | pix fmt | Monochrome | alpha   | file                                                                           |
+|---------|-----------|---------|------------|-------- |--------------------------------------------------------------------------------|
+| 0       | 8         | YUV420  |            | limited | [here](plum-blossom-large.profile0.8bpc.yuv420.alpha-limited.avif)             |
+| 0       | 8         | YUV420  | YES        | limited | [here](plum-blossom-large.profile0.8bpc.yuv420.alpha-limited.monochrome.avif)  |
+| 0       | 10        | YUV420  |            | limited | [here](plum-blossom-large.profile0.10bpc.yuv420.alpha-limited.avif)            |
+| 0       | 10        | YUV420  | YES        | limited | [here](plum-blossom-large.profile0.10bpc.yuv420.alpha-limited.monochrome.avif) |
+| 2       | 12        | YUV420  |            | limited | [here](plum-blossom-large.profile2.12bpc.yuv420.alpha-limited.avif)            |
+| 2       | 12        | YUV420  | YES        | limited | [here](plum-blossom-large.profile2.12bpc.yuv420.alpha-limited.monochrome.avif) |
+| 2       | 8         | YUV422  |            | limited | [here](plum-blossom-large.profile2.8bpc.yuv422.alpha-limited.avif)             |
+| 2       | 8         | YUV422  | YES        | limited | [here](plum-blossom-large.profile2.8bpc.yuv422.alpha-limited.monochrome.avif)  |
+| 2       | 10        | YUV422  |            | limited | [here](plum-blossom-large.profile2.10bpc.yuv422.alpha-limited.avif)            |
+| 2       | 10        | YUV422  | YES        | limited | [here](plum-blossom-large.profile2.10bpc.yuv422.alpha-limited.monochrome.avif) |
+| 2       | 12        | YUV422  |            | limited | [here](plum-blossom-large.profile2.12bpc.yuv422.alpha-limited.avif)            |
+| 2       | 12        | YUV422  | YES        | limited | [here](plum-blossom-large.profile2.12bpc.yuv422.alpha-limited.monochrome.avif) |
+| 1       | 8         | YUV444  |            | limited | [here](plum-blossom-large.profile1.8bpc.yuv444.alpha-limited.avif)             |
+| 1       | 10        | YUV444  |            | limited | [here](plum-blossom-large.profile1.10bpc.yuv444.alpha-limited.avif)            |
+| 2       | 12        | YUV444  |            | limited | [here](plum-blossom-large.profile2.12bpc.yuv444.alpha-limited.avif)            |
+| 2       | 12        | YUV444  | YES        | limited | [here](plum-blossom-large.profile2.12bpc.yuv444.alpha-limited.monochrome.avif) |
+
+#### Full-ranged alpha
+
+| profile | bit depth | pix fmt | Monochrome | alpha   | file                                                                           |
+|---------|-----------|---------|------------|-------- |--------------------------------------------------------------------------------|
+| 0       | 8         | YUV420  |            | full    | [here](plum-blossom-large.profile0.8bpc.yuv420.alpha-full.avif)                |
+| 0       | 8         | YUV420  | YES        | full    | [here](plum-blossom-large.profile0.8bpc.yuv420.alpha-full.monochrome.avif)     |
+| 0       | 10        | YUV420  |            | full    | [here](plum-blossom-large.profile0.10bpc.yuv420.alpha-full.avif)               |
+| 0       | 10        | YUV420  | YES        | full    | [here](plum-blossom-large.profile0.10bpc.yuv420.alpha-full.monochrome.avif)    |
+| 2       | 12        | YUV420  |            | full    | [here](plum-blossom-large.profile2.12bpc.yuv420.alpha-full.avif)               |
+| 2       | 12        | YUV420  | YES        | full    | [here](plum-blossom-large.profile2.12bpc.yuv420.alpha-full.monochrome.avif)    |
+| 2       | 8         | YUV422  |            | full    | [here](plum-blossom-large.profile2.8bpc.yuv422.alpha-full.avif)                |
+| 2       | 8         | YUV422  | YES        | full    | [here](plum-blossom-large.profile2.8bpc.yuv422.alpha-full.monochrome.avif)     |
+| 2       | 10        | YUV422  |            | full    | [here](plum-blossom-large.profile2.10bpc.yuv422.alpha-full.avif)               |
+| 2       | 10        | YUV422  | YES        | full    | [here](plum-blossom-large.profile2.10bpc.yuv422.alpha-full.monochrome.avif)    |
+| 2       | 12        | YUV422  |            | full    | [here](plum-blossom-large.profile2.12bpc.yuv422.alpha-full.avif)               |
+| 2       | 12        | YUV422  | YES        | full    | [here](plum-blossom-large.profile2.12bpc.yuv422.alpha-full.monochrome.avif)    |
+| 1       | 8         | YUV444  |            | full    | [here](plum-blossom-large.profile1.8bpc.yuv444.alpha-full.avif)                |
+| 1       | 10        | YUV444  |            | full    | [here](plum-blossom-large.profile1.10bpc.yuv444.alpha-full.avif)               |
+| 2       | 12        | YUV444  |            | full    | [here](plum-blossom-large.profile2.12bpc.yuv444.alpha-full.avif)               |
+| 2       | 12        | YUV444  | YES        | full    | [here](plum-blossom-large.profile2.12bpc.yuv444.alpha-full.monochrome.avif)    |
+
+### AVIF version (Small Version)
+
+#### Limited-ranged alpha
+
+| profile | bit depth | pix fmt | Monochrome | alpha   | file                                                                           |
+|---------|-----------|---------|------------|-------- |--------------------------------------------------------------------------------|
+| 0       | 8         | YUV420  |            | limited | [here](plum-blossom-small.profile0.8bpc.yuv420.alpha-limited.avif)             |
+| 0       | 8         | YUV420  | YES        | limited | [here](plum-blossom-small.profile0.8bpc.yuv420.alpha-limited.monochrome.avif)  |
+| 0       | 10        | YUV420  |            | limited | [here](plum-blossom-small.profile0.10bpc.yuv420.alpha-limited.avif)            |
+| 0       | 10        | YUV420  | YES        | limited | [here](plum-blossom-small.profile0.10bpc.yuv420.alpha-limited.monochrome.avif) |
+| 2       | 12        | YUV420  |            | limited | [here](plum-blossom-small.profile2.12bpc.yuv420.alpha-limited.avif)            |
+| 2       | 12        | YUV420  | YES        | limited | [here](plum-blossom-small.profile2.12bpc.yuv420.alpha-limited.monochrome.avif) |
+| 2       | 8         | YUV422  |            | limited | [here](plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.avif)             |
+| 2       | 8         | YUV422  | YES        | limited | [here](plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.monochrome.avif)  |
+| 2       | 10        | YUV422  |            | limited | [here](plum-blossom-small.profile2.10bpc.yuv422.alpha-limited.avif)            |
+| 2       | 10        | YUV422  | YES        | limited | [here](plum-blossom-small.profile2.10bpc.yuv422.alpha-limited.monochrome.avif) |
+| 2       | 12        | YUV422  |            | limited | [here](plum-blossom-small.profile2.12bpc.yuv422.alpha-limited.avif)            |
+| 2       | 12        | YUV422  | YES        | limited | [here](plum-blossom-small.profile2.12bpc.yuv422.alpha-limited.monochrome.avif) |
+| 1       | 8         | YUV444  |            | limited | [here](plum-blossom-small.profile1.8bpc.yuv444.alpha-limited.avif)             |
+| 1       | 10        | YUV444  |            | limited | [here](plum-blossom-small.profile1.10bpc.yuv444.alpha-limited.avif)            |
+| 2       | 12        | YUV444  |            | limited | [here](plum-blossom-small.profile2.12bpc.yuv444.alpha-limited.avif)            |
+| 2       | 12        | YUV444  | YES        | limited | [here](plum-blossom-small.profile2.12bpc.yuv444.alpha-limited.monochrome.avif) |
+
+#### Full-ranged alpha
+
+| profile | bit depth | pix fmt | Monochrome | alpha   | file                                                                           |
+|---------|-----------|---------|------------|-------- |--------------------------------------------------------------------------------|
+| 0       | 8         | YUV420  |            | full    | [here](plum-blossom-small.profile0.8bpc.yuv420.alpha-full.avif)                |
+| 0       | 8         | YUV420  | YES        | full    | [here](plum-blossom-small.profile0.8bpc.yuv420.alpha-full.monochrome.avif)     |
+| 0       | 10        | YUV420  |            | full    | [here](plum-blossom-small.profile0.10bpc.yuv420.alpha-full.avif)               |
+| 0       | 10        | YUV420  | YES        | full    | [here](plum-blossom-small.profile0.10bpc.yuv420.alpha-full.monochrome.avif)    |
+| 2       | 12        | YUV420  |            | full    | [here](plum-blossom-small.profile2.12bpc.yuv420.alpha-full.avif)               |
+| 2       | 12        | YUV420  | YES        | full    | [here](plum-blossom-small.profile2.12bpc.yuv420.alpha-full.monochrome.avif)    |
+| 2       | 8         | YUV422  |            | full    | [here](plum-blossom-small.profile2.8bpc.yuv422.alpha-full.avif)                |
+| 2       | 8         | YUV422  | YES        | full    | [here](plum-blossom-small.profile2.8bpc.yuv422.alpha-full.monochrome.avif)     |
+| 2       | 10        | YUV422  |            | full    | [here](plum-blossom-small.profile2.10bpc.yuv422.alpha-full.avif)               |
+| 2       | 10        | YUV422  | YES        | full    | [here](plum-blossom-small.profile2.10bpc.yuv422.alpha-full.monochrome.avif)    |
+| 2       | 12        | YUV422  |            | full    | [here](plum-blossom-small.profile2.12bpc.yuv422.alpha-full.avif)               |
+| 2       | 12        | YUV422  | YES        | full    | [here](plum-blossom-small.profile2.12bpc.yuv422.alpha-full.monochrome.avif)    |
+| 1       | 8         | YUV444  |            | full    | [here](plum-blossom-small.profile1.8bpc.yuv444.alpha-full.avif)                |
+| 1       | 10        | YUV444  |            | full    | [here](plum-blossom-small.profile1.10bpc.yuv444.alpha-full.avif)               |
+| 2       | 12        | YUV444  |            | full    | [here](plum-blossom-small.profile2.12bpc.yuv444.alpha-full.avif)               |
+| 2       | 12        | YUV444  | YES        | full    | [here](plum-blossom-small.profile2.12bpc.yuv444.alpha-full.monochrome.avif)    |
+
+### URLs
+
+You can obtain this list with `make plum-url`.
+
+```
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile0.10bpc.yuv420.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile0.10bpc.yuv420.alpha-full.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile0.10bpc.yuv420.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile0.10bpc.yuv420.alpha-limited.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile0.8bpc.yuv420.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile0.8bpc.yuv420.alpha-full.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile0.8bpc.yuv420.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile0.8bpc.yuv420.alpha-limited.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile1.10bpc.yuv444.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile1.10bpc.yuv444.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile1.8bpc.yuv444.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile1.8bpc.yuv444.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.10bpc.yuv422.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.10bpc.yuv422.alpha-full.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.10bpc.yuv422.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.10bpc.yuv422.alpha-limited.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.12bpc.yuv420.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.12bpc.yuv420.alpha-full.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.12bpc.yuv420.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.12bpc.yuv420.alpha-limited.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.12bpc.yuv422.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.12bpc.yuv422.alpha-full.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.12bpc.yuv422.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.12bpc.yuv422.alpha-limited.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.12bpc.yuv444.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.12bpc.yuv444.alpha-full.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.12bpc.yuv444.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.12bpc.yuv444.alpha-limited.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.8bpc.yuv422.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.8bpc.yuv422.alpha-full.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.8bpc.yuv422.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-large.profile2.8bpc.yuv422.alpha-limited.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile0.10bpc.yuv420.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile0.10bpc.yuv420.alpha-full.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile0.10bpc.yuv420.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile0.10bpc.yuv420.alpha-limited.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile0.8bpc.yuv420.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile0.8bpc.yuv420.alpha-full.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile0.8bpc.yuv420.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile0.8bpc.yuv420.alpha-limited.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile1.10bpc.yuv444.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile1.10bpc.yuv444.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile1.8bpc.yuv444.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile1.8bpc.yuv444.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.10bpc.yuv422.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.10bpc.yuv422.alpha-full.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.10bpc.yuv422.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.10bpc.yuv422.alpha-limited.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.12bpc.yuv420.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.12bpc.yuv420.alpha-full.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.12bpc.yuv420.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.12bpc.yuv420.alpha-limited.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.12bpc.yuv422.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.12bpc.yuv422.alpha-full.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.12bpc.yuv422.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.12bpc.yuv422.alpha-limited.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.12bpc.yuv444.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.12bpc.yuv444.alpha-full.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.12bpc.yuv444.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.12bpc.yuv444.alpha-limited.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.8bpc.yuv422.alpha-full.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.8bpc.yuv422.alpha-full.monochrome.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.avif
+https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.monochrome.avif
 ```
