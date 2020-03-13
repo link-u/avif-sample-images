@@ -339,7 +339,7 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.
 
 ### Original (SVG)
 
-[<img src="https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom.svg" alt="plum-blossom.svg" height="512">](plum-blossom.svg)
+[<img src="https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom.svg" alt="plum-blossom.svg" height="512" height="512">](plum-blossom.svg)
 
  - Author: Ryo Hirafuji ([@ledyba-z](https://github.com/ledyba-z))
 
@@ -378,6 +378,8 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.
 
 #### Full-ranged alpha
 
+| profile | bit depth | pix fmt | Monochrome | alpha   | file                                                                           |
+|---------|-----------|---------|------------|-------- |--------------------------------------------------------------------------------|
 | 0       | 8         | YUV420  |            | full    | [here](plum-blossom-large.profile0.8bpc.yuv420.alpha-full.avif)                |
 | 0       | 8         | YUV420  | YES        | full    | [here](plum-blossom-large.profile0.8bpc.yuv420.alpha-full.monochrome.avif)     |
 | 0       | 10        | YUV420  |            | full    | [here](plum-blossom-large.profile0.10bpc.yuv420.alpha-full.avif)               |
@@ -420,6 +422,8 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.
 
 #### Full-ranged alpha
 
+| profile | bit depth | pix fmt | Monochrome | alpha   | file                                                                           |
+|---------|-----------|---------|------------|-------- |--------------------------------------------------------------------------------|
 | 0       | 8         | YUV420  |            | full    | [here](plum-blossom-small.profile0.8bpc.yuv420.alpha-full.avif)                |
 | 0       | 8         | YUV420  | YES        | full    | [here](plum-blossom-small.profile0.8bpc.yuv420.alpha-full.monochrome.avif)     |
 | 0       | 10        | YUV420  |            | full    | [here](plum-blossom-small.profile0.10bpc.yuv420.alpha-full.avif)               |
