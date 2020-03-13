@@ -338,7 +338,7 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.
 
 ### Original (SVG)
 
-[<img src="https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom.svg" alt="plum-blossom.svg" height="512" height="512">](plum-blossom.svg)
+[![plum-blossom.svg](./plum-blossom.svg)](plum-blossom.svg)
 
  - Author: Ryo Hirafuji ([@ledyba-z](https://github.com/ledyba-z))
 
