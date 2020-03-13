@@ -346,12 +346,12 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.
 #### Large Version (PNG)
 
  - [plum-blossom-large.png](plum-blossom-large.png)
- - size: 4096x4096
+ - size: 2048x2048
 
 #### Small Version (PNG)
 
  - [plum-blossom-small.png](plum-blossom-small.png)
- - size: 512x512
+ - size: 128x128
 
 ### AVIF version (Large Version)
 
