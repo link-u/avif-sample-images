@@ -97,7 +97,7 @@ FOX=\
 
 fox: $(FOX);
 
-PLUM=\
+PLUM_LARGE=\
 	plum-blossom-large.profile0.8bpc.yuv420.alpha-limited.avif \
 	plum-blossom-large.profile0.8bpc.yuv420.alpha-limited.monochrome.avif \
 	plum-blossom-large.profile0.10bpc.yuv420.alpha-limited.avif \
@@ -130,6 +130,42 @@ PLUM=\
 	plum-blossom-large.profile1.10bpc.yuv444.alpha-full.avif \
 	plum-blossom-large.profile2.12bpc.yuv444.alpha-full.avif \
 	plum-blossom-large.profile2.12bpc.yuv444.alpha-full.monochrome.avif
+
+PLUM_SMALL=\
+	plum-blossom-small.profile0.8bpc.yuv420.alpha-limited.avif \
+	plum-blossom-small.profile0.8bpc.yuv420.alpha-limited.monochrome.avif \
+	plum-blossom-small.profile0.10bpc.yuv420.alpha-limited.avif \
+	plum-blossom-small.profile0.10bpc.yuv420.alpha-limited.monochrome.avif \
+	plum-blossom-small.profile2.12bpc.yuv420.alpha-limited.avif \
+	plum-blossom-small.profile2.12bpc.yuv420.alpha-limited.monochrome.avif \
+	plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.avif \
+	plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.monochrome.avif \
+	plum-blossom-small.profile2.10bpc.yuv422.alpha-limited.avif \
+	plum-blossom-small.profile2.10bpc.yuv422.alpha-limited.monochrome.avif \
+	plum-blossom-small.profile2.12bpc.yuv422.alpha-limited.avif \
+	plum-blossom-small.profile2.12bpc.yuv422.alpha-limited.monochrome.avif \
+	plum-blossom-small.profile1.8bpc.yuv444.alpha-limited.avif \
+	plum-blossom-small.profile1.10bpc.yuv444.alpha-limited.avif \
+	plum-blossom-small.profile2.12bpc.yuv444.alpha-limited.avif \
+	plum-blossom-small.profile2.12bpc.yuv444.alpha-limited.monochrome.avif \
+	plum-blossom-small.profile0.8bpc.yuv420.alpha-full.avif \
+	plum-blossom-small.profile0.8bpc.yuv420.alpha-full.monochrome.avif \
+	plum-blossom-small.profile0.10bpc.yuv420.alpha-full.avif \
+	plum-blossom-small.profile0.10bpc.yuv420.alpha-full.monochrome.avif \
+	plum-blossom-small.profile2.12bpc.yuv420.alpha-full.avif \
+	plum-blossom-small.profile2.12bpc.yuv420.alpha-full.monochrome.avif \
+	plum-blossom-small.profile2.8bpc.yuv422.alpha-full.avif \
+	plum-blossom-small.profile2.8bpc.yuv422.alpha-full.monochrome.avif \
+	plum-blossom-small.profile2.10bpc.yuv422.alpha-full.avif \
+	plum-blossom-small.profile2.10bpc.yuv422.alpha-full.monochrome.avif \
+	plum-blossom-small.profile2.12bpc.yuv422.alpha-full.avif \
+	plum-blossom-small.profile2.12bpc.yuv422.alpha-full.monochrome.avif \
+	plum-blossom-small.profile1.8bpc.yuv444.alpha-full.avif \
+	plum-blossom-small.profile1.10bpc.yuv444.alpha-full.avif \
+	plum-blossom-small.profile2.12bpc.yuv444.alpha-full.avif \
+	plum-blossom-small.profile2.12bpc.yuv444.alpha-full.monochrome.avif
+
+PLUM=$(PLUM_LARGE) $(PLUM_SMALL)
 
 plum: $(PLUM);
 
@@ -621,5 +657,159 @@ plum-blossom-large.profile2.12bpc.yuv444.alpha-full.avif: plum-blossom-large.png
 	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv444 --cpu-used 0 --rate-control q --crf 18
 
 plum-blossom-large.profile2.12bpc.yuv444.alpha-full.monochrome.avif: plum-blossom-large.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 12 --pix-fmt yuv444 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv444 --cpu-used 0 --rate-control q --crf 18 --monochrome
+
+## Plum blossom - small version
+
+### YUV420
+
+#### 8bit
+
+plum-blossom-small.profile0.8bpc.yuv420.alpha-limited.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile0.8bpc.yuv420.alpha-limited.monochrome.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18 --monochrome
+
+plum-blossom-small.profile0.8bpc.yuv420.alpha-full.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile0.8bpc.yuv420.alpha-full.monochrome.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18 --monochrome
+
+#### 10bit
+
+plum-blossom-small.profile0.10bpc.yuv420.alpha-limited.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 0 --bit-depth 10 --pix-fmt yuv420 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 0 --bit-depth 10 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile0.10bpc.yuv420.alpha-limited.monochrome.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 0 --bit-depth 10 --pix-fmt yuv420 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 0 --bit-depth 10 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18 --monochrome
+
+plum-blossom-small.profile0.10bpc.yuv420.alpha-full.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 0 --bit-depth 10 --pix-fmt yuv420 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 0 --bit-depth 10 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile0.10bpc.yuv420.alpha-full.monochrome.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 0 --bit-depth 10 --pix-fmt yuv420 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 0 --bit-depth 10 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18 --monochrome
+
+#### 12bit
+
+plum-blossom-small.profile2.12bpc.yuv420.alpha-limited.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 12 --pix-fmt yuv420 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile2.12bpc.yuv420.alpha-limited.monochrome.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 12 --pix-fmt yuv420 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18 --monochrome
+
+plum-blossom-small.profile2.12bpc.yuv420.alpha-full.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 12 --pix-fmt yuv420 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile2.12bpc.yuv420.alpha-full.monochrome.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 12 --pix-fmt yuv420 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18 --monochrome
+
+## YUV422
+
+#### 8bit
+
+plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 8 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 8 --pix-fmt yuv422 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.monochrome.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 8 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 8 --pix-fmt yuv422 --cpu-used 0 --rate-control q --crf 18 --monochrome
+
+plum-blossom-small.profile2.8bpc.yuv422.alpha-full.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 8 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 8 --pix-fmt yuv422 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile2.8bpc.yuv422.alpha-full.monochrome.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 8 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 8 --pix-fmt yuv422 --cpu-used 0 --rate-control q --crf 18 --monochrome
+
+#### 10bit
+
+plum-blossom-small.profile2.10bpc.yuv422.alpha-limited.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 10 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 10 --pix-fmt yuv422 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile2.10bpc.yuv422.alpha-limited.monochrome.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 10 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 10 --pix-fmt yuv422 --cpu-used 0 --rate-control q --crf 18 --monochrome
+
+plum-blossom-small.profile2.10bpc.yuv422.alpha-full.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 10 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 10 --pix-fmt yuv422 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile2.10bpc.yuv422.alpha-full.monochrome.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 10 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 10 --pix-fmt yuv422 --cpu-used 0 --rate-control q --crf 18 --monochrome
+
+#### 12bit
+
+plum-blossom-small.profile2.12bpc.yuv422.alpha-limited.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 12 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv422 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile2.12bpc.yuv422.alpha-limited.monochrome.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 12 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv422 --cpu-used 0 --rate-control q --crf 18 --monochrome
+
+plum-blossom-small.profile2.12bpc.yuv422.alpha-full.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 12 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv422 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile2.12bpc.yuv422.alpha-full.monochrome.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 12 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv422 --cpu-used 0 --rate-control q --crf 18 --monochrome
+
+### YUV444
+
+#### 8bit
+
+plum-blossom-small.profile1.8bpc.yuv444.alpha-limited.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 8 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 1 --bit-depth 8 --pix-fmt yuv444 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile1.8bpc.yuv444.alpha-full.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 8 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 1 --bit-depth 8 --pix-fmt yuv444 --cpu-used 0 --rate-control q --crf 18
+
+#### 10bit
+
+plum-blossom-small.profile1.10bpc.yuv444.alpha-limited.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 10 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 1 --bit-depth 10 --pix-fmt yuv444 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile1.10bpc.yuv444.alpha-full.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 10 --pix-fmt yuv422 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 1 --bit-depth 10 --pix-fmt yuv444 --cpu-used 0 --rate-control q --crf 18
+
+#### 12bit
+
+plum-blossom-small.profile2.12bpc.yuv444.alpha-limited.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 12 --pix-fmt yuv444 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv444 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile2.12bpc.yuv444.alpha-limited.monochrome.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 12 --pix-fmt yuv444 --cpu-used 0 --lossless --monochrome
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv444 --cpu-used 0 --rate-control q --crf 18 --monochrome
+
+plum-blossom-small.profile2.12bpc.yuv444.alpha-full.avif: plum-blossom-small.png
+	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 12 --pix-fmt yuv444 --cpu-used 0 --lossless --monochrome --enable-full-color-range
+	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv444 --cpu-used 0 --rate-control q --crf 18
+
+plum-blossom-small.profile2.12bpc.yuv444.alpha-full.monochrome.avif: plum-blossom-small.png
 	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 12 --pix-fmt yuv444 --cpu-used 0 --lossless --monochrome --enable-full-color-range
 	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv444 --cpu-used 0 --rate-control q --crf 18 --monochrome
