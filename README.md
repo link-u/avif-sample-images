@@ -515,11 +515,24 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-
 
 [![star.gif](star.gif)](star.gif)
 
+ - [AV1 mp4 version](star.mp4)
+
 ### Original (SVG)
 
 [![star.svg](./star.svg)](star.svg)
 
  - Author: Ryo Hirafuji ([@ledyba-z](https://github.com/ledyba-z))
  - License: [CC-BY](https://creativecommons.org/licenses/by/4.0/deed.en)
- - Special Thanks: [Shigatake's Pixel Art Lesson](http://shigatake.sakura.ne.jp/gallery/M-gallery.html)
+ - Special Thanks: [Shigatake's Pixel Art Lesson](http://shigatake.sakura.ne.jp/gallery/dot/dot_1.html)
+
+### AVIFS version
+
+#### Normal
+
+[star.avifs](star.avifs)
+
+ - Converted under these conditions:
+   - YUV420
+   - 8bit
+   - limited-range
 
