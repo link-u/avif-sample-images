@@ -510,3 +510,16 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-
 https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.avif
 https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.monochrome.avif
 ```
+
+## Twinkle Star - Image Sequence Test
+
+[![star.gif](star.gif)](star.gif)
+
+### Original (SVG)
+
+[![star.svg](./star.svg)](star.svg)
+
+ - Author: Ryo Hirafuji ([@ledyba-z](https://github.com/ledyba-z))
+ - License: [CC-BY](https://creativecommons.org/licenses/by/4.0/deed.en)
+ - Special Thanks: [Shigatake's Pixel Art Lesson](http://shigatake.sakura.ne.jp/gallery/M-gallery.html)
+
