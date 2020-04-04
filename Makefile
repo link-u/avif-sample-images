@@ -816,7 +816,7 @@ plum-blossom-small.profile2.12bpc.yuv444.alpha-full.monochrome.avif: plum-blosso
 
 star.avifs: star.input.txt
 	$(eval TMP := $(shell mktemp -d))
-	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p -lossless 1 $(TMP)/star.mp4
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p -color_range jpeg -lossless 1 $(TMP)/star.mp4
 	# You need the latest version of gpac.
 	# Go to https://github.com/gpac/gpac
 	# then, `make deb -j32`
@@ -828,9 +828,9 @@ star.avifs: star.input.txt
 # FIXME(ledya-z): WORK IN PROGRESS
 star-with-alpha.avifs: star.input.txt
 	$(eval TMP := $(shell mktemp -d))
-	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p -lossless 1 "$(TMP)/star-video.mp4"
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p -color_range mpeg -lossless 1 "$(TMP)/star-video.mp4"
 	# FIXME(ledyba-z): It does not generate monochrome OBUs.
-	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt gray -lossless 1 "$(TMP)/star-alpha.mp4"
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt gray -color_range jpeg -lossless 1 "$(TMP)/star-alpha.mp4"
 	# You need the latest version of gpac.
 	# Go to https://github.com/gpac/gpac
 	# then, `make deb -j32`
