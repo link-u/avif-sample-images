@@ -536,3 +536,10 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-
    - 8bit
    - limited-range
 
+[star-with-alpha.avifs](star-with-alpha.avifs)
+
+ - Converted under these conditions:
+   - YUV420
+   - 8bit
+   - limited-range
+   - with-alpha
