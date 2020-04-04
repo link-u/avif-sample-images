@@ -7,6 +7,3 @@ duration 0.1
 file 'star270.png'
 duration 0.1
 file 'star.png'
-duration 0.1
-file 'star.png'
-
