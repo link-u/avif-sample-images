@@ -13,9 +13,12 @@ echo "<h1>AVIF images</h1>"
 
 cat Makefile | grep '^.*\?\.avif:' | sort -d | while read line
 do
+
   list=(${line//:/ })
   avif=${list[0]}
   png=${list[1]}
+
+if (echo ${avif} | grep -v "kimono"); then
   cat <<EOF
   <h2>${avif}<h2>
     <h3>PNG version<h3>
@@ -23,9 +26,49 @@ do
     <h3>AVIF version<h3>
       <img src="./${avif}" width="400">
 EOF
+fi
+
 done
 
-echo "<h1>AVIF images</h1>"
+cat <<EOF
+<h2>kimono.avif</h2>
+  <h3>PNG version<h3>
+    <img src="./kimono.png" width="400">
+  <h3>AVIF version<h3>
+    <img src="./kimono.avif" width="400">
+<h2>kimono.rotate90.avif</h2>
+  <h3>PNG version<h3>
+    <img src="./kimono.png" width="400">
+  <h3>AVIF version<h3>
+    <img src="./kimono.rotate90.avif" width="400">
+<h2>kimono.rotate270.avif</h2>
+  <h3>PNG version<h3>
+    <img src="./kimono.png" width="400">
+  <h3>AVIF version<h3>
+    <img src="./kimono.rotate270.avif" width="400">
+<h2>kimono.mirror-horizontal.avif</h2>
+  <h3>PNG version<h3>
+    <img src="./kimono.png" width="400">
+  <h3>AVIF version<h3>
+    <img src="./kimono.mirror-horizontal.avif" width="400">
+<h2>kimono.mirror-vertical.rotate270.avif</h2>
+  <h3>PNG version<h3>
+    <img src="./kimono.png" width="400">
+  <h3>AVIF version<h3>
+    <img src="./kimono.mirror-vertical.rotate270.avif" width="400">
+<h2>kimono.crop.avif</h2>
+  <h3>PNG version<h3>
+    <img src="./kimono.png" width="400">
+  <h3>AVIF version<h3>
+    <img src="./kimono.crop.avif" width="400">
+<h2>kimono.mirror-vertical.rotate270.crop.avif</h2>
+  <h3>PNG version<h3>
+    <img src="./kimono.png" width="400">
+  <h3>AVIF version<h3>
+    <img src="./kimono.mirror-vertical.rotate270.crop.avif" width="400">
+EOF
+
+echo "<h1>AVIFS images</h1>"
 
 cat<<EOF
 <h2>star.avifs<h2>
