@@ -121,6 +121,8 @@ Thus, resulted image is as the same as the original.
 
 ### Cropping
 
+[kimono.crop.avif](kimono.crop.avif)
+
 Displaying image will be cropped from the original image, using `CleanApertureBox`(See: ISO/IEC 14496-12:2015).
 
 Cropped under these condition:
@@ -139,6 +141,8 @@ Resulted image should be:
 ![kimono.crop.png](kimono.crop.png)
 
 ### Cropping + Mirroring vertically + Rotating at 90 degrees.
+
+[kimono.mirror-vertical.rotate270.crop.avif](kimono.mirror-vertical.rotate270.crop.avif)
 
 [Encoded image is mirrored vertically, then rorated at 90 degree in clockwise](kimono.mirror-vertical.rotate270.png), and marked to crop it first, rotate it at 90 degree in counter-clockwise, and then mirror it vertically.
 
