@@ -18,19 +18,21 @@ do
   avif=${list[0]}
   png=${list[1]}
   
-  if [ "cat" = "${avif}" ]; then
+  if [[ "${avif}" == "cat" ]]; then
     continue
   fi
 
-  if grep -v -q "kimono" ${png}; then
-    cat <<EOF
+  if [[ ${png} == *kimono* ]]; then
+    continue
+  fi
+
+cat <<EOF
   <h2>${avif}<h2>
     <h3>PNG version<h3>
       <img src="./${png}" width="400">
     <h3>AVIF version<h3>
       <img src="./${avif}" width="400">
 EOF
-  fi
 
 done
 
