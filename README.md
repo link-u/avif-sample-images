@@ -159,6 +159,8 @@ Cropping condition is:
 
 Resulted image should be as the same as above.
 
+![kimono.crop.png](kimono.crop.png)
+
 ### URLS
 
 You can obtain this list with `make kimono-url`.
