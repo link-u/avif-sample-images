@@ -11,22 +11,26 @@ EOF
 
 echo "<h1>AVIF images</h1>"
 
-cat Makefile | grep '^.*\?\.avif:' | sort -d | while read line
+grep '^.*\?\.avif:' Makefile | while read line
 do
 
   list=(${line//:/ })
   avif=${list[0]}
   png=${list[1]}
+  
+  if [ "cat" = "${avif}" ]; then
+    continue
+  fi
 
-if (echo ${avif} | grep -v "kimono"); then
-  cat <<EOF
+  if grep -v -q "kimono" ${png}; then
+    cat <<EOF
   <h2>${avif}<h2>
     <h3>PNG version<h3>
       <img src="./${png}" width="400">
     <h3>AVIF version<h3>
       <img src="./${avif}" width="400">
 EOF
-fi
+  fi
 
 done
 
@@ -70,7 +74,7 @@ EOF
 
 echo "<h1>AVIFS images</h1>"
 
-cat<<EOF
+cat <<EOF
 <h2>star.avifs<h2>
   <h3>GIF version</h3>
     <img src="./star.gif" width="400">
