@@ -169,12 +169,24 @@ PLUM=$(PLUM_LARGE) $(PLUM_SMALL)
 
 plum: $(PLUM);
 
+STAR=\
+	star-8bpc.avifs \
+	star-8bpc-with-alpha.avifs \
+	star-10bpc.avifs \
+	star-10bpc-with-alpha.avifs \
+	star-12bpc.avifs \
+	star-12bpc-with-alpha.avifs
+
+star: $(STAR);
+
 ALL_AVIF=$(HATO) $(KIMONO) $(FOX) $(PLUM)
+ALL_AVIFS=$(STAR)
 DECODED_PNG=$(ALL_AVIF:%.avif=decoded/%.png)
 DUMMY_CHECK_TARGETS=$(ALL_AVIF:%.avif=%.check)
 
-.PHONY: all \
-	clean hato kimono fox plum \
+.PHONY: all clean \
+    hato kimono fox plum \
+	star \
 	decode decode-clean decode-images \
 	url hato-url kimono-url fox-url plum-url\
 	compare $(DUMMY_CHECK_TARGETS)
@@ -814,23 +826,23 @@ plum-blossom-small.profile2.12bpc.yuv444.alpha-full.monochrome.avif: plum-blosso
 	$(CAVIF) -i $< -o .alpha-masks/$@ --encode-target alpha --profile 2 --bit-depth 12 --pix-fmt yuv444 --cpu-used 0 --lossless --monochrome --enable-full-color-range
 	$(CAVIF) -i $< -o $@ --tune psnr --encode-target image --attach-alpha .alpha-masks/$@ --profile 2 --bit-depth 12 --pix-fmt yuv444 --cpu-used 0 --rate-control q --crf 18 --monochrome
 
-star.avifs: star.input.txt
+star-8bpc.avifs: star.input.txt
 	$(eval TMP := $(shell mktemp -d))
-	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p -color_range jpeg -lossless 1 $(TMP)/star.mp4
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p -color_range jpeg -b:v 0 -crf 0 -lossless 1 $(TMP)/star.mp4
 	# You need the latest version of gpac.
 	# Go to https://github.com/gpac/gpac
 	# then, `make deb -j32`
-	MP4Box -add-image $(TMP)/star.mp4:id=1:primary -new star.avifs
-	MP4Box -ab avis -ab msf1 -ab miaf -ab MA1B -rb mif1 -brand avis star.avifs
-	MP4Box -add $(TMP)/star.mp4:hdlr=pict:ccst:name="GPAC avifs" star.avifs
+	MP4Box -add-image $(TMP)/star.mp4:id=1:primary -new $@
+	MP4Box -ab avis -ab msf1 -ab miaf -ab MA1B -rb mif1 -brand avis $@
+	MP4Box -add $(TMP)/star.mp4:hdlr=pict:ccst:name="GPAC avifs" $@
 	rm -Rfv $(TMP)
 
 # FIXME(ledya-z): WORK IN PROGRESS
-star-with-alpha.avifs: star.input.txt
+star-8bpc-with-alpha.avifs: star.input.txt
 	$(eval TMP := $(shell mktemp -d))
-	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p -color_range mpeg -lossless 1 "$(TMP)/star-video.mp4"
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p -color_range mpeg -b:v 0 -crf 0 -lossless 1 "$(TMP)/star-video.mp4"
 	# FIXME(ledyba-z): It does not generate monochrome OBUs.
-	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt gray -color_range jpeg -lossless 1 "$(TMP)/star-alpha.mp4"
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt gray -color_range mpeg -b:v 0 -crf 0 -lossless 1 "$(TMP)/star-alpha.mp4"
 	# You need the latest version of gpac.
 	# Go to https://github.com/gpac/gpac
 	# then, `make deb -j32`
@@ -838,6 +850,62 @@ star-with-alpha.avifs: star.input.txt
 	MP4Box -raw-layer "1:output=$(TMP)/star-video" "$(TMP)/star-video.mp4"
 	MP4Box -raw-layer "1:output=$(TMP)/star-alpha" "$(TMP)/star-alpha.mp4"
 
-	MP4Box -add-image "$(TMP)/star-alpha.av1:id=3:ref=auxl,4:alpha:name=Alpha" -add-image "$(TMP)/star-video.av1:id=4:name=Color" -set-primary 4 -ab avif -new star-with-alpha.avifs
-	MP4Box -add "$(TMP)/star-video.av1:hdlr=pict:ccst:name=\"GPAC avifs\"" -add "$(TMP)/star-alpha.av1:hdlr=auxv:ccst:alpha:name=\"GPAC avifs alpha\"" -ref 2:auxl:1 -ab msf1 -ab miaf -ab MA1B -brand avis star-with-alpha.avifs
+	MP4Box -add-image "$(TMP)/star-alpha.av1:id=3:ref=auxl,4:alpha:name=Alpha" -add-image "$(TMP)/star-video.av1:id=4:name=Color" -set-primary 4 -ab avif -new $@
+	MP4Box -add "$(TMP)/star-video.av1:hdlr=pict:ccst:name=\"GPAC avifs\"" -add "$(TMP)/star-alpha.av1:hdlr=auxv:ccst:alpha:name=\"GPAC avifs alpha\"" -ref 2:auxl:1 -ab msf1 -ab miaf -ab MA1B -brand avis $@
+	rm -Rfv $(TMP)
+
+star-10bpc.avifs: star.input.txt
+	$(eval TMP := $(shell mktemp -d))
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p10 -color_range jpeg -b:v 0 -crf 0 -lossless 1 $(TMP)/star.mp4
+	# You need the latest version of gpac.
+	# Go to https://github.com/gpac/gpac
+	# then, `make deb -j32`
+	MP4Box -add-image $(TMP)/star.mp4:id=1:primary -new $@
+	MP4Box -ab avis -ab msf1 -ab miaf -ab MA1B -rb mif1 -brand avis $@
+	MP4Box -add $(TMP)/star.mp4:hdlr=pict:ccst:name="GPAC avifs" $@
+	rm -Rfv $(TMP)
+
+# FIXME(ledya-z): WORK IN PROGRESS
+star-10bpc-with-alpha.avifs: star.input.txt
+	$(eval TMP := $(shell mktemp -d))
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p10 -color_range mpeg -b:v 0 -crf 0 -lossless 1 "$(TMP)/star-video.mp4"
+	# FIXME(ledyba-z): It does not generate monochrome OBUs.
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt gray10 -color_range mpeg -b:v 0 -crf 0 -lossless 1 "$(TMP)/star-alpha.mp4"
+	# You need the latest version of gpac.
+	# Go to https://github.com/gpac/gpac
+	# then, `make deb -j32`
+
+	MP4Box -raw-layer "1:output=$(TMP)/star-video" "$(TMP)/star-video.mp4"
+	MP4Box -raw-layer "1:output=$(TMP)/star-alpha" "$(TMP)/star-alpha.mp4"
+
+	MP4Box -add-image "$(TMP)/star-alpha.av1:id=3:ref=auxl,4:alpha:name=Alpha" -add-image "$(TMP)/star-video.av1:id=4:name=Color" -set-primary 4 -ab avif -new $@
+	MP4Box -add "$(TMP)/star-video.av1:hdlr=pict:ccst:name=\"GPAC avifs\"" -add "$(TMP)/star-alpha.av1:hdlr=auxv:ccst:alpha:name=\"GPAC avifs alpha\"" -ref 2:auxl:1 -ab msf1 -ab miaf -ab MA1B -brand avis $@
+	rm -Rfv $(TMP)
+
+star-12bpc.avifs: star.input.txt
+	$(eval TMP := $(shell mktemp -d))
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p12 -color_range jpeg -b:v 0 -crf 0 -lossless 1 $(TMP)/star.mp4
+	# You need the latest version of gpac.
+	# Go to https://github.com/gpac/gpac
+	# then, `make deb -j32`
+	MP4Box -add-image $(TMP)/star.mp4:id=1:primary -new $@
+	MP4Box -ab avis -ab msf1 -ab miaf -ab MA1B -rb mif1 -brand avis $@
+	MP4Box -add $(TMP)/star.mp4:hdlr=pict:ccst:name="GPAC avifs" $@
+	rm -Rfv $(TMP)
+
+# FIXME(ledya-z): WORK IN PROGRESS
+star-12bpc-with-alpha.avifs: star.input.txt
+	$(eval TMP := $(shell mktemp -d))
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p12 -color_range mpeg -b:v 0 -crf 0 -lossless 1 "$(TMP)/star-video.mp4"
+	# FIXME(ledyba-z): It does not generate monochrome OBUs.
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt gray12 -color_range mpeg -b:v 0 -crf 0 -lossless 1 "$(TMP)/star-alpha.mp4"
+	# You need the latest version of gpac.
+	# Go to https://github.com/gpac/gpac
+	# then, `make deb -j32`
+
+	MP4Box -raw-layer "1:output=$(TMP)/star-video" "$(TMP)/star-video.mp4"
+	MP4Box -raw-layer "1:output=$(TMP)/star-alpha" "$(TMP)/star-alpha.mp4"
+
+	MP4Box -add-image "$(TMP)/star-alpha.av1:id=3:ref=auxl,4:alpha:name=Alpha" -add-image "$(TMP)/star-video.av1:id=4:name=Color" -set-primary 4 -ab avif -new $@
+	MP4Box -add "$(TMP)/star-video.av1:hdlr=pict:ccst:name=\"GPAC avifs\"" -add "$(TMP)/star-alpha.av1:hdlr=auxv:ccst:alpha:name=\"GPAC avifs alpha\"" -ref 2:auxl:1 -ab msf1 -ab miaf -ab MA1B -brand avis $@
 	rm -Rfv $(TMP)

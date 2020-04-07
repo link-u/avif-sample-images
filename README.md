@@ -535,14 +535,18 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-
 
 #### Normal
 
-[star.avifs](star.avifs)
+- [star-8bpc.avifs](star-8bpc.avifs)
+- [star-10bpc.avifs](star-10bpc.avifs)
+- [star-12bpc.avifs](star-12bpc.avifs)
 
  - Converted under these conditions:
    - YUV420
    - 8bit
    - full-ranged color
 
-[star-with-alpha.avifs](star-with-alpha.avifs)
+- [star-8bpc-with-alpha.avifs](star-8bpc-with-alpha.avifs)
+- [star-8bpc-with-alpha.avifs](star-10bpc-with-alpha.avifs)
+- [star-8bpc-with-alpha.avifs](star-12bpc-with-alpha.avifs)
 
  - Converted under these conditions:
    - YUV420
