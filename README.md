@@ -6,7 +6,7 @@
 - All files are tagged as MIAF compatible.
 - All files are tagged as compatible with the AVIF Baseline or Advanced Profile if possible.
 - All images have the "reduced_still_picture_header" and "still_picture" flags set to 1 in the AV1 Sequence Header.
-- All images are licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
+- Most images are licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en), but some files are licensed different license. Please check.
 
 [Makefile](Makefile) describes how they were created. To generate files yourself, you have to install [cavif](https://github.com/link-u/cavif) and [davif](https://github.com/link-u/davif)
 
@@ -15,8 +15,9 @@
 ![hato.jpg](hato.jpg)
 
  - size: 3082x2048
- - Author: Kaede Fujisaki ([@ledyba](https://github.com/ledyba))
- - Retrieved from [her website](https://hexe.net/2017/11/27/12:27:02/).
+ - License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
+   - Author: Kaede Fujisaki ([@ledyba](https://github.com/ledyba))
+   - Retrieved from [her website](https://hexe.net/2017/11/27/12:27:02/).
 
 ### AVIF version
 
@@ -62,8 +63,10 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2
 [<img src="https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.jpg" alt="kimono.jpg" height="512">](kimono.jpg)
 
  - size: 722x1024
- - Authors: Momiji Jinzamomi([@momiji-san](https://github.com/momiji-san)) and Kaede Fujisaki ([@ledyba](https://github.com/ledyba))
- - Retrieved from [their website](https://hexe.net/2018/12/24/18:59:01/).
+ - License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
+   - Authors: Momiji Jinzamomi([@momiji-san](https://github.com/momiji-san)) and Kaede Fujisaki ([@ledyba](https://github.com/ledyba))
+   - Retrieved from [their website](https://hexe.net/2018/12/24/18:59:01/).
+
 
 Test images for rotation(`irot`), mirroring(`imir`), cropping(`clap`).
 
@@ -183,8 +186,9 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate
 [<img src="https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.jpg" alt="fox.jpg" height="512">](fox.jpg)
 
  - size: 1204 x 800
- - Author: Kaede Fujisaki ([@ledyba](https://github.com/ledyba))
- - Retrieved from [her website](https://hexe.net/2017/12/02/16:33:53/).
+ - License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
+   - Author: Kaede Fujisaki ([@ledyba](https://github.com/ledyba))
+   - Retrieved from [her website](https://hexe.net/2017/12/02/16:33:53/).
 
 #### Odd-Width
 
@@ -346,7 +350,8 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.
 
 [![plum-blossom.svg](./plum-blossom.svg)](plum-blossom.svg)
 
- - Author: Ryo Hirafuji ([@ledyba-z](https://github.com/ledyba-z))
+ - License: [CC-BY](https://creativecommons.org/licenses/by/4.0/deed.en)
+   - Author: Ryo Hirafuji ([@ledyba-z](https://github.com/ledyba-z))
 
 #### Large Version (PNG)
 
@@ -527,8 +532,8 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-
 
 [![star.svg](./star.svg)](star.svg)
 
- - Author: Ryo Hirafuji ([@ledyba-z](https://github.com/ledyba-z))
  - License: [CC-BY](https://creativecommons.org/licenses/by/4.0/deed.en)
+   - Author: Ryo Hirafuji ([@ledyba-z](https://github.com/ledyba-z))
  - Special Thanks: [Shigatake's Pixel Art Lesson](http://shigatake.sakura.ne.jp/gallery/dot/dot_1.html)
 
 ### AVIFS version
