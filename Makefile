@@ -856,7 +856,7 @@ star-8bpc-with-alpha.avifs: star.input.txt
 
 star-10bpc.avifs: star.input.txt
 	$(eval TMP := $(shell mktemp -d))
-	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p10 -color_range jpeg -b:v 0 -crf 0 -lossless 1 $(TMP)/star.mp4
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv422p10 -color_range jpeg -b:v 0 -crf 0 -lossless 1 $(TMP)/star.mp4
 	# You need the latest version of gpac.
 	# Go to https://github.com/gpac/gpac
 	# then, `make deb -j32`
@@ -868,7 +868,7 @@ star-10bpc.avifs: star.input.txt
 # FIXME(ledya-z): WORK IN PROGRESS
 star-10bpc-with-alpha.avifs: star.input.txt
 	$(eval TMP := $(shell mktemp -d))
-	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p10 -color_range mpeg -b:v 0 -crf 0 -lossless 1 "$(TMP)/star-video.mp4"
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv422p10 -color_range mpeg -b:v 0 -crf 0 -lossless 1 "$(TMP)/star-video.mp4"
 	# FIXME(ledyba-z): It does not generate monochrome OBUs.
 	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt gray10 -color_range mpeg -b:v 0 -crf 0 -lossless 1 "$(TMP)/star-alpha.mp4"
 	# You need the latest version of gpac.
@@ -884,7 +884,7 @@ star-10bpc-with-alpha.avifs: star.input.txt
 
 star-12bpc.avifs: star.input.txt
 	$(eval TMP := $(shell mktemp -d))
-	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p12 -color_range jpeg -b:v 0 -crf 0 -lossless 1 $(TMP)/star.mp4
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv444p12 -color_range jpeg -b:v 0 -crf 0 -lossless 1 $(TMP)/star.mp4
 	# You need the latest version of gpac.
 	# Go to https://github.com/gpac/gpac
 	# then, `make deb -j32`
@@ -896,7 +896,7 @@ star-12bpc.avifs: star.input.txt
 # FIXME(ledya-z): WORK IN PROGRESS
 star-12bpc-with-alpha.avifs: star.input.txt
 	$(eval TMP := $(shell mktemp -d))
-	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv420p12 -color_range mpeg -b:v 0 -crf 0 -lossless 1 "$(TMP)/star-video.mp4"
+	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt yuv444p12 -color_range mpeg -b:v 0 -crf 0 -lossless 1 "$(TMP)/star-video.mp4"
 	# FIXME(ledyba-z): It does not generate monochrome OBUs.
 	~/umi/src/git.ffmpeg.org/ffmpeg/ffmpeg -r 10 -f concat -i star.input.txt -strict -2 -vcodec av1 -pix_fmt gray12 -color_range mpeg -b:v 0 -crf 0 -lossless 1 "$(TMP)/star-alpha.mp4"
 	# You need the latest version of gpac.
