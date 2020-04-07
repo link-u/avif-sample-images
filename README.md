@@ -522,6 +522,21 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-
 https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.monochrome.avif
 ```
 
+## Red at 12 o'clock with color profile - ICC Profile tests
+
+![red-at-12-oclock-with-color-profile.jpg](red-at-12-oclock-with-color-profile)
+
+ - License: GNU LGPL v2.1 or 2 claused BSD License
+   - Author: Tony Payne <tpayne@chromium.org>
+   - [commit](https://chromium.googlesource.com/chromium/src/+/e89ab1941644ff34b262cac05f23e82b7e249377)
+
+### AVIF version
+
+ - [red-at-12-oclock-with-color-profile-lossy.avif](red-at-12-oclock-with-color-profile-lossy.avif)
+ - [red-at-12-oclock-with-color-profile-8bpc.avif](red-at-12-oclock-with-color-profile-8bpc.avif)
+ - [red-at-12-oclock-with-color-profile-10bpc.avif](red-at-12-oclock-with-color-profile-10bpc.avif)
+ - [red-at-12-oclock-with-color-profile-12bpc.avif](red-at-12-oclock-with-color-profile-12bpc.avif)
+
 ## Twinkle Star - Image Sequence Test
 
 [![star.gif](star.gif)](star.gif)
