@@ -71,10 +71,12 @@ jobs:
       - uses: actions/checkout@v2
       - name: Download cavif
         shell: pwsh
+        env:
+          APPVEYOR_TOKEN: ${{ secrets.CAVIF_APPVEYOR_TOKEN }}
         run: |
           # https://www.appveyor.com/docs/api/samples/download-artifacts-ps/
           $apiUrl = 'https://ci.appveyor.com/api'
-          $token = '${{ secrets.CAVIF_APPVEYOR_TOKEN }}'
+          $token = "$APPVEYOR_TOKEN"
           $headers = @{
             "Authorization" = "Bearer $token"
             "Content-type" = "application/json"
@@ -82,23 +84,23 @@ jobs:
           $accountName = 'ledyba-z'
           $projectSlug = 'cavif'
           
-          $downloadLocation = '.'
+          $downloadLocation = (Resolve-Path .\).Path
           
           # get project with last build details
           $project = Invoke-RestMethod -Method Get -Uri "$apiUrl/projects/$accountName/$projectSlug" -Headers $headers
 
-          Write-Host "Project:" $project
+          echo "Project:" $project
           
           # we assume here that build has a single job
           # get this job id
           $jobId = $project.build.jobs[0].jobId
 
-          Write-Host "Jobid: " $jobid
+          echo "Jobid: " $jobid
 
           # get job artifacts (just to see what we've got)
           $artifacts = Invoke-RestMethod -Method Get -Uri "$apiUrl/buildjobs/$jobId/artifacts" -Headers $headers
 
-          Write-Host "Artifacts: " $artifacts
+          echo "Artifacts: " $artifacts
 
           # here we just take the first artifact, but you could specify its file name
           $artifactFileName = $artifacts[0].fileName
@@ -106,13 +108,13 @@ jobs:
           # artifact will be downloaded as
           $localArtifactPath = "$downloadLocation\$artifactFileName"
 
-          Write-Host "Download To: " $localArtifactPath
+          echo "Download To: " $localArtifactPath
 
           # download artifact
           # -OutFile - is local file name where artifact will be downloaded into
           # the Headers in this call should only contain the bearer token, and no Content-type, otherwise it will fail!
           $downloadURL = "$apiUrl/buildjobs/$jobId/artifacts/$artifactFileName"
-          Write-Host "Download from:" $downloadURL
+          echo "Download from:" $downloadURL
 
           Invoke-RestMethod -Method Get -Uri $downloadURL -OutFile "$localArtifactPath" -Headers @{ "Authorization" = "Bearer $token" }
 
