@@ -6,7 +6,7 @@ on:
     - cron:  '0 20 * * *' # https://crontab.guru/#0_2_*_*_*
 
 jobs:
-  check:
+  check-in-ubuntu:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -65,3 +65,46 @@ jobs:
         path: ${{ matrix.codename }}
     - name: Compare the result
       run: make compare -j $(nproc)
+  check-in-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download cavif
+        shell: pwsh
+        run: |
+          # https://www.appveyor.com/docs/api/samples/download-artifacts-ps/
+          $apiUrl = 'https://ci.appveyor.com/api'
+          $token = '${{ secrets.CAVIF_APPVEYOR_TOKEN }}'
+          $headers = @{
+            "Authorization" = "Bearer $token"
+            "Content-type" = "application/json"
+          }
+          $accountName = 'ledyba-z'
+          $projectSlug = 'cavif'
+          
+          $downloadLocation = 'C:\projects'
+          
+          # get project with last build details
+          $project = Invoke-RestMethod -Method Get -Uri "$apiUrl/projects/$accountName/$projectSlug" -Headers $headers
+          
+          # we assume here that build has a single job
+          # get this job id
+          $jobId = $project.build.jobs[0].jobId
+          
+          # get job artifacts (just to see what we've got)
+          $artifacts = Invoke-RestMethod -Method Get -Uri "$apiUrl/buildjobs/$jobId/artifacts" -Headers $headers
+          
+          # here we just take the first artifact, but you could specify its file name
+          # $artifactFileName = 'MyWebApp.zip'
+          $artifactFileName = $artifacts[0].fileName
+          
+          # artifact will be downloaded as
+          $localArtifactPath = "$downloadLocation\$artifactFileName"
+          
+          # download artifact
+          # -OutFile - is local file name where artifact will be downloaded into
+          # the Headers in this call should only contain the bearer token, and no Content-type, otherwise it will fail!
+          Invoke-RestMethod -Method Get -Uri "$apiUrl/buildjobs/$jobId/artifacts/$artifactFileName" `
+          -OutFile $localArtifactPath -Headers @{ "Authorization" = "Bearer $token" }
+
+          7za x $localArtifactPath
