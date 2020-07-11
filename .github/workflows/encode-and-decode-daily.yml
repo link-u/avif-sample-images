@@ -87,11 +87,11 @@ jobs:
             # get project with last build details
             Write-Host "Fetching: $apiUrl/projects/$AccountName/$ProjectSlug"
             $project = Invoke-RestMethod -Method Get -Uri "$apiUrl/projects/$AccountName/$ProjectSlug" -Headers $headers
-            $project | Format-Table | Out-String | Write-Host "Projects: $_"
+            Write-Output $project | Format-Table | Out-String | Write-Host "Projects: $_"
             
             # we assume here that build has a single job
             # get this job id
-            $project.build | Where { $_.status -eq "success" } | Format-Table | Out-String | Write-Host "Success Builds: $_"
+            Write-Output $project.build | Where { $_.status -eq "success" } | Format-Table | Out-String | Write-Host "Success Builds: $_"
             $jobId = ($project.build | Where { $_.status -eq "success" }).jobs[0].jobId
   
             Write-Host "Jobid: $jobid"
