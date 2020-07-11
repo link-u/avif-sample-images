@@ -86,25 +86,34 @@ jobs:
           
           # get project with last build details
           $project = Invoke-RestMethod -Method Get -Uri "$apiUrl/projects/$accountName/$projectSlug" -Headers $headers
+
+          Write-Host "Project:" $project
           
           # we assume here that build has a single job
           # get this job id
           $jobId = $project.build.jobs[0].jobId
-          
+
+          Write-Host "Jobid: " $jobid
+
           # get job artifacts (just to see what we've got)
           $artifacts = Invoke-RestMethod -Method Get -Uri "$apiUrl/buildjobs/$jobId/artifacts" -Headers $headers
-          
+
+          Write-Host "Artifacts: " $artifacts
+
           # here we just take the first artifact, but you could specify its file name
-          # $artifactFileName = 'MyWebApp.zip'
           $artifactFileName = $artifacts[0].fileName
           
           # artifact will be downloaded as
           $localArtifactPath = "$downloadLocation\$artifactFileName"
-          
+
+          Write-Host "Download To: " $localArtifactPath
+
           # download artifact
           # -OutFile - is local file name where artifact will be downloaded into
           # the Headers in this call should only contain the bearer token, and no Content-type, otherwise it will fail!
-          Invoke-RestMethod -Method Get -Uri "$apiUrl/buildjobs/$jobId/artifacts/$artifactFileName" `
-          -OutFile $localArtifactPath -Headers @{ "Authorization" = "Bearer $token" }
+          $downloadURL = "$apiUrl/buildjobs/$jobId/artifacts/$artifactFileName"
+          Write-Host "Download from:" $downloadURL
+
+          Invoke-RestMethod -Method Get -Uri $downloadURL -OutFile "$localArtifactPath" -Headers @{ "Authorization" = "Bearer $token" }
 
           7za x $localArtifactPath
