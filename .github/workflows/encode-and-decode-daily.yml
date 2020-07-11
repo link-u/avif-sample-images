@@ -166,4 +166,5 @@ jobs:
       - name: Compare the result
         shell: msys2 {0}
         run: |
+          export PATH="/mingw64/bin:${PATH}"
           make compare -j $(nproc)
