@@ -49,9 +49,9 @@ jobs:
     - name: Clean all images.
       run: make clean
     - name: Encode them all.
-      run: make all -j
+      run: make all-j 1
     - name: Decode them all.
-      run: make decode -j
+      run: make decode-j
     - name: Copy images to upload.
       run: |
         mkdir -p ${{ matrix.codename }}/decoded
@@ -64,7 +64,7 @@ jobs:
         name: ${{ matrix.codename }}
         path: ${{ matrix.codename }}
     - name: Compare the result
-      run: make compare -j
+      run: make compare-j
   check-on-windows:
     runs-on: windows-latest
     steps:
@@ -145,10 +145,10 @@ jobs:
         run: make clean
       - name: Encode them all
         shell: msys2 {0}
-        run: make all -j
+        run: make all-j 1
       - name: Decode them all
         shell: msys2 {0}
-        run: make decode -j
+        run: make decode-j
       - name: Copy images to upload.
         shell: msys2 {0}
         run: |
@@ -165,4 +165,4 @@ jobs:
         shell: msys2 {0}
         run: |
           pacman -S imagemagick
-          make compare -j
+          make compare-j
