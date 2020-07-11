@@ -87,12 +87,11 @@ jobs:
             # get project with last build details
             Write-Host "Fetching: $apiUrl/projects/$AccountName/$ProjectSlug"
             $project = Invoke-RestMethod -Method Get -Uri "$apiUrl/projects/$AccountName/$ProjectSlug" -Headers $headers
-            Write-Host ("Projects: ", $project | Format-Table | Out-String)
+            Write-Host ($project | Format-Table | Out-String)
             
             # we assume here that build has a single job
             # get this job id
-            Write-Output $project.build | Where { $_.status -eq "success" } | Format-Table | Out-String | Write-Host "Success Builds: $_"
-            Write-Host ("Jobs: ", $project.build | Where { $_.status -eq "success" } | Format-Table | Out-String)
+            Write-Host ($project.build | Where { $_.status -eq "success" } | Format-Table | Out-String)
             $jobId = ($project.build | Where { $_.status -eq "success" }).jobs[0].jobId
 
             Write-Host "Jobid: $jobid"
@@ -114,7 +113,7 @@ jobs:
             # -OutFile - is local file name where artifact will be downloaded into
             # the Headers in this call should only contain the bearer token, and no Content-type, otherwise it will fail!
             $downloadURL = "$apiUrl/buildjobs/$jobId/artifacts/$artifactFileName"
-            Write-Host "Download from:" $downloadURL
+            Write-Host "Download from: $downloadURL"
   
             Invoke-RestMethod -Method Get -Uri $downloadURL -OutFile "$localArtifactPath" -Headers @{ "Authorization" = "Bearer $token" }
   
