@@ -133,7 +133,6 @@ jobs:
       - name: Install make
         shell: pwsh
         run: |
-          msys2do pacman --noconfirm -Syu
           msys2do pacman --noconfirm -S make
       - name: Encode them all
         shell: pwsh
