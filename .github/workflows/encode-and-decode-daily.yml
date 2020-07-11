@@ -134,7 +134,9 @@ jobs:
       - name: Install dependencies
         shell: msys2 {0}
         run: |
-          pacman --noconfirm -S make imagemagick bc
+          pacman --noconfirm -S make
+          pacman --noconfirm -S imagemagick
+          pacman --noconfirm -S bc
       - name: Use installed cavif and davif
         shell: msys2 {0}
         run: |
