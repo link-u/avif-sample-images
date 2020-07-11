@@ -136,8 +136,8 @@ jobs:
           msys2do pacman --noconfirm -S make
       - name: Use installed cavif and davif
         run: |
-          msys2do sed -i -e 's/^CAVIF=.*$/CAVIF=.\/cavif.exe/' Makefile
-          msys2do sed -i -e 's/^DAVIF=.*$/DAVIF=.\/davif.exe/' Makefile
+          msys2do sed -i -e "s/^CAVIF=.*$/CAVIF=.\/cavif.exe/" Makefile
+          msys2do sed -i -e "s/^DAVIF=.*$/DAVIF=.\/davif.exe/" Makefile
       - name: Encode them all
         shell: pwsh
         run: |
