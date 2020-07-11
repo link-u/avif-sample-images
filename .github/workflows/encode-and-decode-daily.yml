@@ -99,7 +99,7 @@ jobs:
             # get job artifacts (just to see what we've got)
             $artifacts = Invoke-RestMethod -Method Get -Uri "$apiUrl/buildjobs/$jobId/artifacts" -Headers $headers
   
-            Write-Host "Artifacts: $artifacts"
+            Write-Host ($artifacts | Format-Table | Out-String)
   
             # here we just take the first artifact, but you could specify its file name
             $artifactFileName = $artifacts[0].fileName
@@ -130,10 +130,17 @@ jobs:
         uses: numworks/setup-msys2@v1
         with:
           msystem: MSYS
+      - name: Install make
+        shell: pwsh
+        run: |
+          msys2do pacman --noconfirm -Syu
+          msys2do pacman --noconfirm -S make
       - name: Encode them all
+        shell: pwsh
         run: |
           msys2do make all -j
       - name: Decode them all
+        shell: pwsh
         run: |
           msys2do make decode -j
   
