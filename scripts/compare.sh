@@ -12,7 +12,7 @@ elif (echo ${avif} | grep "\(rotate\|mirror\|crop\)"); then
   # FIMXE(ledyba-z): compare transformed images
   score="100.0"
 else
-  score=$(compare -metric PSNR ${orig} ${decoded} NULL: 2>&1 || true)
+  score=$(magick compare -metric PSNR ${orig} ${decoded} NULL: 2>&1 || true)
 fi
 if test $(echo "${score} >= 35.0" | bc -l) -eq 1; then
   echo "Passing: ${decoded}: ${score}"
