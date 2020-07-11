@@ -131,10 +131,10 @@ jobs:
         with:
           msystem: MSYS
           update: true
-      - name: Install make
+      - name: Install dependencies
         shell: msys2 {0}
         run: |
-          pacman --noconfirm -S make
+          pacman --noconfirm -S make imagemagick bc
       - name: Use installed cavif and davif
         shell: msys2 {0}
         run: |
@@ -164,5 +164,4 @@ jobs:
       - name: Compare the result
         shell: msys2 {0}
         run: |
-          pacman -S imagemagick
           make compare -j $(nproc)
