@@ -82,25 +82,23 @@ jobs:
               "Authorization" = "Bearer $token"
               "Content-type" = "application/json"
             }
-            $accountName = 'ledyba-z'
-            
             $downloadLocation = (Resolve-Path .\).Path
             
             # get project with last build details
             $project = Invoke-RestMethod -Method Get -Uri "$apiUrl/projects/$accountName/$projectSlug" -Headers $headers
   
-            echo "Project: $project"
+            Write-Host "Project: $project"
             
             # we assume here that build has a single job
             # get this job id
             $jobId = ($project.build | Where { $_.status -eq "success" }).jobs[0].jobId
   
-            echo "Jobid: $jobid"
+            Write-Host "Jobid: $jobid"
   
             # get job artifacts (just to see what we've got)
             $artifacts = Invoke-RestMethod -Method Get -Uri "$apiUrl/buildjobs/$jobId/artifacts" -Headers $headers
   
-            echo "Artifacts: $artifacts"
+            Write-Host "Artifacts: $artifacts"
   
             # here we just take the first artifact, but you could specify its file name
             $artifactFileName = $artifacts[0].fileName
@@ -108,17 +106,21 @@ jobs:
             # artifact will be downloaded as
             $localArtifactPath = "$downloadLocation\$artifactFileName"
   
-            echo "Download To: $localArtifactPath"
+            Write-Host "Download To: $localArtifactPath"
   
             # download artifact
             # -OutFile - is local file name where artifact will be downloaded into
             # the Headers in this call should only contain the bearer token, and no Content-type, otherwise it will fail!
             $downloadURL = "$apiUrl/buildjobs/$jobId/artifacts/$artifactFileName"
-            echo "Download from:" $downloadURL
+            Write-Host "Download from:" $downloadURL
   
             Invoke-RestMethod -Method Get -Uri $downloadURL -OutFile "$localArtifactPath" -Headers @{ "Authorization" = "Bearer $token" }
   
             7za x $localArtifactPath
           }
+          Write-Host "::group::download davif"
           download('ledyba-z', 'davif')
+          Write-Host "::endgroup::"
+          Write-Host "::group::download cavif"
           download('ledyba-z', 'cavif')
+          Write-Host "::endgroup::"
