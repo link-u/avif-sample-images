@@ -148,4 +148,20 @@ jobs:
         shell: msys2 {0}
         run: |
           make decode -j
-  
+      - name: Copy images to upload.
+        shell: msys2 {0}
+        run: |
+          mkdir -p win64/decoded
+          mkdir -p win64/encoded
+          cp decoded/* win64/decoded
+          cp *.avif win64/encoded
+      - name: Upload result
+        uses: actions/upload-artifact@v1
+        with:
+          name: win64
+          path: win64
+      - name: Compare the result
+        shell: msys2 {0}
+        run: |
+          pacman -S imagemagick
+          make compare -j
