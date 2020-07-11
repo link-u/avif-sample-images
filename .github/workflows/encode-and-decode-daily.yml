@@ -49,9 +49,9 @@ jobs:
     - name: Clean all images.
       run: make clean
     - name: Encode them all.
-      run: make all -j $(nproc)
+      run: make all -j
     - name: Decode them all.
-      run: make decode -j $(nproc)
+      run: make decode -j
     - name: Copy images to upload.
       run: |
         mkdir -p ${{ matrix.codename }}/decoded
@@ -64,14 +64,11 @@ jobs:
         name: ${{ matrix.codename }}
         path: ${{ matrix.codename }}
     - name: Compare the result
-      run: make compare -j $(nproc)
+      run: make compare -j
   check-in-windows:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install 7Zip PowerShell Module
-        shell: powershell
-        run: Install-Module 7Zip4PowerShell -Force -Verbose
       - name: Download davif/cavif
         shell: pwsh
         env:
@@ -120,8 +117,7 @@ jobs:
   
             Invoke-RestMethod -Method Get -Uri $downloadURL -OutFile "$localArtifactPath" -Headers @{ "Authorization" = "Bearer $token" }
   
-            Expand-7Zip -ArchiveFileName "$localArtifactPath" -TargetPath "$downloadLocation"
-
+            7z.exe x "$localArtifactPath"
             Remove-Item "$localArtifactPath"
           }
           Write-Host "::group::download davif"
@@ -130,3 +126,14 @@ jobs:
           Write-Host "::group::download cavif"
           download -AccountName ledyba-z -ProjectSlug cavif
           Write-Host "::endgroup::"
+      - name: Install msys2
+        uses: numworks/setup-msys2@v1
+        with:
+          msystem: MSYS
+      - name: Encode them all
+        run: |
+          msys2do make all -j
+      - name: Decode them all
+        run: |
+          msys2do make decode -j
+  
