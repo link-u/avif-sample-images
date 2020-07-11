@@ -69,7 +69,10 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Download cavif
+      - name: Install 7Zip PowerShell Module
+        shell: powershell
+        run: Install-Module 7Zip4PowerShell -Force -Verbose
+      - name: Download davif/cavif
         shell: pwsh
         env:
           APPVEYOR_TOKEN: ${{ secrets.CAVIF_APPVEYOR_TOKEN }}
@@ -88,10 +91,11 @@ jobs:
             Write-Host "Fetching: $apiUrl/projects/$AccountName/$ProjectSlug"
             $project = Invoke-RestMethod -Method Get -Uri "$apiUrl/projects/$AccountName/$ProjectSlug" -Headers $headers
   
-            Write-Host "Project: $project"
+            Write-Host "Project: ($project | Format-Table | Out-String)"
             
             # we assume here that build has a single job
             # get this job id
+            Write-Host "Success Builds: ($project.build | Where { $_.status -eq "success" } | Format-Table | Out-String)"
             $jobId = ($project.build | Where { $_.status -eq "success" }).jobs[0].jobId
   
             Write-Host "Jobid: $jobid"
@@ -117,7 +121,9 @@ jobs:
   
             Invoke-RestMethod -Method Get -Uri $downloadURL -OutFile "$localArtifactPath" -Headers @{ "Authorization" = "Bearer $token" }
   
-            7za x $localArtifactPath
+            Expand-7Zip -ArchiveFileName "$localArtifactPath" -TargetPath "$downloadLocation"
+
+            Remove-Item "$localArtifactPath"
           }
           Write-Host "::group::download davif"
           download -AccountName ledyba-z -ProjectSlug davif
