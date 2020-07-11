@@ -140,14 +140,15 @@ jobs:
         run: |
           sed -i -e 's/^CAVIF=.*$/CAVIF=.\/cavif.exe/' Makefile
           sed -i -e 's/^DAVIF=.*$/DAVIF=.\/davif.exe/' Makefile
+      - name: Clean all images.
+        shell: msys2 {0}
+        run: make clean
       - name: Encode them all
         shell: msys2 {0}
-        run: |
-          make all -j
+        run: make all -j
       - name: Decode them all
         shell: msys2 {0}
-        run: |
-          make decode -j
+        run: make decode -j
       - name: Copy images to upload.
         shell: msys2 {0}
         run: |
