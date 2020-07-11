@@ -85,7 +85,7 @@ jobs:
             $downloadLocation = (Resolve-Path .\).Path
             
             # get project with last build details
-            WriteHost "Fetching: $apiUrl/projects/$AccountName/$ProjectSlug"
+            Write-Host "Fetching: $apiUrl/projects/$AccountName/$ProjectSlug"
             $project = Invoke-RestMethod -Method Get -Uri "$apiUrl/projects/$AccountName/$ProjectSlug" -Headers $headers
   
             Write-Host "Project: $project"
