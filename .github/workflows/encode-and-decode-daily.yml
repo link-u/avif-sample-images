@@ -6,7 +6,7 @@ on:
     - cron:  '0 20 * * *' # https://crontab.guru/#0_2_*_*_*
 
 jobs:
-  check-in-ubuntu:
+  check-on-ubuntu:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -65,7 +65,7 @@ jobs:
         path: ${{ matrix.codename }}
     - name: Compare the result
       run: make compare -j
-  check-in-windows:
+  check-on-windows:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
@@ -127,7 +127,7 @@ jobs:
           download -AccountName ledyba-z -ProjectSlug cavif
           Write-Host "::endgroup::"
       - name: Install msys2
-        uses: numworks/setup-msys2@v1
+        uses: msys2/setup-msys2@v1
         with:
           msystem: MSYS
           update: true
