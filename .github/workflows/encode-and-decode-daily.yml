@@ -129,7 +129,7 @@ jobs:
       - name: Install msys2
         uses: msys2/setup-msys2@v1
         with:
-          msystem: MSYS
+          msystem: MINGW64
           update: true
       - name: Install dependencies
         shell: msys2 {0}
