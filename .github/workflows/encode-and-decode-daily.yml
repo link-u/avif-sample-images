@@ -93,14 +93,14 @@ jobs:
           
           # we assume here that build has a single job
           # get this job id
-          $jobId = $project.build.jobs[0].jobId
+          $jobId = ($project.build | Where { $_.status -eq "success" }).jobs[0].jobId
 
-          echo "Jobid: " $jobid
+          echo "Jobid: $jobid"
 
           # get job artifacts (just to see what we've got)
           $artifacts = Invoke-RestMethod -Method Get -Uri "$apiUrl/buildjobs/$jobId/artifacts" -Headers $headers
 
-          echo "Artifacts: " $artifacts
+          echo "Artifacts: $artifacts"
 
           # here we just take the first artifact, but you could specify its file name
           $artifactFileName = $artifacts[0].fileName
@@ -108,7 +108,7 @@ jobs:
           # artifact will be downloaded as
           $localArtifactPath = "$downloadLocation\$artifactFileName"
 
-          echo "Download To: " $localArtifactPath
+          echo "Download To: $localArtifactPath"
 
           # download artifact
           # -OutFile - is local file name where artifact will be downloaded into
