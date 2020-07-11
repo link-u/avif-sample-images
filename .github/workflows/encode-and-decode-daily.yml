@@ -82,7 +82,7 @@ jobs:
           $accountName = 'ledyba-z'
           $projectSlug = 'cavif'
           
-          $downloadLocation = 'C:\projects'
+          $downloadLocation = '.'
           
           # get project with last build details
           $project = Invoke-RestMethod -Method Get -Uri "$apiUrl/projects/$accountName/$projectSlug" -Headers $headers
