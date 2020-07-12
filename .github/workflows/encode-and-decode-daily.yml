@@ -145,7 +145,7 @@ jobs:
       - name: Use installed cavif and davif
         shell: msys2 {0}
         run: |
-          sed -i -e 's/^CAVIF=.*$/CAVIF=.\/cavif.exe/' Makefile
+          sed -i -e 's/^CAVIF=.*$/CAVIF=.\/cavif.exe --enable-full-color-range/' Makefile
           sed -i -e 's/^DAVIF=.*$/DAVIF=.\/davif.exe/' Makefile
       - name: Clean all images.
         shell: msys2 {0}
