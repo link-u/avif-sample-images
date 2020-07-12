@@ -135,12 +135,13 @@ jobs:
       - name: Install dependencies
         shell: msys2 {0}
         run: |
+          set -eux
           pacman --noconfirm -S make
-          pacman --noconfirm -S imagemagick
           pacman --noconfirm -S bc
+          pacman --noconfirm -S mingw-w64-x86_64-imagemagick
           make --version
-          magick -version
           echo '2+2' | bc
+          magick -version
       - name: Use installed cavif and davif
         shell: msys2 {0}
         run: |
