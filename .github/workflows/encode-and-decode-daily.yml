@@ -13,11 +13,11 @@ jobs:
         os: [ubuntu-18.04, ubuntu-20.04]
         include:
           - os: ubuntu-18.04
-            codename: "bionic"
-            cavif-flag: ""
+            codename: 'bionic'
+            cavif-flag: ''
           - os: ubuntu-20.04
-            codename: "focal"
-            cavif-flag: ""
+            codename: 'focal'
+            cavif-flag: ''
     steps:
     - uses: actions/checkout@v2
     - name: Install required tools
@@ -32,7 +32,7 @@ jobs:
       env:
         #id of https://github.com/link-u/cavif/actions?query=workflow%3A%22Build+debian+package+on+push+or+release-tags.%22
         # curl https://api.github.com/repos/link-u/cavif/actions/workflows
-        WORKFLOW_ID: "452267"
+        WORKFLOW_ID: '452267'
     - name: Download latest davif
       shell: bash
       run: |
@@ -43,7 +43,7 @@ jobs:
       env:
         #id of https://github.com/link-u/davif/actions?query=workflow%3A%22Build+debian+package+on+push+or+release-tags.%22
         # curl https://api.github.com/repos/link-u/davif/actions/workflows
-        WORKFLOW_ID: "452394"
+        WORKFLOW_ID: '452394'
     - name: Install davif and cavif
       run: sudo dpkg -i *.deb
     - name: Use installed cavif and davif
@@ -95,24 +95,24 @@ jobs:
         shell: bash
         run: |
           runId=$(curl https://api.github.com/repos/link-u/cavif/actions/workflows/${WORKFLOW_ID}/runs | jq '[.workflow_runs[] | select( .conclusion == "success")][0].id')
-          artifactId=$(curl https://api.github.com/repos/link-u/cavif/actions/runs/${runId}/artifacts | jq '[.artifacts[] | select( .name == "cavif-win64.zip")][0].id')
+          artifactId=$(curl https://api.github.com/repos/link-u/cavif/actions/runs/${runId}/artifacts | jq '[.artifacts[] | select( .name == "cavif-win64")][0].id')
           curl --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -o cavif.zip -L https://api.github.com/repos/link-u/cavif/actions/artifacts/${artifactId}/zip
           unzip cavif.zip
           rm cavif.zip
           ./cavif.exe -h
         env:
-          WORKFLOW_ID: "4517759"
+          WORKFLOW_ID: '4517759'
       - name: Download latest davif
         shell: bash
         run: |
           runId=$(curl https://api.github.com/repos/link-u/davif/actions/workflows/${WORKFLOW_ID}/runs | jq '[.workflow_runs[] | select( .conclusion == "success")][0].id')
-          artifactId=$(curl https://api.github.com/repos/link-u/davif/actions/runs/${runId}/artifacts | jq '[.artifacts[] | select( .name == "davif-win64.zip")][0].id')
+          artifactId=$(curl https://api.github.com/repos/link-u/davif/actions/runs/${runId}/artifacts | jq '[.artifacts[] | select( .name == "davif-win64")][0].id')
           curl --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -o davif.zip -L https://api.github.com/repos/link-u/davif/actions/artifacts/${artifactId}/zip
           unzip davif.zip
           rm davif.zip
           ./davif.exe -h
         env:
-          WORKFLOW_ID: "4521970"
+          WORKFLOW_ID: '4521970'
       - name: Rewrite Makefile to installed cavif and davif
         shell: msys2 {0}
         run: |
