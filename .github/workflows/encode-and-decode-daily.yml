@@ -79,6 +79,8 @@ jobs:
           msystem: MINGW64
           update: true
           path-type: inherit
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       - name: Install dependencies
         shell: msys2 {0}
         run: |
