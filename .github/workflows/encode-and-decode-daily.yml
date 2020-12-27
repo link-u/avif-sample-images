@@ -30,7 +30,9 @@ jobs:
         curl --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -o cavif.zip -L https://api.github.com/repos/link-u/cavif/actions/artifacts/${artifactId}/zip
         unzip cavif.zip
       env:
-        WORKFLOW_ID: "452267" #id of https://github.com/link-u/cavif/actions?query=workflow%3A%22Build+debian+package+on+push+or+release-tags.%22
+        #id of https://github.com/link-u/cavif/actions?query=workflow%3A%22Build+debian+package+on+push+or+release-tags.%22
+        # curl https://api.github.com/repos/link-u/cavif/actions/workflows
+        WORKFLOW_ID: "452267"
     - name: Download latest davif
       shell: bash
       run: |
@@ -39,7 +41,9 @@ jobs:
         curl --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -o davif.zip -L https://api.github.com/repos/link-u/davif/actions/artifacts/${artifactId}/zip
         unzip davif.zip
       env:
-        WORKFLOW_ID: "452394" #id of https://github.com/link-u/davif/actions?query=workflow%3A%22Build+debian+package+on+push+or+release-tags.%22
+        #id of https://github.com/link-u/davif/actions?query=workflow%3A%22Build+debian+package+on+push+or+release-tags.%22
+        # curl https://api.github.com/repos/link-u/davif/actions/workflows
+        WORKFLOW_ID: "452394"
     - name: Install davif and cavif
       run: sudo dpkg -i *.deb
     - name: Use installed cavif and davif
@@ -69,63 +73,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Download davif/cavif
-        shell: pwsh
-        env:
-          APPVEYOR_TOKEN: ${{ secrets.CAVIF_APPVEYOR_TOKEN }}
-        run: |
-          function download($AccountName, $ProjectSlug) {
-            # https://www.appveyor.com/docs/api/samples/download-artifacts-ps/
-            $apiUrl = 'https://ci.appveyor.com/api'
-            $token = "$APPVEYOR_TOKEN"
-            $headers = @{
-              "Authorization" = "Bearer $token"
-              "Content-type" = "application/json"
-            }
-            $downloadLocation = (Resolve-Path .\).Path
-            
-            # get project with last build details
-            Write-Host "Fetching: $apiUrl/projects/$AccountName/$ProjectSlug"
-            $project = Invoke-RestMethod -Method Get -Uri "$apiUrl/projects/$AccountName/$ProjectSlug" -Headers $headers
-            Write-Host ($project | Format-Table | Out-String)
-            
-            # we assume here that build has a single job
-            # get this job id
-            Write-Host ($project.build | Where { $_.status -eq "success" } | Format-Table | Out-String)
-            $jobId = ($project.build | Where { $_.status -eq "success" }).jobs[0].jobId
-
-            Write-Host "Jobid: $jobid"
-  
-            # get job artifacts (just to see what we've got)
-            $artifacts = Invoke-RestMethod -Method Get -Uri "$apiUrl/buildjobs/$jobId/artifacts" -Headers $headers
-  
-            Write-Host ($artifacts | Format-Table | Out-String)
-  
-            # here we just take the first artifact, but you could specify its file name
-            $artifactFileName = $artifacts[0].fileName
-            
-            # artifact will be downloaded as
-            $localArtifactPath = "$downloadLocation\$artifactFileName"
-  
-            Write-Host "Download To: $localArtifactPath"
-  
-            # download artifact
-            # -OutFile - is local file name where artifact will be downloaded into
-            # the Headers in this call should only contain the bearer token, and no Content-type, otherwise it will fail!
-            $downloadURL = "$apiUrl/buildjobs/$jobId/artifacts/$artifactFileName"
-            Write-Host "Download from: $downloadURL"
-  
-            Invoke-RestMethod -Method Get -Uri $downloadURL -OutFile "$localArtifactPath" -Headers @{ "Authorization" = "Bearer $token" }
-  
-            7z.exe x "$localArtifactPath"
-            Remove-Item "$localArtifactPath"
-          }
-          Write-Host "::group::download davif"
-          download -AccountName ledyba-z -ProjectSlug davif
-          Write-Host "::endgroup::"
-          Write-Host "::group::download cavif"
-          download -AccountName ledyba-z -ProjectSlug cavif
-          Write-Host "::endgroup::"
       - name: Install msys2
         uses: msys2/setup-msys2@v1
         with:
@@ -139,9 +86,33 @@ jobs:
           pacman --noconfirm -S make
           pacman --noconfirm -S bc
           pacman --noconfirm -S mingw-w64-x86_64-imagemagick
+          pacman --noconfirm -S mingw-w64-x86_64-curl
+          pacman --noconfirm -S mingw-w64-x86_64-jq
           make --version
           echo '2+2' | bc
           magick -version
+      - name: Download latest cavif
+        shell: bash
+        run: |
+          runId=$(curl https://api.github.com/repos/link-u/cavif/actions/workflows/${WORKFLOW_ID}/runs | jq '[.workflow_runs[] | select( .conclusion == "success")][0].id')
+          artifactId=$(curl https://api.github.com/repos/link-u/cavif/actions/runs/${runId}/artifacts | jq '[.artifacts[] | select( .name == "cavif-win64.zip")][0].id')
+          curl --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -o cavif.zip -L https://api.github.com/repos/link-u/cavif/actions/artifacts/${artifactId}/zip
+          unzip cavif.zip
+          rm cavif.zip
+          ./cavif.exe -h
+        env:
+          WORKFLOW_ID: "4517759"
+      - name: Download latest davif
+        shell: bash
+        run: |
+          runId=$(curl https://api.github.com/repos/link-u/davif/actions/workflows/${WORKFLOW_ID}/runs | jq '[.workflow_runs[] | select( .conclusion == "success")][0].id')
+          artifactId=$(curl https://api.github.com/repos/link-u/davif/actions/runs/${runId}/artifacts | jq '[.artifacts[] | select( .name == "davif-win64.zip")][0].id')
+          curl --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -o davif.zip -L https://api.github.com/repos/link-u/davif/actions/artifacts/${artifactId}/zip
+          unzip davif.zip
+          rm davif.zip
+          ./davif.exe -h
+        env:
+          WORKFLOW_ID: "4521970"
       - name: Rewrite Makefile to installed cavif and davif
         shell: msys2 {0}
         run: |
