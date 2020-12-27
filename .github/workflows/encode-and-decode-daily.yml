@@ -74,13 +74,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install msys2
-        uses: msys2/setup-msys2@v1
+        uses: msys2/setup-msys2@v2
         with:
           msystem: MINGW64
           update: true
           path-type: inherit
-        env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       - name: Install dependencies
         shell: msys2 {0}
         run: |
