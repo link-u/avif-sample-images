@@ -32,7 +32,7 @@ jobs:
       env:
         #id of https://github.com/link-u/cavif/actions?query=workflow%3A%22Build+debian+package+on+push+or+release-tags.%22
         # curl https://api.github.com/repos/link-u/cavif/actions/workflows
-        WORKFLOW_ID: '452267'
+        WORKFLOW_ID: '4521995'
     - name: Download latest davif
       shell: bash
       run: |
