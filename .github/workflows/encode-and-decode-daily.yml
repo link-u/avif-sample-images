@@ -1,9 +1,9 @@
-name: Encode all images and decode them again daily.
+name: Encode all images and decode them again weekly.
 
 on:
   push:
   schedule:
-    - cron:  '0 20 * * *' # https://crontab.guru/#0_2_*_*_*
+    - cron:  '0 20 * * 0' # https://crontab.guru/#0_2_*_*_0
 
 jobs:
   check-on-ubuntu:
