@@ -23,23 +23,23 @@
 
 #### YUV 420
 
-| profile | bit depth | Monochrome | file                                             |
-|---------|-----------|------------|--------------------------------------------------|
-| 0       | 8         |            | [here](hato.profile0.8bpc.yuv420.avif)           |
-| 0       | 8         | YES        | [here](hato.profile0.8bpc.yuv420.monochromeavif) |
-| 0       | 10        |            | [here](hato.profile0.10bpc.yuv420.avif)          |
-| 0       | 10        | YES        | [here](hato.profile0.10bpc.yuv420.avif)          |
+| profile | bit depth | Monochrome | file                                               |
+|---------|-----------|------------|----------------------------------------------------|
+| 0       | 8         |            | [here](hato.profile0.8bpc.yuv420.avif)             |
+| 0       | 8         | YES        | [here](hato.profile0.8bpc.yuv420.monochrome.avif)  |
+| 0       | 10        |            | [here](hato.profile0.10bpc.yuv420.avif)            |
+| 0       | 10        | YES        | [here](hato.profile0.10bpc.yuv420.monochrome.avif) |
 
 #### YUV422
 
-| profile | bit depth | Monochrome | file                                              |
-|---------|-----------|------------|---------------------------------------------------|
-| 2       | 8         |            | [here](hato.profile2.8bpc.yuv422.avif)            |
-| 2       | 8         | YES        | [here](hato.profile2.8bpc.yuv422.monochrome.avif) |
-| 2       | 10        |            | [here](hato.profile2.10bpc.yuv422.avif)           |
-| 2       | 10        | YES        | [here](hato.profile2.10bpc.yuv422.avif)           |
-| 2       | 12        |            | [here](hato.profile2.12bpc.yuv422.avif)           |
-| 2       | 12        | YES        | [here](hato.profile2.12bpc.yuv422.avif)           |
+| profile | bit depth | Monochrome | file                                               |
+|---------|-----------|------------|----------------------------------------------------|
+| 2       | 8         |            | [here](hato.profile2.8bpc.yuv422.avif)             |
+| 2       | 8         | YES        | [here](hato.profile2.8bpc.yuv422.monochrome.avif)  |
+| 2       | 10        |            | [here](hato.profile2.10bpc.yuv422.avif)            |
+| 2       | 10        | YES        | [here](hato.profile2.10bpc.yuv422.monochrome.avif) |
+| 2       | 12        |            | [here](hato.profile2.12bpc.yuv422.avif)            |
+| 2       | 12        | YES        | [here](hato.profile2.12bpc.yuv422.monochrome.avif) |
 
 #### URLS
 
@@ -60,7 +60,7 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/hato.profile2
 
 ## Kimono - Transformation tests
 
-[<img src="https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.jpg" alt="kimono.jpg" height="512">](kimono.jpg)
+[<img src="kimono.jpg" alt="kimono.jpg" height="512">](kimono.jpg)
 
  - size: 722x1024
  - License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
@@ -183,7 +183,7 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate
 
 ### Original
 
-[<img src="https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.jpg" alt="fox.jpg" height="512">](fox.jpg)
+[<img src="fox.jpg" alt="fox.jpg" height="512">](fox.jpg)
 
  - size: 1204 x 800
  - License: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
@@ -348,7 +348,7 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.
 
 ### Original (SVG)
 
-[![plum-blossom.svg](./plum-blossom.svg)](plum-blossom.svg)
+![plum-blossom.svg](./plum-blossom.svg)
 
  - License: [CC-BY](https://creativecommons.org/licenses/by/4.0/deed.en)
    - Author: Ryo Hirafuji ([@ledyba-z](https://github.com/ledyba-z))
@@ -524,7 +524,7 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-
 
 ## Red at 12 o'clock with color profile - ICC Profile tests
 
-![red-at-12-oclock-with-color-profile.jpg](red-at-12-oclock-with-color-profile)
+![red-at-12-oclock-with-color-profile.jpg](red-at-12-oclock-with-color-profile.jpg)
 
  - License: GNU LGPL v2.1 or 2 claused BSD License
    - Author: Tony Payne <tpayne@chromium.org>
@@ -539,13 +539,13 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-
 
 ## Twinkle Star - Image Sequence Test
 
-[![star.gif](star.gif)](star.gif)
+![star.gif](star.gif)
 
  - [AV1 mp4 version](star.mp4)
 
 ### Original (SVG)
 
-[![star.svg](./star.svg)](star.svg)
+![star.svg](./star.svg)
 
  - License: [CC-BY](https://creativecommons.org/licenses/by/4.0/deed.en)
    - Author: Ryo Hirafuji ([@ledyba-z](https://github.com/ledyba-z))
