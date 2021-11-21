@@ -23,23 +23,23 @@
 
 #### YUV 420
 
-| profile | bit depth | Monochrome | file                                               |
-|---------|-----------|------------|----------------------------------------------------|
-| 0       | 8         |            | [here](hato.profile0.8bpc.yuv420.avif)             |
-| 0       | 8         | YES        | [here](hato.profile0.8bpc.yuv420.monochrome.avif)  |
-| 0       | 10        |            | [here](hato.profile0.10bpc.yuv420.avif)            |
-| 0       | 10        | YES        | [here](hato.profile0.10bpc.yuv420.monochrome.avif) |
+| profile | bit depth | Monochrome | file                                                        |
+|---------|-----------|------------|-------------------------------------------------------------|
+| 0       | 8         |            | [here](hato.profile0.8bpc.yuv420.avif?raw=true)             |
+| 0       | 8         | YES        | [here](hato.profile0.8bpc.yuv420.monochrome.avif?raw=true)  |
+| 0       | 10        |            | [here](hato.profile0.10bpc.yuv420.avif?raw=true)            |
+| 0       | 10        | YES        | [here](hato.profile0.10bpc.yuv420.monochrome.avif?raw=true) |
 
 #### YUV422
 
-| profile | bit depth | Monochrome | file                                               |
-|---------|-----------|------------|----------------------------------------------------|
-| 2       | 8         |            | [here](hato.profile2.8bpc.yuv422.avif)             |
-| 2       | 8         | YES        | [here](hato.profile2.8bpc.yuv422.monochrome.avif)  |
-| 2       | 10        |            | [here](hato.profile2.10bpc.yuv422.avif)            |
-| 2       | 10        | YES        | [here](hato.profile2.10bpc.yuv422.monochrome.avif) |
-| 2       | 12        |            | [here](hato.profile2.12bpc.yuv422.avif)            |
-| 2       | 12        | YES        | [here](hato.profile2.12bpc.yuv422.monochrome.avif) |
+| profile | bit depth | Monochrome | file                                                        |
+|---------|-----------|------------|-------------------------------------------------------------|
+| 2       | 8         |            | [here](hato.profile2.8bpc.yuv422.avif?raw=true)             |
+| 2       | 8         | YES        | [here](hato.profile2.8bpc.yuv422.monochrome.avif?raw=true)  |
+| 2       | 10        |            | [here](hato.profile2.10bpc.yuv422.avif?raw=true)            |
+| 2       | 10        | YES        | [here](hato.profile2.10bpc.yuv422.monochrome.avif?raw=true) |
+| 2       | 12        |            | [here](hato.profile2.12bpc.yuv422.avif?raw=true)            |
+| 2       | 12        | YES        | [here](hato.profile2.12bpc.yuv422.monochrome.avif?raw=true) |
 
 #### URLS
 
@@ -85,46 +85,46 @@ All AVIF images are encoded in these settings:
 
 ### Identity
 
-[kimono.avif](./kimono.avif)
+[kimono.avif](./kimono.avif?raw=true)
 
 No operation is applied.
 
 ### Rotation 90
 
-[kimono.rotate90.avif](./kimono.rotate90.avif)
+[kimono.rotate90.avif](./kimono.rotate90.avif?raw=true)
 
-[Encoded image is rotated at 90 degree in counter-clockwise](kimono.rotate90.png), and marked to rotate it 270 degree in counter-clockwise when displaying. Thus, resulted image is as the same as the original.
+[Encoded image is rotated at 90 degree in counter-clockwise](kimono.rotate90.png?raw=true), and marked to rotate it 270 degree in counter-clockwise when displaying. Thus, resulted image is as the same as the original.
 
 ### Rotation 270
 
-[kimono.rotate270.avif](./kimono.rotate270.avif)
+[kimono.rotate270.avif](./kimono.rotate270.avif?raw=true)
 
-[Encoded image is rotated at 270 degree in counter-clockwise](kimono.rotate270.png), and marked to rotate it 90 degree in counter-clockwise when displaying. Thus, resulted image is as the same as the original.
+[Encoded image is rotated at 270 degree in counter-clockwise](kimono.rotate270.png?raw=true), and marked to rotate it 90 degree in counter-clockwise when displaying. Thus, resulted image is as the same as the original.
 
 
 ### Mirroring horizontally
 
-[kimono.mirror-horizontal.avif](./kimono.mirror-horizontal.avif)
+[kimono.mirror-horizontal.avif](./kimono.mirror-horizontal.avif?raw=true)
 
-[Encoded image is mirrored horizontally](kimono.mirror-horizontal.png), and marked to mirror it horizontally again when displaying. Thus, resulted image is as the same as the original.
+[Encoded image is mirrored horizontally](kimono.mirror-horizontal.png?raw=true), and marked to mirror it horizontally again when displaying. Thus, resulted image is as the same as the original.
 
 ### Mirroring vertically
 
-[kimono.mirror-vertical.avif](./kimono.mirror-vertical.avif)
+[kimono.mirror-vertical.avif](./kimono.mirror-vertical.avif?raw=true)
 
 Vertical version. Same as above.
 
 ### Mirroring vertically + Rotating at 90 degrees.
 
-[kimono.mirror-vertical.rotate270.avif](./kimono.mirror-vertical.rotate270.avif)
+[kimono.mirror-vertical.rotate270.avif](./kimono.mirror-vertical.rotate270.avif?raw=true)
 
-[Encoded image is mirrored vertically, then rorated at 90 degree in clockwise](kimono.mirror-vertical.rotate270.png), and marked to rotate it at 90 degree in counter-clockwise and then mirror it vertically when displaying.
+[Encoded image is mirrored vertically, then rorated at 90 degree in clockwise](kimono.mirror-vertical.rotate270.png?raw=true), and marked to rotate it at 90 degree in counter-clockwise and then mirror it vertically when displaying.
 
 Thus, resulted image is as the same as the original.
 
 ### Cropping
 
-[kimono.crop.avif](kimono.crop.avif)
+[kimono.crop.avif](kimono.crop.avif?raw=true)
 
 Displaying image will be cropped from the original image, using `CleanApertureBox`(See: ISO/IEC 14496-12:2015).
 
@@ -145,9 +145,9 @@ Resulted image should be:
 
 ### Cropping + Mirroring vertically + Rotating at 90 degrees.
 
-[kimono.mirror-vertical.rotate270.crop.avif](kimono.mirror-vertical.rotate270.crop.avif)
+[kimono.mirror-vertical.rotate270.crop.avif](kimono.mirror-vertical.rotate270.crop.avif?raw=true)
 
-[Encoded image is mirrored vertically, then rorated at 90 degree in clockwise](kimono.mirror-vertical.rotate270.png), and marked to crop it first, rotate it at 90 degree in counter-clockwise, and then mirror it vertically.
+[Encoded image is mirrored vertically, then rorated at 90 degree in clockwise](kimono.mirror-vertical.rotate270.png?raw=true), and marked to crop it first, rotate it at 90 degree in counter-clockwise, and then mirror it vertically.
 
 Cropping condition is:
 
@@ -192,87 +192,87 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/kimono.rotate
 
 #### Odd-Width
 
- - [fox.odd-width.png](fox.odd-width.png)
+ - [fox.odd-width.png](fox.odd-width.png?raw=true)
  - size: 1203 x 800
 
 #### Odd-Height
 
-  - [fox.odd-height.png](fox.odd-height.png)
+  - [fox.odd-height.png](fox.odd-height.png?raw=true)
   - size: 1204 x 799
 
 #### Odd-Width x Odd-Height
 
-  - [fox.odd-width.odd-height.png](fox.odd-width.odd-height.png)
+  - [fox.odd-width.odd-height.png](fox.odd-width.odd-height.png?raw=true)
   - size: 1203 x 799
 
 ### AVIF version
 
-| profile | bit depth | pix fmt | Monochrome | odd width | odd height | file                                                                   |
-|---------|-----------|---------|------------|-----------|------------|------------------------------------------------------------------------|
-| 0       | 8         | YUV420  |            |           |            | [here](fox.profile0.8bpc.yuv420.avif)                                  |
-| 0       | 8         | YUV420  |            | YES       |            | [here](fox.profile0.8bpc.yuv420.odd-width.avif)                        |
-| 0       | 8         | YUV420  |            |           | YES        | [here](fox.profile0.8bpc.yuv420.odd-height.avif)                       |
-| 0       | 8         | YUV420  |            | YES       | YES        | [here](fox.profile0.8bpc.yuv420.odd-width.odd-height.avif)             |
-| 0       | 8         | YUV420  | YES        |           |            | [here](fox.profile0.8bpc.yuv420.monochrome.avif)                       |
-| 0       | 8         | YUV420  | YES        | YES       |            | [here](fox.profile0.8bpc.yuv420.monochrome.odd-width.avif)             |
-| 0       | 8         | YUV420  | YES        |           | YES        | [here](fox.profile0.8bpc.yuv420.monochrome.odd-height.avif)            |
-| 0       | 8         | YUV420  | YES        | YES       | YES        | [here](fox.profile0.8bpc.yuv420.monochrome.odd-width.odd-height.avif)  |
-| 0       | 10        | YUV420  |            |           |            | [here](fox.profile0.10bpc.yuv420.avif)                                 |
-| 0       | 10        | YUV420  |            | YES       |            | [here](fox.profile0.10bpc.yuv420.odd-width.avif)                       |
-| 0       | 10        | YUV420  |            |           | YES        | [here](fox.profile0.10bpc.yuv420.odd-height.avif)                      |
-| 0       | 10        | YUV420  |            | YES       | YES        | [here](fox.profile0.10bpc.yuv420.odd-width.odd-height.avif)            |
-| 0       | 10        | YUV420  | YES        |           |            | [here](fox.profile0.10bpc.yuv420.monochrome.avif)                      |
-| 0       | 10        | YUV420  | YES        | YES       |            | [here](fox.profile0.10bpc.yuv420.monochrome.odd-width.avif)            |
-| 0       | 10        | YUV420  | YES        |           | YES        | [here](fox.profile0.10bpc.yuv420.monochrome.odd-height.avif)           |
-| 0       | 10        | YUV420  | YES        | YES       | YES        | [here](fox.profile0.10bpc.yuv420.monochrome.odd-width.odd-height.avif) |
-| 2       | 12        | YUV420  |            |           |            | [here](fox.profile2.12bpc.yuv420.avif)                                 |
-| 2       | 12        | YUV420  |            | YES       |            | [here](fox.profile2.12bpc.yuv420.odd-width.avif)                       |
-| 2       | 12        | YUV420  |            |           | YES        | [here](fox.profile2.12bpc.yuv420.odd-height.avif)                      |
-| 2       | 12        | YUV420  |            | YES       | YES        | [here](fox.profile2.12bpc.yuv420.odd-width.odd-height.avif)            |
-| 2       | 12        | YUV420  | YES        |           |            | [here](fox.profile2.12bpc.yuv420.monochrome.avif)                      |
-| 2       | 12        | YUV420  | YES        | YES       |            | [here](fox.profile2.12bpc.yuv420.monochrome.odd-width.avif)            |
-| 2       | 12        | YUV420  | YES        |           | YES        | [here](fox.profile2.12bpc.yuv420.monochrome.odd-height.avif)           |
-| 2       | 12        | YUV420  | YES        | YES       | YES        | [here](fox.profile2.12bpc.yuv420.monochrome.odd-width.odd-height.avif) |
-| 2       | 8         | YUV422  |            |           |            | [here](fox.profile2.8bpc.yuv422.avif)                                  |
-| 2       | 8         | YUV422  |            | YES       |            | [here](fox.profile2.8bpc.yuv422.odd-width.avif)                        |
-| 2       | 8         | YUV422  |            |           | YES        | [here](fox.profile2.8bpc.yuv422.odd-height.avif)                       |
-| 2       | 8         | YUV422  |            | YES       | YES        | [here](fox.profile2.8bpc.yuv422.odd-width.odd-height.avif)             |
-| 2       | 8         | YUV422  | YES        |           |            | [here](fox.profile2.8bpc.yuv422.monochrome.avif)                       |
-| 2       | 8         | YUV422  | YES        | YES       |            | [here](fox.profile2.8bpc.yuv422.monochrome.odd-width.avif)             |
-| 2       | 8         | YUV422  | YES        |           | YES        | [here](fox.profile2.8bpc.yuv422.monochrome.odd-height.avif)            |
-| 2       | 8         | YUV422  | YES        | YES       | YES        | [here](fox.profile2.8bpc.yuv422.monochrome.odd-width.odd-height.avif)  |
-| 2       | 10        | YUV422  |            |           |            | [here](fox.profile2.10bpc.yuv422.avif)                                 |
-| 2       | 10        | YUV422  |            | YES       |            | [here](fox.profile2.10bpc.yuv422.odd-width.avif)                       |
-| 2       | 10        | YUV422  |            |           | YES        | [here](fox.profile2.10bpc.yuv422.odd-height.avif)                      |
-| 2       | 10        | YUV422  |            | YES       | YES        | [here](fox.profile2.10bpc.yuv422.odd-width.odd-height.avif)            |
-| 2       | 10        | YUV422  | YES        |           |            | [here](fox.profile2.10bpc.yuv422.monochrome.avif)                      |
-| 2       | 10        | YUV422  | YES        | YES       |            | [here](fox.profile2.10bpc.yuv422.monochrome.odd-width.avif)            |
-| 2       | 10        | YUV422  | YES        |           | YES        | [here](fox.profile2.10bpc.yuv422.monochrome.odd-height.avif)           |
-| 2       | 10        | YUV422  | YES        | YES       | YES        | [here](fox.profile2.10bpc.yuv422.monochrome.odd-width.odd-height.avif) |
-| 2       | 12        | YUV422  |            |           |            | [here](fox.profile2.12bpc.yuv422.avif)                                 |
-| 2       | 12        | YUV422  |            | YES       |            | [here](fox.profile2.12bpc.yuv422.odd-width.avif)                       |
-| 2       | 12        | YUV422  |            |           | YES        | [here](fox.profile2.12bpc.yuv422.odd-height.avif)                      |
-| 2       | 12        | YUV422  |            | YES       | YES        | [here](fox.profile2.12bpc.yuv422.odd-width.odd-height.avif)            |
-| 2       | 12        | YUV422  | YES        |           |            | [here](fox.profile2.12bpc.yuv422.monochrome.avif)                      |
-| 2       | 12        | YUV422  | YES        | YES       |            | [here](fox.profile2.12bpc.yuv422.monochrome.odd-width.avif)            |
-| 2       | 12        | YUV422  | YES        |           | YES        | [here](fox.profile2.12bpc.yuv422.monochrome.odd-height.avif)           |
-| 2       | 12        | YUV422  | YES        | YES       | YES        | [here](fox.profile2.12bpc.yuv422.monochrome.odd-width.odd-height.avif) |
-| 1       | 8         | YUV444  |            |           |            | [here](fox.profile1.8bpc.yuv444.avif)                                  |
-| 1       | 8         | YUV444  |            | YES       |            | [here](fox.profile1.8bpc.yuv444.odd-width.avif)                        |
-| 1       | 8         | YUV444  |            |           | YES        | [here](fox.profile1.8bpc.yuv444.odd-height.avif)                       |
-| 1       | 8         | YUV444  |            | YES       | YES        | [here](fox.profile1.8bpc.yuv444.odd-width.odd-height.avif)             |
-| 1       | 10        | YUV444  |            |           |            | [here](fox.profile1.10bpc.yuv444.avif)                                 |
-| 1       | 10        | YUV444  |            | YES       |            | [here](fox.profile1.10bpc.yuv444.odd-width.avif)                       |
-| 1       | 10        | YUV444  |            |           | YES        | [here](fox.profile1.10bpc.yuv444.odd-height.avif)                      |
-| 1       | 10        | YUV444  |            | YES       | YES        | [here](fox.profile1.10bpc.yuv444.odd-width.odd-height.avif)            |
-| 2       | 12        | YUV444  |            |           |            | [here](fox.profile2.12bpc.yuv444.avif)                                 |
-| 2       | 12        | YUV444  |            | YES       |            | [here](fox.profile2.12bpc.yuv444.odd-width.avif)                       |
-| 2       | 12        | YUV444  |            |           | YES        | [here](fox.profile2.12bpc.yuv444.odd-height.avif)                      |
-| 2       | 12        | YUV444  |            | YES       | YES        | [here](fox.profile2.12bpc.yuv444.odd-width.odd-height.avif)            |
-| 2       | 12        | YUV444  | YES        |           |            | [here](fox.profile2.12bpc.yuv444.monochrome.avif)                      |
-| 2       | 12        | YUV444  | YES        | YES       |            | [here](fox.profile2.12bpc.yuv444.monochrome.odd-width.avif)            |
-| 2       | 12        | YUV444  | YES        |           | YES        | [here](fox.profile2.12bpc.yuv444.monochrome.odd-height.avif)           |
-| 2       | 12        | YUV444  | YES        | YES       | YES        | [here](fox.profile2.12bpc.yuv444.monochrome.odd-width.odd-height.avif) |
+| profile | bit depth | pix fmt | Monochrome | odd width | odd height | file                                                                            |
+|---------|-----------|---------|------------|-----------|------------|---------------------------------------------------------------------------------|
+| 0       | 8         | YUV420  |            |           |            | [here](fox.profile0.8bpc.yuv420.avif?raw=true)                                  |
+| 0       | 8         | YUV420  |            | YES       |            | [here](fox.profile0.8bpc.yuv420.odd-width.avif?raw=true)                        |
+| 0       | 8         | YUV420  |            |           | YES        | [here](fox.profile0.8bpc.yuv420.odd-height.avif?raw=true)                       |
+| 0       | 8         | YUV420  |            | YES       | YES        | [here](fox.profile0.8bpc.yuv420.odd-width.odd-height.avif?raw=true)             |
+| 0       | 8         | YUV420  | YES        |           |            | [here](fox.profile0.8bpc.yuv420.monochrome.avif?raw=true)                       |
+| 0       | 8         | YUV420  | YES        | YES       |            | [here](fox.profile0.8bpc.yuv420.monochrome.odd-width.avif?raw=true)             |
+| 0       | 8         | YUV420  | YES        |           | YES        | [here](fox.profile0.8bpc.yuv420.monochrome.odd-height.avif?raw=true)            |
+| 0       | 8         | YUV420  | YES        | YES       | YES        | [here](fox.profile0.8bpc.yuv420.monochrome.odd-width.odd-height.avif?raw=true)  |
+| 0       | 10        | YUV420  |            |           |            | [here](fox.profile0.10bpc.yuv420.avif?raw=true)                                 |
+| 0       | 10        | YUV420  |            | YES       |            | [here](fox.profile0.10bpc.yuv420.odd-width.avif?raw=true)                       |
+| 0       | 10        | YUV420  |            |           | YES        | [here](fox.profile0.10bpc.yuv420.odd-height.avif?raw=true)                      |
+| 0       | 10        | YUV420  |            | YES       | YES        | [here](fox.profile0.10bpc.yuv420.odd-width.odd-height.avif?raw=true)            |
+| 0       | 10        | YUV420  | YES        |           |            | [here](fox.profile0.10bpc.yuv420.monochrome.avif?raw=true)                      |
+| 0       | 10        | YUV420  | YES        | YES       |            | [here](fox.profile0.10bpc.yuv420.monochrome.odd-width.avif?raw=true)            |
+| 0       | 10        | YUV420  | YES        |           | YES        | [here](fox.profile0.10bpc.yuv420.monochrome.odd-height.avif?raw=true)           |
+| 0       | 10        | YUV420  | YES        | YES       | YES        | [here](fox.profile0.10bpc.yuv420.monochrome.odd-width.odd-height.avif?raw=true) |
+| 2       | 12        | YUV420  |            |           |            | [here](fox.profile2.12bpc.yuv420.avif?raw=true)                                 |
+| 2       | 12        | YUV420  |            | YES       |            | [here](fox.profile2.12bpc.yuv420.odd-width.avif?raw=true)                       |
+| 2       | 12        | YUV420  |            |           | YES        | [here](fox.profile2.12bpc.yuv420.odd-height.avif?raw=true)                      |
+| 2       | 12        | YUV420  |            | YES       | YES        | [here](fox.profile2.12bpc.yuv420.odd-width.odd-height.avif?raw=true)            |
+| 2       | 12        | YUV420  | YES        |           |            | [here](fox.profile2.12bpc.yuv420.monochrome.avif?raw=true)                      |
+| 2       | 12        | YUV420  | YES        | YES       |            | [here](fox.profile2.12bpc.yuv420.monochrome.odd-width.avif?raw=true)            |
+| 2       | 12        | YUV420  | YES        |           | YES        | [here](fox.profile2.12bpc.yuv420.monochrome.odd-height.avif?raw=true)           |
+| 2       | 12        | YUV420  | YES        | YES       | YES        | [here](fox.profile2.12bpc.yuv420.monochrome.odd-width.odd-height.avif?raw=true) |
+| 2       | 8         | YUV422  |            |           |            | [here](fox.profile2.8bpc.yuv422.avif?raw=true)                                  |
+| 2       | 8         | YUV422  |            | YES       |            | [here](fox.profile2.8bpc.yuv422.odd-width.avif?raw=true)                        |
+| 2       | 8         | YUV422  |            |           | YES        | [here](fox.profile2.8bpc.yuv422.odd-height.avif?raw=true)                       |
+| 2       | 8         | YUV422  |            | YES       | YES        | [here](fox.profile2.8bpc.yuv422.odd-width.odd-height.avif?raw=true)             |
+| 2       | 8         | YUV422  | YES        |           |            | [here](fox.profile2.8bpc.yuv422.monochrome.avif?raw=true)                       |
+| 2       | 8         | YUV422  | YES        | YES       |            | [here](fox.profile2.8bpc.yuv422.monochrome.odd-width.avif?raw=true)             |
+| 2       | 8         | YUV422  | YES        |           | YES        | [here](fox.profile2.8bpc.yuv422.monochrome.odd-height.avif?raw=true)            |
+| 2       | 8         | YUV422  | YES        | YES       | YES        | [here](fox.profile2.8bpc.yuv422.monochrome.odd-width.odd-height.avif?raw=true)  |
+| 2       | 10        | YUV422  |            |           |            | [here](fox.profile2.10bpc.yuv422.avif?raw=true)                                 |
+| 2       | 10        | YUV422  |            | YES       |            | [here](fox.profile2.10bpc.yuv422.odd-width.avif?raw=true)                       |
+| 2       | 10        | YUV422  |            |           | YES        | [here](fox.profile2.10bpc.yuv422.odd-height.avif?raw=true)                      |
+| 2       | 10        | YUV422  |            | YES       | YES        | [here](fox.profile2.10bpc.yuv422.odd-width.odd-height.avif?raw=true)            |
+| 2       | 10        | YUV422  | YES        |           |            | [here](fox.profile2.10bpc.yuv422.monochrome.avif?raw=true)                      |
+| 2       | 10        | YUV422  | YES        | YES       |            | [here](fox.profile2.10bpc.yuv422.monochrome.odd-width.avif?raw=true)            |
+| 2       | 10        | YUV422  | YES        |           | YES        | [here](fox.profile2.10bpc.yuv422.monochrome.odd-height.avif?raw=true)           |
+| 2       | 10        | YUV422  | YES        | YES       | YES        | [here](fox.profile2.10bpc.yuv422.monochrome.odd-width.odd-height.avif?raw=true) |
+| 2       | 12        | YUV422  |            |           |            | [here](fox.profile2.12bpc.yuv422.avif?raw=true)                                 |
+| 2       | 12        | YUV422  |            | YES       |            | [here](fox.profile2.12bpc.yuv422.odd-width.avif?raw=true)                       |
+| 2       | 12        | YUV422  |            |           | YES        | [here](fox.profile2.12bpc.yuv422.odd-height.avif?raw=true)                      |
+| 2       | 12        | YUV422  |            | YES       | YES        | [here](fox.profile2.12bpc.yuv422.odd-width.odd-height.avif?raw=true)            |
+| 2       | 12        | YUV422  | YES        |           |            | [here](fox.profile2.12bpc.yuv422.monochrome.avif?raw=true)                      |
+| 2       | 12        | YUV422  | YES        | YES       |            | [here](fox.profile2.12bpc.yuv422.monochrome.odd-width.avif?raw=true)            |
+| 2       | 12        | YUV422  | YES        |           | YES        | [here](fox.profile2.12bpc.yuv422.monochrome.odd-height.avif?raw=true)           |
+| 2       | 12        | YUV422  | YES        | YES       | YES        | [here](fox.profile2.12bpc.yuv422.monochrome.odd-width.odd-height.avif?raw=true) |
+| 1       | 8         | YUV444  |            |           |            | [here](fox.profile1.8bpc.yuv444.avif?raw=true)                                  |
+| 1       | 8         | YUV444  |            | YES       |            | [here](fox.profile1.8bpc.yuv444.odd-width.avif?raw=true)                        |
+| 1       | 8         | YUV444  |            |           | YES        | [here](fox.profile1.8bpc.yuv444.odd-height.avif?raw=true)                       |
+| 1       | 8         | YUV444  |            | YES       | YES        | [here](fox.profile1.8bpc.yuv444.odd-width.odd-height.avif?raw=true)             |
+| 1       | 10        | YUV444  |            |           |            | [here](fox.profile1.10bpc.yuv444.avif?raw=true)                                 |
+| 1       | 10        | YUV444  |            | YES       |            | [here](fox.profile1.10bpc.yuv444.odd-width.avif?raw=true)                       |
+| 1       | 10        | YUV444  |            |           | YES        | [here](fox.profile1.10bpc.yuv444.odd-height.avif?raw=true)                      |
+| 1       | 10        | YUV444  |            | YES       | YES        | [here](fox.profile1.10bpc.yuv444.odd-width.odd-height.avif?raw=true)            |
+| 2       | 12        | YUV444  |            |           |            | [here](fox.profile2.12bpc.yuv444.avif?raw=true)                                 |
+| 2       | 12        | YUV444  |            | YES       |            | [here](fox.profile2.12bpc.yuv444.odd-width.avif?raw=true)                       |
+| 2       | 12        | YUV444  |            |           | YES        | [here](fox.profile2.12bpc.yuv444.odd-height.avif?raw=true)                      |
+| 2       | 12        | YUV444  |            | YES       | YES        | [here](fox.profile2.12bpc.yuv444.odd-width.odd-height.avif?raw=true)            |
+| 2       | 12        | YUV444  | YES        |           |            | [here](fox.profile2.12bpc.yuv444.monochrome.avif?raw=true)                      |
+| 2       | 12        | YUV444  | YES        | YES       |            | [here](fox.profile2.12bpc.yuv444.monochrome.odd-width.avif?raw=true)            |
+| 2       | 12        | YUV444  | YES        |           | YES        | [here](fox.profile2.12bpc.yuv444.monochrome.odd-height.avif?raw=true)           |
+| 2       | 12        | YUV444  | YES        | YES       | YES        | [here](fox.profile2.12bpc.yuv444.monochrome.odd-width.odd-height.avif?raw=true) |
 
 ### URLs
 
@@ -355,101 +355,101 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/fox.profile2.
 
 #### Large Version (PNG)
 
- - [plum-blossom-large.png](plum-blossom-large.png)
+ - [plum-blossom-large.png](plum-blossom-large.png?raw=true)
  - size: 2048x2048
 
 #### Small Version (PNG)
 
- - [plum-blossom-small.png](plum-blossom-small.png)
+ - [plum-blossom-small.png](plum-blossom-small.png?raw=true)
  - size: 128x128
 
 ### AVIF version (Large Version)
 
 #### Limited-ranged alpha
 
-| profile | bit depth | pix fmt | Monochrome | alpha   | file                                                                           |
-|---------|-----------|---------|------------|-------- |--------------------------------------------------------------------------------|
-| 0       | 8         | YUV420  |            | limited | [here](plum-blossom-large.profile0.8bpc.yuv420.alpha-limited.avif)             |
-| 0       | 8         | YUV420  | YES        | limited | [here](plum-blossom-large.profile0.8bpc.yuv420.alpha-limited.monochrome.avif)  |
-| 0       | 10        | YUV420  |            | limited | [here](plum-blossom-large.profile0.10bpc.yuv420.alpha-limited.avif)            |
-| 0       | 10        | YUV420  | YES        | limited | [here](plum-blossom-large.profile0.10bpc.yuv420.alpha-limited.monochrome.avif) |
-| 2       | 12        | YUV420  |            | limited | [here](plum-blossom-large.profile2.12bpc.yuv420.alpha-limited.avif)            |
-| 2       | 12        | YUV420  | YES        | limited | [here](plum-blossom-large.profile2.12bpc.yuv420.alpha-limited.monochrome.avif) |
-| 2       | 8         | YUV422  |            | limited | [here](plum-blossom-large.profile2.8bpc.yuv422.alpha-limited.avif)             |
-| 2       | 8         | YUV422  | YES        | limited | [here](plum-blossom-large.profile2.8bpc.yuv422.alpha-limited.monochrome.avif)  |
-| 2       | 10        | YUV422  |            | limited | [here](plum-blossom-large.profile2.10bpc.yuv422.alpha-limited.avif)            |
-| 2       | 10        | YUV422  | YES        | limited | [here](plum-blossom-large.profile2.10bpc.yuv422.alpha-limited.monochrome.avif) |
-| 2       | 12        | YUV422  |            | limited | [here](plum-blossom-large.profile2.12bpc.yuv422.alpha-limited.avif)            |
-| 2       | 12        | YUV422  | YES        | limited | [here](plum-blossom-large.profile2.12bpc.yuv422.alpha-limited.monochrome.avif) |
-| 1       | 8         | YUV444  |            | limited | [here](plum-blossom-large.profile1.8bpc.yuv444.alpha-limited.avif)             |
-| 1       | 10        | YUV444  |            | limited | [here](plum-blossom-large.profile1.10bpc.yuv444.alpha-limited.avif)            |
-| 2       | 12        | YUV444  |            | limited | [here](plum-blossom-large.profile2.12bpc.yuv444.alpha-limited.avif)            |
-| 2       | 12        | YUV444  | YES        | limited | [here](plum-blossom-large.profile2.12bpc.yuv444.alpha-limited.monochrome.avif) |
+| profile | bit depth | pix fmt | Monochrome | alpha   | file                                                                                    |
+|---------|-----------|---------|------------|-------- |-----------------------------------------------------------------------------------------|
+| 0       | 8         | YUV420  |            | limited | [here](plum-blossom-large.profile0.8bpc.yuv420.alpha-limited.avif?raw=true)             |
+| 0       | 8         | YUV420  | YES        | limited | [here](plum-blossom-large.profile0.8bpc.yuv420.alpha-limited.monochrome.avif?raw=true)  |
+| 0       | 10        | YUV420  |            | limited | [here](plum-blossom-large.profile0.10bpc.yuv420.alpha-limited.avif?raw=true)            |
+| 0       | 10        | YUV420  | YES        | limited | [here](plum-blossom-large.profile0.10bpc.yuv420.alpha-limited.monochrome.avif?raw=true) |
+| 2       | 12        | YUV420  |            | limited | [here](plum-blossom-large.profile2.12bpc.yuv420.alpha-limited.avif?raw=true)            |
+| 2       | 12        | YUV420  | YES        | limited | [here](plum-blossom-large.profile2.12bpc.yuv420.alpha-limited.monochrome.avif?raw=true) |
+| 2       | 8         | YUV422  |            | limited | [here](plum-blossom-large.profile2.8bpc.yuv422.alpha-limited.avif?raw=true)             |
+| 2       | 8         | YUV422  | YES        | limited | [here](plum-blossom-large.profile2.8bpc.yuv422.alpha-limited.monochrome.avif?raw=true)  |
+| 2       | 10        | YUV422  |            | limited | [here](plum-blossom-large.profile2.10bpc.yuv422.alpha-limited.avif?raw=true)            |
+| 2       | 10        | YUV422  | YES        | limited | [here](plum-blossom-large.profile2.10bpc.yuv422.alpha-limited.monochrome.avif?raw=true) |
+| 2       | 12        | YUV422  |            | limited | [here](plum-blossom-large.profile2.12bpc.yuv422.alpha-limited.avif?raw=true)            |
+| 2       | 12        | YUV422  | YES        | limited | [here](plum-blossom-large.profile2.12bpc.yuv422.alpha-limited.monochrome.avif?raw=true) |
+| 1       | 8         | YUV444  |            | limited | [here](plum-blossom-large.profile1.8bpc.yuv444.alpha-limited.avif?raw=true)             |
+| 1       | 10        | YUV444  |            | limited | [here](plum-blossom-large.profile1.10bpc.yuv444.alpha-limited.avif?raw=true)            |
+| 2       | 12        | YUV444  |            | limited | [here](plum-blossom-large.profile2.12bpc.yuv444.alpha-limited.avif?raw=true)            |
+| 2       | 12        | YUV444  | YES        | limited | [here](plum-blossom-large.profile2.12bpc.yuv444.alpha-limited.monochrome.avif?raw=true) |
 
 #### Full-ranged alpha
 
-| profile | bit depth | pix fmt | Monochrome | alpha   | file                                                                           |
-|---------|-----------|---------|------------|-------- |--------------------------------------------------------------------------------|
-| 0       | 8         | YUV420  |            | full    | [here](plum-blossom-large.profile0.8bpc.yuv420.alpha-full.avif)                |
-| 0       | 8         | YUV420  | YES        | full    | [here](plum-blossom-large.profile0.8bpc.yuv420.alpha-full.monochrome.avif)     |
-| 0       | 10        | YUV420  |            | full    | [here](plum-blossom-large.profile0.10bpc.yuv420.alpha-full.avif)               |
-| 0       | 10        | YUV420  | YES        | full    | [here](plum-blossom-large.profile0.10bpc.yuv420.alpha-full.monochrome.avif)    |
-| 2       | 12        | YUV420  |            | full    | [here](plum-blossom-large.profile2.12bpc.yuv420.alpha-full.avif)               |
-| 2       | 12        | YUV420  | YES        | full    | [here](plum-blossom-large.profile2.12bpc.yuv420.alpha-full.monochrome.avif)    |
-| 2       | 8         | YUV422  |            | full    | [here](plum-blossom-large.profile2.8bpc.yuv422.alpha-full.avif)                |
-| 2       | 8         | YUV422  | YES        | full    | [here](plum-blossom-large.profile2.8bpc.yuv422.alpha-full.monochrome.avif)     |
-| 2       | 10        | YUV422  |            | full    | [here](plum-blossom-large.profile2.10bpc.yuv422.alpha-full.avif)               |
-| 2       | 10        | YUV422  | YES        | full    | [here](plum-blossom-large.profile2.10bpc.yuv422.alpha-full.monochrome.avif)    |
-| 2       | 12        | YUV422  |            | full    | [here](plum-blossom-large.profile2.12bpc.yuv422.alpha-full.avif)               |
-| 2       | 12        | YUV422  | YES        | full    | [here](plum-blossom-large.profile2.12bpc.yuv422.alpha-full.monochrome.avif)    |
-| 1       | 8         | YUV444  |            | full    | [here](plum-blossom-large.profile1.8bpc.yuv444.alpha-full.avif)                |
-| 1       | 10        | YUV444  |            | full    | [here](plum-blossom-large.profile1.10bpc.yuv444.alpha-full.avif)               |
-| 2       | 12        | YUV444  |            | full    | [here](plum-blossom-large.profile2.12bpc.yuv444.alpha-full.avif)               |
-| 2       | 12        | YUV444  | YES        | full    | [here](plum-blossom-large.profile2.12bpc.yuv444.alpha-full.monochrome.avif)    |
+| profile | bit depth | pix fmt | Monochrome | alpha   | file                                                                                    |
+|---------|-----------|---------|------------|-------- |-----------------------------------------------------------------------------------------|
+| 0       | 8         | YUV420  |            | full    | [here](plum-blossom-large.profile0.8bpc.yuv420.alpha-full.avif?raw=true)                |
+| 0       | 8         | YUV420  | YES        | full    | [here](plum-blossom-large.profile0.8bpc.yuv420.alpha-full.monochrome.avif?raw=true)     |
+| 0       | 10        | YUV420  |            | full    | [here](plum-blossom-large.profile0.10bpc.yuv420.alpha-full.avif?raw=true)               |
+| 0       | 10        | YUV420  | YES        | full    | [here](plum-blossom-large.profile0.10bpc.yuv420.alpha-full.monochrome.avif?raw=true)    |
+| 2       | 12        | YUV420  |            | full    | [here](plum-blossom-large.profile2.12bpc.yuv420.alpha-full.avif?raw=true)               |
+| 2       | 12        | YUV420  | YES        | full    | [here](plum-blossom-large.profile2.12bpc.yuv420.alpha-full.monochrome.avif?raw=true)    |
+| 2       | 8         | YUV422  |            | full    | [here](plum-blossom-large.profile2.8bpc.yuv422.alpha-full.avif?raw=true)                |
+| 2       | 8         | YUV422  | YES        | full    | [here](plum-blossom-large.profile2.8bpc.yuv422.alpha-full.monochrome.avif?raw=true)     |
+| 2       | 10        | YUV422  |            | full    | [here](plum-blossom-large.profile2.10bpc.yuv422.alpha-full.avif?raw=true)               |
+| 2       | 10        | YUV422  | YES        | full    | [here](plum-blossom-large.profile2.10bpc.yuv422.alpha-full.monochrome.avif?raw=true)    |
+| 2       | 12        | YUV422  |            | full    | [here](plum-blossom-large.profile2.12bpc.yuv422.alpha-full.avif?raw=true)               |
+| 2       | 12        | YUV422  | YES        | full    | [here](plum-blossom-large.profile2.12bpc.yuv422.alpha-full.monochrome.avif?raw=true)    |
+| 1       | 8         | YUV444  |            | full    | [here](plum-blossom-large.profile1.8bpc.yuv444.alpha-full.avif?raw=true)                |
+| 1       | 10        | YUV444  |            | full    | [here](plum-blossom-large.profile1.10bpc.yuv444.alpha-full.avif?raw=true)               |
+| 2       | 12        | YUV444  |            | full    | [here](plum-blossom-large.profile2.12bpc.yuv444.alpha-full.avif?raw=true)               |
+| 2       | 12        | YUV444  | YES        | full    | [here](plum-blossom-large.profile2.12bpc.yuv444.alpha-full.monochrome.avif?raw=true)    |
 
 ### AVIF version (Small Version)
 
 #### Limited-ranged alpha
 
-| profile | bit depth | pix fmt | Monochrome | alpha   | file                                                                           |
-|---------|-----------|---------|------------|-------- |--------------------------------------------------------------------------------|
-| 0       | 8         | YUV420  |            | limited | [here](plum-blossom-small.profile0.8bpc.yuv420.alpha-limited.avif)             |
-| 0       | 8         | YUV420  | YES        | limited | [here](plum-blossom-small.profile0.8bpc.yuv420.alpha-limited.monochrome.avif)  |
-| 0       | 10        | YUV420  |            | limited | [here](plum-blossom-small.profile0.10bpc.yuv420.alpha-limited.avif)            |
-| 0       | 10        | YUV420  | YES        | limited | [here](plum-blossom-small.profile0.10bpc.yuv420.alpha-limited.monochrome.avif) |
-| 2       | 12        | YUV420  |            | limited | [here](plum-blossom-small.profile2.12bpc.yuv420.alpha-limited.avif)            |
-| 2       | 12        | YUV420  | YES        | limited | [here](plum-blossom-small.profile2.12bpc.yuv420.alpha-limited.monochrome.avif) |
-| 2       | 8         | YUV422  |            | limited | [here](plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.avif)             |
-| 2       | 8         | YUV422  | YES        | limited | [here](plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.monochrome.avif)  |
-| 2       | 10        | YUV422  |            | limited | [here](plum-blossom-small.profile2.10bpc.yuv422.alpha-limited.avif)            |
-| 2       | 10        | YUV422  | YES        | limited | [here](plum-blossom-small.profile2.10bpc.yuv422.alpha-limited.monochrome.avif) |
-| 2       | 12        | YUV422  |            | limited | [here](plum-blossom-small.profile2.12bpc.yuv422.alpha-limited.avif)            |
-| 2       | 12        | YUV422  | YES        | limited | [here](plum-blossom-small.profile2.12bpc.yuv422.alpha-limited.monochrome.avif) |
-| 1       | 8         | YUV444  |            | limited | [here](plum-blossom-small.profile1.8bpc.yuv444.alpha-limited.avif)             |
-| 1       | 10        | YUV444  |            | limited | [here](plum-blossom-small.profile1.10bpc.yuv444.alpha-limited.avif)            |
-| 2       | 12        | YUV444  |            | limited | [here](plum-blossom-small.profile2.12bpc.yuv444.alpha-limited.avif)            |
-| 2       | 12        | YUV444  | YES        | limited | [here](plum-blossom-small.profile2.12bpc.yuv444.alpha-limited.monochrome.avif) |
+| profile | bit depth | pix fmt | Monochrome | alpha   | file                                                                                    |
+|---------|-----------|---------|------------|-------- |-----------------------------------------------------------------------------------------|
+| 0       | 8         | YUV420  |            | limited | [here](plum-blossom-small.profile0.8bpc.yuv420.alpha-limited.avif?raw=true)             |
+| 0       | 8         | YUV420  | YES        | limited | [here](plum-blossom-small.profile0.8bpc.yuv420.alpha-limited.monochrome.avif?raw=true)  |
+| 0       | 10        | YUV420  |            | limited | [here](plum-blossom-small.profile0.10bpc.yuv420.alpha-limited.avif?raw=true)            |
+| 0       | 10        | YUV420  | YES        | limited | [here](plum-blossom-small.profile0.10bpc.yuv420.alpha-limited.monochrome.avif?raw=true) |
+| 2       | 12        | YUV420  |            | limited | [here](plum-blossom-small.profile2.12bpc.yuv420.alpha-limited.avif?raw=true)            |
+| 2       | 12        | YUV420  | YES        | limited | [here](plum-blossom-small.profile2.12bpc.yuv420.alpha-limited.monochrome.avif?raw=true) |
+| 2       | 8         | YUV422  |            | limited | [here](plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.avif?raw=true)             |
+| 2       | 8         | YUV422  | YES        | limited | [here](plum-blossom-small.profile2.8bpc.yuv422.alpha-limited.monochrome.avif?raw=true)  |
+| 2       | 10        | YUV422  |            | limited | [here](plum-blossom-small.profile2.10bpc.yuv422.alpha-limited.avif?raw=true)            |
+| 2       | 10        | YUV422  | YES        | limited | [here](plum-blossom-small.profile2.10bpc.yuv422.alpha-limited.monochrome.avif?raw=true) |
+| 2       | 12        | YUV422  |            | limited | [here](plum-blossom-small.profile2.12bpc.yuv422.alpha-limited.avif?raw=true)            |
+| 2       | 12        | YUV422  | YES        | limited | [here](plum-blossom-small.profile2.12bpc.yuv422.alpha-limited.monochrome.avif?raw=true) |
+| 1       | 8         | YUV444  |            | limited | [here](plum-blossom-small.profile1.8bpc.yuv444.alpha-limited.avif?raw=true)             |
+| 1       | 10        | YUV444  |            | limited | [here](plum-blossom-small.profile1.10bpc.yuv444.alpha-limited.avif?raw=true)            |
+| 2       | 12        | YUV444  |            | limited | [here](plum-blossom-small.profile2.12bpc.yuv444.alpha-limited.avif?raw=true)            |
+| 2       | 12        | YUV444  | YES        | limited | [here](plum-blossom-small.profile2.12bpc.yuv444.alpha-limited.monochrome.avif?raw=true) |
 
 #### Full-ranged alpha
 
-| profile | bit depth | pix fmt | Monochrome | alpha   | file                                                                           |
-|---------|-----------|---------|------------|-------- |--------------------------------------------------------------------------------|
-| 0       | 8         | YUV420  |            | full    | [here](plum-blossom-small.profile0.8bpc.yuv420.alpha-full.avif)                |
-| 0       | 8         | YUV420  | YES        | full    | [here](plum-blossom-small.profile0.8bpc.yuv420.alpha-full.monochrome.avif)     |
-| 0       | 10        | YUV420  |            | full    | [here](plum-blossom-small.profile0.10bpc.yuv420.alpha-full.avif)               |
-| 0       | 10        | YUV420  | YES        | full    | [here](plum-blossom-small.profile0.10bpc.yuv420.alpha-full.monochrome.avif)    |
-| 2       | 12        | YUV420  |            | full    | [here](plum-blossom-small.profile2.12bpc.yuv420.alpha-full.avif)               |
-| 2       | 12        | YUV420  | YES        | full    | [here](plum-blossom-small.profile2.12bpc.yuv420.alpha-full.monochrome.avif)    |
-| 2       | 8         | YUV422  |            | full    | [here](plum-blossom-small.profile2.8bpc.yuv422.alpha-full.avif)                |
-| 2       | 8         | YUV422  | YES        | full    | [here](plum-blossom-small.profile2.8bpc.yuv422.alpha-full.monochrome.avif)     |
-| 2       | 10        | YUV422  |            | full    | [here](plum-blossom-small.profile2.10bpc.yuv422.alpha-full.avif)               |
-| 2       | 10        | YUV422  | YES        | full    | [here](plum-blossom-small.profile2.10bpc.yuv422.alpha-full.monochrome.avif)    |
-| 2       | 12        | YUV422  |            | full    | [here](plum-blossom-small.profile2.12bpc.yuv422.alpha-full.avif)               |
-| 2       | 12        | YUV422  | YES        | full    | [here](plum-blossom-small.profile2.12bpc.yuv422.alpha-full.monochrome.avif)    |
-| 1       | 8         | YUV444  |            | full    | [here](plum-blossom-small.profile1.8bpc.yuv444.alpha-full.avif)                |
-| 1       | 10        | YUV444  |            | full    | [here](plum-blossom-small.profile1.10bpc.yuv444.alpha-full.avif)               |
-| 2       | 12        | YUV444  |            | full    | [here](plum-blossom-small.profile2.12bpc.yuv444.alpha-full.avif)               |
-| 2       | 12        | YUV444  | YES        | full    | [here](plum-blossom-small.profile2.12bpc.yuv444.alpha-full.monochrome.avif)    |
+| profile | bit depth | pix fmt | Monochrome | alpha   | file                                                                                    |
+|---------|-----------|---------|------------|-------- |-----------------------------------------------------------------------------------------|
+| 0       | 8         | YUV420  |            | full    | [here](plum-blossom-small.profile0.8bpc.yuv420.alpha-full.avif?raw=true)                |
+| 0       | 8         | YUV420  | YES        | full    | [here](plum-blossom-small.profile0.8bpc.yuv420.alpha-full.monochrome.avif?raw=true)     |
+| 0       | 10        | YUV420  |            | full    | [here](plum-blossom-small.profile0.10bpc.yuv420.alpha-full.avif?raw=true)               |
+| 0       | 10        | YUV420  | YES        | full    | [here](plum-blossom-small.profile0.10bpc.yuv420.alpha-full.monochrome.avif?raw=true)    |
+| 2       | 12        | YUV420  |            | full    | [here](plum-blossom-small.profile2.12bpc.yuv420.alpha-full.avif?raw=true)               |
+| 2       | 12        | YUV420  | YES        | full    | [here](plum-blossom-small.profile2.12bpc.yuv420.alpha-full.monochrome.avif?raw=true)    |
+| 2       | 8         | YUV422  |            | full    | [here](plum-blossom-small.profile2.8bpc.yuv422.alpha-full.avif?raw=true)                |
+| 2       | 8         | YUV422  | YES        | full    | [here](plum-blossom-small.profile2.8bpc.yuv422.alpha-full.monochrome.avif?raw=true)     |
+| 2       | 10        | YUV422  |            | full    | [here](plum-blossom-small.profile2.10bpc.yuv422.alpha-full.avif?raw=true)               |
+| 2       | 10        | YUV422  | YES        | full    | [here](plum-blossom-small.profile2.10bpc.yuv422.alpha-full.monochrome.avif?raw=true)    |
+| 2       | 12        | YUV422  |            | full    | [here](plum-blossom-small.profile2.12bpc.yuv422.alpha-full.avif?raw=true)               |
+| 2       | 12        | YUV422  | YES        | full    | [here](plum-blossom-small.profile2.12bpc.yuv422.alpha-full.monochrome.avif?raw=true)    |
+| 1       | 8         | YUV444  |            | full    | [here](plum-blossom-small.profile1.8bpc.yuv444.alpha-full.avif?raw=true)                |
+| 1       | 10        | YUV444  |            | full    | [here](plum-blossom-small.profile1.10bpc.yuv444.alpha-full.avif?raw=true)               |
+| 2       | 12        | YUV444  |            | full    | [here](plum-blossom-small.profile2.12bpc.yuv444.alpha-full.avif?raw=true)               |
+| 2       | 12        | YUV444  | YES        | full    | [here](plum-blossom-small.profile2.12bpc.yuv444.alpha-full.monochrome.avif?raw=true)    |
 
 ### URLs
 
@@ -532,16 +532,16 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-
 
 ### AVIF version
 
- - [red-at-12-oclock-with-color-profile-lossy.avif](red-at-12-oclock-with-color-profile-lossy.avif)
- - [red-at-12-oclock-with-color-profile-8bpc.avif](red-at-12-oclock-with-color-profile-8bpc.avif)
- - [red-at-12-oclock-with-color-profile-10bpc.avif](red-at-12-oclock-with-color-profile-10bpc.avif)
- - [red-at-12-oclock-with-color-profile-12bpc.avif](red-at-12-oclock-with-color-profile-12bpc.avif)
+ - [red-at-12-oclock-with-color-profile-lossy.avif](red-at-12-oclock-with-color-profile-lossy.avif?raw=true)
+ - [red-at-12-oclock-with-color-profile-8bpc.avif](red-at-12-oclock-with-color-profile-8bpc.avif?raw=true)
+ - [red-at-12-oclock-with-color-profile-10bpc.avif](red-at-12-oclock-with-color-profile-10bpc.avif?raw=true)
+ - [red-at-12-oclock-with-color-profile-12bpc.avif](red-at-12-oclock-with-color-profile-12bpc.avif?raw=true)
 
 ## Twinkle Star - Image Sequence Test
 
 ![star.gif](star.gif)
 
- - [AV1 mp4 version](star.mp4)
+ - [AV1 mp4 version](star.mp4?raw=true)
 
 ### Original (SVG)
 
@@ -555,27 +555,27 @@ https://raw.githubusercontent.com/link-u/avif-sample-images/master/plum-blossom-
 
 #### Normal
 
-- [star-8bpc.avifs](star-8bpc.avifs)
+- [star-8bpc.avifs](star-8bpc.avifs?raw=true)
    - YUV420
    - full-ranged color
-- [star-10bpc.avifs](star-10bpc.avifs)
+- [star-10bpc.avifs](star-10bpc.avifs?raw=true)
    - YUV422
    - full-ranged color
-- [star-12bpc.avifs](star-12bpc.avifs)
+- [star-12bpc.avifs](star-12bpc.avifs?raw=true)
    - YUV444
    - full-ranged color
 
-- [star-8bpc-with-alpha.avifs](star-8bpc-with-alpha.avifs)
+- [star-8bpc-with-alpha.avifs](star-8bpc-with-alpha.avifs?raw=true)
    - YUV420
    - 8bit
    - limited-ranged color
    - limited-ranged alpha
-- [star-8bpc-with-alpha.avifs](star-10bpc-with-alpha.avifs)
+- [star-8bpc-with-alpha.avifs](star-10bpc-with-alpha.avifs?raw=true)
    - YUV422
    - 10bit
    - limited-ranged color
    - limited-ranged alpha
-- [star-8bpc-with-alpha.avifs](star-12bpc-with-alpha.avifs)
+- [star-8bpc-with-alpha.avifs](star-12bpc-with-alpha.avifs?raw=true)
    - YUV444
    - 12bit
    - limited-ranged color
