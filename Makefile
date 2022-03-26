@@ -288,10 +288,10 @@ kimono.mirror-vertical.rotate270.avif: kimono.mirror-vertical.rotate270.png
 	$(CAVIF) -i $< -o $@ --mirror vertical --rotation 90 --tune psnr --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18
 
 kimono.crop.avif: kimono.png
-	$(CAVIF) -i $< -o $@ --crop-offset 103,-308 --crop-size 385,330 --tune psnr --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18
+	$(CAVIF) -i $< -o $@ --crop-offset 102,-309 --crop-size 384,330 --tune psnr --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18
 
 kimono.mirror-vertical.rotate270.crop.avif: kimono.mirror-vertical.rotate270.png
-	$(CAVIF) -i $< -o $@ --crop-offset -308,103 --crop-size 330,385 --mirror vertical --rotation 90 --tune psnr --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18
+	$(CAVIF) -i $< -o $@ --crop-offset -309,102 --crop-size 330,384 --mirror vertical --rotation 90 --tune psnr --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18
 
 ## Fox Parade
 
