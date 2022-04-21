@@ -46,7 +46,7 @@ jobs:
       env:
         #id of https://github.com/link-u/davif/actions?query=workflow%3A%22Build+debian+package+on+push+or+release-tags.%22
         # curl https://api.github.com/repos/link-u/davif/actions/workflows
-        WORKFLOW_ID: '452394'
+        WORKFLOW_ID: '4521992'
     - name: Install davif and cavif
       run: sudo dpkg -i *.deb
     - name: Use installed cavif and davif
