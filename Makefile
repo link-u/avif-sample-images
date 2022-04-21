@@ -1,6 +1,6 @@
 CAVIF=../cavif/build/cavif
 DAVIF=../davif/build/davif
-AVIFDEC=../libaom/build/avifdec
+AVIFDEC=../libavif/build/avifdec
 
 all: hato kimono fox plum;
 
