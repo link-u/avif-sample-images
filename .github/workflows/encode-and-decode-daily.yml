@@ -1,4 +1,4 @@
-name: Encode all images and decode them again weekly.
+name: Encode all images and decode them again
 
 on:
   push:
