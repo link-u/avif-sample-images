@@ -1,9 +1,10 @@
-CAVIF=../cavif/cmake-build-debug/cavif
-DAVIF=../davif/cmake-build-debug/davif
+CAVIF=../cavif/build/cavif
+DAVIF=../davif/build/davif
+AVIFDEC=../libaom/build/avifdec
 
 all: hato kimono fox plum;
 
-HATO=\
+HATO= \
 	hato.profile2.8bpc.yuv422.avif \
 	hato.profile2.8bpc.yuv422.monochrome.avif \
 	hato.profile2.10bpc.yuv422.avif \
@@ -17,7 +18,7 @@ HATO=\
 
 hato: $(HATO);
 
-KIMONO=\
+KIMONO= \
 	kimono.avif \
 	kimono.rotate90.avif \
 	kimono.rotate270.avif \
@@ -29,7 +30,7 @@ KIMONO=\
 
 kimono: $(KIMONO);
 
-FOX=\
+FOX= \
 	fox.profile0.8bpc.yuv420.avif \
 	fox.profile0.8bpc.yuv420.odd-width.avif \
 	fox.profile0.8bpc.yuv420.odd-height.avif \
@@ -97,7 +98,7 @@ FOX=\
 
 fox: $(FOX);
 
-PLUM_LARGE=\
+PLUM_LARGE= \
 	plum-blossom-large.profile0.8bpc.yuv420.alpha-limited.avif \
 	plum-blossom-large.profile0.8bpc.yuv420.alpha-limited.monochrome.avif \
 	plum-blossom-large.profile0.10bpc.yuv420.alpha-limited.avif \
@@ -131,7 +132,7 @@ PLUM_LARGE=\
 	plum-blossom-large.profile2.12bpc.yuv444.alpha-full.avif \
 	plum-blossom-large.profile2.12bpc.yuv444.alpha-full.monochrome.avif
 
-PLUM_SMALL=\
+PLUM_SMALL= \
 	plum-blossom-small.profile0.8bpc.yuv420.alpha-limited.avif \
 	plum-blossom-small.profile0.8bpc.yuv420.alpha-limited.monochrome.avif \
 	plum-blossom-small.profile0.10bpc.yuv420.alpha-limited.avif \
@@ -169,7 +170,7 @@ PLUM=$(PLUM_LARGE) $(PLUM_SMALL)
 
 plum: $(PLUM);
 
-STAR=\
+STAR= \
 	star-8bpc.avifs \
 	star-8bpc-with-alpha.avifs \
 	star-10bpc.avifs \
@@ -181,25 +182,36 @@ star: $(STAR);
 
 ALL_AVIF=$(HATO) $(KIMONO) $(FOX) $(PLUM)
 ALL_AVIFS=$(STAR)
+
 DECODED_PNG=$(ALL_AVIF:%.avif=decoded/%.png)
+DECODED_PNG_AVIFDEC=$(ALL_AVIF:%.avif=decoded-avifdec/%.png)
+
 DUMMY_CHECK_TARGETS=$(ALL_AVIF:%.avif=%.check)
 
-.PHONY: all clean \
-    hato kimono fox plum \
+.PHONY: \
+	all clean \
+	hato kimono fox plum \
 	star \
-	decode decode-clean decode-images \
-	url hato-url kimono-url fox-url plum-url\
+	decode decode-clean decode-images decode-images-avifdec \
+	url hato-url kimono-url fox-url plum-url \
 	compare $(DUMMY_CHECK_TARGETS)
 
 decode-clean:
-	rm -Rf decoded/
+	rm -Rf decoded/ decoded-avifdec/
 
 $(DECODED_PNG): | decoded
+
+$(DECODED_PNG_AVIFDEC): | decoded-avifdec
 
 decoded:
 	mkdir -p decoded
 
+decoded-avifdec:
+	mkdir -p decoded-avifdec
+
 decode-images: $(DECODED_PNG);
+
+decode-images-avifdec: $(DECODED_PNG_AVIFDEC);
 
 decode:
 	$(MAKE) decode-clean
@@ -209,6 +221,9 @@ compare: $(DUMMY_CHECK_TARGETS);
 
 decoded/%.png: %.avif
 	$(DAVIF) -i $< -o $@
+
+decoded-avifdec/%.png: %.avif
+	$(AVIFDEC) $< $@
 
 $(DUMMY_CHECK_TARGETS): %.check: %.avif decoded/%.png
 	bash -e scripts/compare.sh $@ $(word 1,$^) $(word 2,$^)
@@ -288,10 +303,10 @@ kimono.mirror-vertical.rotate270.avif: kimono.mirror-vertical.rotate270.png
 	$(CAVIF) -i $< -o $@ --mirror vertical --rotation 90 --tune psnr --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18
 
 kimono.crop.avif: kimono.png
-	$(CAVIF) -i $< -o $@ --crop-offset 102,-309 --crop-size 384,330 --tune psnr --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18
+	$(CAVIF) -i $< -o $@ --crop-offset 101,-308 --crop-size 384,328 --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --enable-full-color-range --lossless
 
 kimono.mirror-vertical.rotate270.crop.avif: kimono.mirror-vertical.rotate270.png
-	$(CAVIF) -i $< -o $@ --crop-offset -309,102 --crop-size 330,384 --mirror vertical --rotation 90 --tune psnr --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --rate-control q --crf 18
+	$(CAVIF) -i $< -o $@ --crop-offset -308,101 --crop-size 328,384 --mirror vertical --rotation 90 --profile 0 --bit-depth 8 --pix-fmt yuv420 --cpu-used 0 --enable-full-color-range --lossless
 
 ## Fox Parade
 
