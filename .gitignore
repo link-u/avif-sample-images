@@ -1,4 +1,5 @@
 *.avif.png
 /core
 /decoded/
+/decoded-avifdec/
 /.alpha-masks/
