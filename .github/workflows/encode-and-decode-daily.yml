@@ -2,8 +2,11 @@ name: Encode all images and decode them again
 
 on:
   push:
-  schedule:
-    - cron:  '0 20 * * 0' # https://crontab.guru/#0_2_*_*_0
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   check-on-ubuntu:
