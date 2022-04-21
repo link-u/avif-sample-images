@@ -1,6 +1,6 @@
 # AVIF Example files.
 
-![Encode all images and decode them again weekly.](https://github.com/link-u/avif-sample-images/workflows/Encode%20all%20images%20and%20decode%20them%20again%20weekly./badge.svg)
+[![Encode all images and decode them again](https://github.com/link-u/avif-sample-images/actions/workflows/encode-and-decode-again.yml/badge.svg)](https://github.com/link-u/avif-sample-images/actions/workflows/encode-and-decode-again.yml)
 
 - All files do not contain Exif metadata.
 - All files are tagged as MIAF compatible.
